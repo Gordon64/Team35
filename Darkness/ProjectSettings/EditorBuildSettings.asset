@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Darkness.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Start Screen.unity
+    guid: 6fd5c5bfdfaf24149ab4314a013b5f75
+  - enabled: 1
+    path: Assets/Darkness.unity
+    guid: 44f00aa5170b8044a87c2c52ff4b5513
   m_configObjects: {}
