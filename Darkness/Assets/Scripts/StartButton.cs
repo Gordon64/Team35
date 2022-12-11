@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 
 public class StartButton : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class StartButton : MonoBehaviour
     public void OpenLoadGame()
     {
         //Function to display panel and exit button
-        if(LoadGame != null)
+        if (LoadGame != null)
         {
             LoadGame.SetActive(true);
         }
@@ -21,14 +20,5 @@ public class StartButton : MonoBehaviour
         {
             Close_LoadGame.SetActive(true);
         }
-=======
-using UnityEngine.SceneManagement;
-
-public class StartButton : MonoBehaviour
-{
-    public void loadNextScene (string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
->>>>>>> John-Dev-Branch
     }
 }
