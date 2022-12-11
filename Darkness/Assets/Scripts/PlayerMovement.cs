@@ -15,13 +15,22 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");     //moving left to right
-        float moveVertical = Input.GetAxis("Vertical");
 
         Vector2 currentVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
 
-        float newVelocityX = 0f;
-        float newVelocityY = 0f;    
+        float newVelocityX = 0f; 
 
+        //flips sprite based on direction walked
+        if (moveHorizontal > 0.01f)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if (moveHorizontal < 0.01f)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        //moving left & right
         if(moveHorizontal < 0 && currentVelocity.x <= 0)
         {
             newVelocityX = -speed;
@@ -37,12 +46,15 @@ public class PlayerMovement : MonoBehaviour
             //idle animation
         }
 
-        if(moveVertical > 0 && currentVelocity.y >= 0)
-        {
-            newVelocityY = speed;
-        }
+        //running animator
+        gameObject.GetComponent<Animator>().SetBool("running", moveHorizontal != 0);
+
+
 
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocityX, 0);
     }
+
+
+
 
 }
