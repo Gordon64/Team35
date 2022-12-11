@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    private float moveHorizontal;
+
 
     void FixedUpdate()
     {
@@ -50,11 +52,14 @@ public class PlayerMovement : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("running", moveHorizontal != 0);
 
 
-
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocityX, 0);
     }
 
 
+    public bool canAttack()
+    {
+        return moveHorizontal == 0;
+    }
 
 
 }
