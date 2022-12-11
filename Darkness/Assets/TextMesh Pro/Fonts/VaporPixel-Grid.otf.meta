@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 76fb6cfa0277ea549a68e91a0657f9fd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - VaporPixel
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a3d95adbbe957ef448859e012ba20c52, type: 3}
+  - {fileID: 12800000, guid: 3082571de683dac448b38fa0e4979e9a, type: 3}
+  - {fileID: 12800000, guid: b120558d8e55e8b478cf3a85feb71373, type: 3}
+  - {fileID: 12800000, guid: 3207803bd56978d4386acfcafdfc78bb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
