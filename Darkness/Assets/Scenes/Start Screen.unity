@@ -853,7 +853,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 605088035}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
+<<<<<<< HEAD
         m_MethodName: StartLevel
+=======
+        m_MethodName: loadNextScene
+>>>>>>> John-Dev-Branch
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -910,7 +914,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 605088030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db578e6b5d214ca5ae2a1455e85a6d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 449e1b3fe5f7a4e2082dbb689cae1045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1152365398
@@ -1432,7 +1436,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD
   m_Children: []
+=======
+  m_Children:
+  - {fileID: 605088031}
+  - {fileID: 2032837737}
+  - {fileID: 267825458}
+  - {fileID: 1640625337}
+>>>>>>> John-Dev-Branch
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1710,6 +1722,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032837736}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!114 &2032837741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,3 +1813,5 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057016103}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> John-Dev-Branch

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: 4e1c928566c2f5c4abf2c0efb937fe13
+  - enabled: 1
+    path: Assets/Scenes/DarknessSettingsAudio.unity
+    guid: 076480bfb210fae4c9ae1cd7103cfe76
   m_configObjects: {}
