@@ -1600,7 +1600,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD
 --- !u!61 &886254215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1627,7 +1626,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24, y: 2.925517}
   m_EdgeRadius: 0
-=======
 --- !u!1001 &1041753583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1699,7 +1697,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db9f81f7787c3a43b9c1ba6f49ecc5c, type: 3}
->>>>>>> John-Dev-Branch
 --- !u!1 &1067907730
 GameObject:
   m_ObjectHideFlags: 0
