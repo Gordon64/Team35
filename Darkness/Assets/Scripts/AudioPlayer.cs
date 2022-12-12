@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    AudioSource audio;
+    //AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.Play();
+        
     }
 
     // Update is called once per frame
@@ -21,8 +20,10 @@ public class AudioPlayer : MonoBehaviour
 
     private void Awake()
     {
+        /*
         audio = GetComponent<AudioSource>();
         audio.Play();
+        */
     }
 
 }

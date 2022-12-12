@@ -61,8 +61,9 @@ public class Bandit : MonoBehaviour {
             m_isDead = true;
             m_animator.SetTrigger("Death");
             health = 0;
-            updateText();
+            //updateText();
         }
+        updateText();
 
         // -- Handle Animations --
         //Death
@@ -71,13 +72,13 @@ public class Bandit : MonoBehaviour {
             {
                 health = 0;
                 m_animator.SetTrigger("Death");
-                updateText();
+                //updateText();
             }
             else
             {
                 health += 1;
                 m_animator.SetTrigger("Recover");
-                updateText();
+                //updateText();
             }
 
             m_isDead = !m_isDead;
@@ -88,7 +89,7 @@ public class Bandit : MonoBehaviour {
         {
             health -= 1;
             m_animator.SetTrigger("Hurt");
-            updateText();
+            //updateText();
         }
 
         //Attack
