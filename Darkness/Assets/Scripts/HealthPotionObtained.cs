@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioPlayer : MonoBehaviour
+public class HealthPotionObtained : MonoBehaviour
 {
-    //AudioSource audio;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +16,9 @@ public class AudioPlayer : MonoBehaviour
         
     }
 
-    private void Awake()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*
-        audio = GetComponent<AudioSource>();
-        audio.Play();
-        */
+        Bandit.health += 3;
+        Destroy(this.gameObject);
     }
-
 }

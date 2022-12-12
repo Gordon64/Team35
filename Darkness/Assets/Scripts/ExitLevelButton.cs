@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class ExitLevelButton : MonoBehaviour
 {
-    public void StartLevel(string sceneName)
+    public void ReturnToStart(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }

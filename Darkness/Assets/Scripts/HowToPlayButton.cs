@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class HowToPlayButton : MonoBehaviour
 {
-    public void StartLevel(string sceneName)
+    public void StartTutorial(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
