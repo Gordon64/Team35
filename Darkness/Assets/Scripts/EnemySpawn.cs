@@ -38,10 +38,4 @@ public class EnemySpawn : MonoBehaviour
             SceneManager.LoadScene("BattleScene");
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
