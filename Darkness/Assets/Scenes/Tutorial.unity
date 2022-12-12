@@ -182,7 +182,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3082571de683dac448b38fa0e4979e9a, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -522,8 +522,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Drink health potions to restore your health!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a27e9167efb307340abea6514f4fc486, type: 2}
+  m_sharedMaterial: {fileID: 101428362394509859, guid: a27e9167efb307340abea6514f4fc486, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -612,7 +612,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 101428362394509859, guid: a27e9167efb307340abea6514f4fc486, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1122,61 +1122,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951620193}
   m_CullTransparentMesh: 1
---- !u!1001 &967730310
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_GravityScale
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: healthText
-      value: 
-      objectReference: {fileID: 1883533326}
-    - target: {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      propertyPath: m_jumpForce
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1150320417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,8 +2054,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a27e9167efb307340abea6514f4fc486, type: 2}
+  m_sharedMaterial: {fileID: 101428362394509859, guid: a27e9167efb307340abea6514f4fc486, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2199,7 +2144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 101428362394509859, guid: a27e9167efb307340abea6514f4fc486, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2304,3 +2249,66 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
+--- !u!1001 &6722639757080265684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1883533326}
+    - target: {fileID: 6723203340784359636, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_Name
+      value: LightBandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
