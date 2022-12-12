@@ -15,7 +15,7 @@ public class Bandit : MonoBehaviour {
     private bool                m_isDead = false;
 
     public TMP_Text healthText;
-    public int health = 10;
+    public static int health = 10;
 
 
     // Use this for initialization
@@ -127,4 +127,8 @@ public class Bandit : MonoBehaviour {
         healthText.text = "Health: " + health.ToString();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        updateText();
+    }
 }
