@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Bandit : MonoBehaviour {
 
@@ -13,11 +14,16 @@ public class Bandit : MonoBehaviour {
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
 
+    public TMP_Text healthText;
+    public int health = 10;
+
+
     // Use this for initialization
     void Start () {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
+        updateText();
     }
 	
 	// Update is called once per frame
@@ -49,20 +55,41 @@ public class Bandit : MonoBehaviour {
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
 
+        //Check health
+        if (health <= 0)
+        {
+            m_isDead = true;
+            m_animator.SetTrigger("Death");
+            health = 0;
+            updateText();
+        }
+
         // -- Handle Animations --
         //Death
         if (Input.GetKeyDown("e")) {
-            if(!m_isDead)
+            if (!m_isDead)
+            {
+                health = 0;
                 m_animator.SetTrigger("Death");
+                updateText();
+            }
             else
+            {
+                health += 1;
                 m_animator.SetTrigger("Recover");
+                updateText();
+            }
 
             m_isDead = !m_isDead;
         }
-            
+
         //Hurt
         else if (Input.GetKeyDown("q"))
+        {
+            health -= 1;
             m_animator.SetTrigger("Hurt");
+            updateText();
+        }
 
         //Attack
         else if(Input.GetMouseButtonDown(0)) {
@@ -94,4 +121,10 @@ public class Bandit : MonoBehaviour {
         else
             m_animator.SetInteger("AnimState", 0);
     }
+
+    void updateText()
+    {
+        healthText.text = "Health: " + health.ToString();
+    }
+
 }
