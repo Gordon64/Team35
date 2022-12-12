@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b5d8536c984bc488816ccb7648575e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  attack: 10
+  health: 40
+  attack: 8
   defense: 0
   speed: 10
-  damageTextPosition: {x: 20, y: 20}
+  damageTextPosition: {x: 40, y: 30}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
   nextActTurn: 0
 --- !u!114 &-876656634205146675

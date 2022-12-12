@@ -45,9 +45,9 @@ public class UnitStats : MonoBehaviour, IComparable
 
         GameObject HUDCanvas = GameObject.Find("HUDCanvas");
         GameObject damageText = Instantiate(this.damageTextPrefab, HUDCanvas.transform) as GameObject;
-        damageText.GetComponent<TMP_Text>().text = "" + damage.ToString("#.00");
+        damageText.GetComponent<TMP_Text>().text = "" + damage.ToString("-#.");
         damageText.transform.localPosition = this.damageTextPosition;
-        damageText.transform.localScale = new Vector2(1.0f, 1.0f);
+        damageText.transform.localScale = new Vector2(2.0f, 2.0f);
         Debug.Log(damage);
 
         if(this.health <= 0)
