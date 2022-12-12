@@ -1,6 +1,7 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class TurnSystem : MonoBehaviour
 {
@@ -42,10 +43,25 @@ public class TurnSystem : MonoBehaviour
 
     public void nextTurn()
     {
+        GameObject[] remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
+
+        if(remainingEnemyUnits.Length == 0)
+        {
+            SceneManager.LoadScene("LevelScene");
+        }
+
+        GameObject[] remainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+
+        if(remainingPlayerUnits.Length == 0)
+        {
+            SceneManager.LoadScene("LevelScene");
+        }
+
         UnitStats currentUnitStats = unitsStats[0];
         unitsStats.Remove(currentUnitStats);
         GameObject playerParty = GameObject.Find("PlayerParty");
         Debug.Log("running");
+
         if (!currentUnitStats.isDead())
         {
             GameObject currentUnit = currentUnitStats.gameObject;
