@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public abstract class ShowUnitStat : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public abstract class ShowUnitStat : MonoBehaviour
 
     [SerializeField]
     private float maxValue;
+
+    [SerializeField]
+    protected TextMeshProUGUI textElement;
 
     private Vector2 initialScale;
 

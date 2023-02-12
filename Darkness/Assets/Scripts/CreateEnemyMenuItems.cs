@@ -27,7 +27,7 @@ public class CreateEnemyMenuItems : MonoBehaviour
         GameObject targetEnemyUnit = Instantiate(this.targetEnemyUnitPrefab, enemyUnitsMenu.transform) as GameObject;
         targetEnemyUnit.name = "Target" + this.gameObject.name;
         targetEnemyUnit.transform.localPosition = nextPosition;
-        targetEnemyUnit.transform.localScale = new Vector2(2.0f, 2.0f);
+        targetEnemyUnit.transform.localScale = new Vector2(1.0f, 0.2f);
         targetEnemyUnit.GetComponent<Button>().onClick.AddListener(() => selectEnemyTarget());
         targetEnemyUnit.GetComponent<Image>().sprite = this.menuItemSprite;
 
