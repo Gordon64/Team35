@@ -17,6 +17,7 @@ public class CreateEnemyMenuItems : MonoBehaviour
     [SerializeField]
     private KillEnemy killEnemyScript;
 
+    //Creates Buttons for targeting the Enemy.
     void Awake()
     {
         GameObject enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
@@ -33,7 +34,8 @@ public class CreateEnemyMenuItems : MonoBehaviour
 
         killEnemyScript.menuItem = targetEnemyUnit;
     }
-
+    
+    //Targets Enemy on click
     public void selectEnemyTarget()
     {
         GameObject partyData = GameObject.Find("PlayerParty");

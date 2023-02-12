@@ -9,6 +9,7 @@ public class PlayerUnitAction : MonoBehaviour
 
     private GameObject currentAttack;
 
+    //Manages player action during player's turn.
     void Awake()
     {
         this.physicalAttack = Instantiate(this.physicalAttack, this.transform);

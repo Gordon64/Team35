@@ -28,11 +28,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6359140498464498090}
+  - {fileID: 6270176728941110854}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3509810458261920259
+--- !u!1001 &4607545329864498671
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -42,11 +42,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2089920838171159866, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: m_Name
-      value: UnitPrefab
+      value: EnemyUnit
       objectReference: {fileID: 0}
     - target: {fileID: 7563072728192908201, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7563072728192908201, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,8 +91,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
---- !u!4 &6359140498464498090 stripped
+--- !u!4 &6270176728941110854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7563072728192908201, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
-  m_PrefabInstance: {fileID: 3509810458261920259}
+  m_PrefabInstance: {fileID: 4607545329864498671}
   m_PrefabAsset: {fileID: 0}

@@ -60,7 +60,6 @@ public class TurnSystem : MonoBehaviour
         UnitStats currentUnitStats = unitsStats[0];
         unitsStats.Remove(currentUnitStats);
         GameObject playerParty = GameObject.Find("PlayerParty");
-        Debug.Log("running");
 
         if (!currentUnitStats.isDead())
         {
