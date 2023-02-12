@@ -12,7 +12,7 @@ public abstract class ShowUnitStat : MonoBehaviour
     private float maxValue;
 
     [SerializeField]
-    protected TextMeshProUGUI textElement;
+    public TextMeshProUGUI textElement;
 
     private Vector2 initialScale;
 

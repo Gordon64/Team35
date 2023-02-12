@@ -64,4 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52237b578f45ea7409c2dff2a3775384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  physicalAttack: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
+  physicalAttack: {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}

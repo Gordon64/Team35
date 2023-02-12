@@ -49,3 +49,7 @@ MonoBehaviour:
   maxAttackMultiplier: 1
   minDefenseMultiplier: 0.2
   maxDefenseMultiplier: 0.8
+  minLifestealMultiplier: 0
+  maxLifestealMultiplier: 0
+  prehitDialogue: 
+  posthitDialogue: The angel swiftly strikes.

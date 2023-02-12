@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuItem: {fileID: 0}
+  health: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!114 &7206624775632731158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetEnemyUnitPrefab: {fileID: 3538781575327652717, guid: 7fa700bcea300914096fcf55502c8b80, type: 3}
+  healthBar: {fileID: 131777247768663635, guid: da3f283d6c8e03a41b222447fcae4361, type: 3}
+  healthText: {fileID: 0}
   menuItemSprite: {fileID: 21300166, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   initialPosition: {x: -60, y: -30}
   itemDimensions: {x: 10, y: 2}
@@ -149,5 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0c06c9e4e697c4b9f084d986c97eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
+  attack1: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
+  attack2: {fileID: 7018705526504252920, guid: aae779f9260b1224397bd468f69b0360, type: 3}
+  attack3: {fileID: 7018705526504252920, guid: ad3285eea79eabd49860f08b3c63fd6a, type: 3}
+  attack4: {fileID: 7018705526504252920, guid: d1c8622bf207df343b9db987d6c1c51f, type: 3}
   targetsTag: PlayerUnit
