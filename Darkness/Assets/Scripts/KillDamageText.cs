@@ -7,7 +7,7 @@ public class KillDamageText : MonoBehaviour
 	[SerializeField]
 	private float destroyTime;
 
-	// Use this for initialization
+	//Destroys damage text, starts next turn (could be moved somewhere else)
 	void Start()
 	{
 		Destroy(this.gameObject, this.destroyTime);

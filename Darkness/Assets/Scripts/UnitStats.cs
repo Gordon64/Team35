@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
+//Stats container for every unit in battle. Spawns damage text and heal text. Calculates next turn.
 public class UnitStats : MonoBehaviour, IComparable
 {
     public float health;
@@ -20,7 +20,10 @@ public class UnitStats : MonoBehaviour, IComparable
 
     [SerializeField]
     private GameObject damageTextPrefab;
-    
+
+    [SerializeField]
+    private GameObject healTextPrefab;
+
     public int nextActTurn;
 
     private bool dead = false;
@@ -71,7 +74,7 @@ public class UnitStats : MonoBehaviour, IComparable
         this.health += heal;
 
         GameObject HUDCanvas = GameObject.Find("HUDCanvas");
-        GameObject damageText = Instantiate(this.damageTextPrefab, HUDCanvas.transform) as GameObject;
+        GameObject damageText = Instantiate(this.healTextPrefab, HUDCanvas.transform) as GameObject;
         damageText.GetComponent<TMP_Text>().text = "" + heal.ToString("+#.");
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);

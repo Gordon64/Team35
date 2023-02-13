@@ -103,9 +103,10 @@ MonoBehaviour:
   health: 40
   attack: 8
   defense: 0
-  speed: 10
+  speed: 8
   damageTextPosition: {x: 40, y: 30}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
+  healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
   nextActTurn: 0
 --- !u!114 &-876656634205146675
 MonoBehaviour:

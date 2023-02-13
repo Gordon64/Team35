@@ -9,7 +9,7 @@ public class EnemySpawn : MonoBehaviour
     private GameObject enemyEncounterPrefab;
 
     private bool spawning = false;
-
+    //Spawns an encounter when a player enters the spawner range and changes the scene.
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);

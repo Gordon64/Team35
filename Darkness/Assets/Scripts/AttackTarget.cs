@@ -27,6 +27,7 @@ public class AttackTarget : MonoBehaviour
     [SerializeField]
     private string posthitDialogue;
 
+    //calculates damage and heal based on target and attack owner's stats. Changes dialogue box according to attack.
     public void hit (GameObject target)
     {
         UnitStats ownerStats = this.owner.GetComponent<UnitStats>();
