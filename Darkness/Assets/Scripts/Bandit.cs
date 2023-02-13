@@ -16,6 +16,7 @@ public class Bandit : MonoBehaviour
     private bool m_isDead = false;
 
     public TMP_Text healthText;
+    public static int maxHealth = 10;
     public static int health = 10;
 
 
@@ -25,6 +26,7 @@ public class Bandit : MonoBehaviour
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
+        health = maxHealth;
         updateText();
     }
 
@@ -129,6 +131,11 @@ public class Bandit : MonoBehaviour
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+    }
+
+    public void takeDamage(int damage)
+    {
+        health -= damage;
     }
 
     void updateText()
