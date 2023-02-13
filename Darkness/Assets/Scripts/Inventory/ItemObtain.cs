@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ItemObtain : MonoBehaviour
 {
-    public InventoryItem Item;
+    public InventoryItem anItem;
 
     void Obtain()
     {
-        InventoryManager.im.Add(Item);
-        Destroy(gameObject);
+        InventoryManager.Instance.Add(anItem);
+        Destroy(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

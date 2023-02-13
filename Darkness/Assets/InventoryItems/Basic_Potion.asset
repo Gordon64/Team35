@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
-  m_Name: BasicSword
+  m_Name: Basic_Potion
   m_EditorClassIdentifier: 
-  itemid: 2
-  itemName: BasicSword
-  ourValue: 4
-  itemIcon: {fileID: -7159556775398224966, guid: 545f9c74323fe914c829180b85afb1b7, type: 3}
+  itemid: 1
+  itemName: BasicPotion
+  ourValue: 3
+  itemIcon: {fileID: 6426664300169387062, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}

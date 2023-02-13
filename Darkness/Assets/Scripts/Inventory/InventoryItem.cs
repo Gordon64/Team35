@@ -7,6 +7,6 @@ public class InventoryItem :ScriptableObject
 {
     public int itemid;
     public string itemName;
-    public string ourValue;
+    public int ourValue;
     public Sprite itemIcon;
 }

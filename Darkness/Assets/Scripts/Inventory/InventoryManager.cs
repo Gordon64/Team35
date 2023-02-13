@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager im;
+    public static InventoryManager Instance;
     public List<InventoryItem> ourItems = new List<InventoryItem>();
 
     public Transform ItemContent;
@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     public void Awake()
     {
-        im = this;
+        Instance = this;
     }
 
     public void Add(InventoryItem anItem)
@@ -21,13 +21,19 @@ public class InventoryManager : MonoBehaviour
         ourItems.Add(anItem);
     }
 
-    public void Delete(InventoryItem anItem)
+    public void Remove(InventoryItem anItem)
     {
         ourItems.Remove(anItem);
     }
 
     public void ListOfItems()
     {
+        //prevents duplicates
+        foreach (Transform anItem in ItemContent)
+        {
+            Destroy(anItem.gameObject);
+        }
+
         foreach (var anItem in ourItems)
         {
             GameObject ob = Instantiate(TheItem, ItemContent);
