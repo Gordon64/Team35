@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class NPC_Trigger : MonoBehaviour
 {
-    public GameObject TextPanel, firstText;
+    public GameObject TextPanel, firstText, d1, d2;
     public Dialogue tutorial;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,8 @@ public class NPC_Trigger : MonoBehaviour
     {
         if (TextPanel.activeSelf == false)
         {
+            d1.SetActive(false);
+            d2.SetActive(false);
             TextPanel.SetActive(true);
             firstText.SetActive(true);
         }
@@ -30,6 +32,6 @@ public class NPC_Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
