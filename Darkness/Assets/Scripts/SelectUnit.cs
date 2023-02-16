@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Manages the visibility of menus as options are selected.
 public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;

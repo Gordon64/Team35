@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CreateEnemyMenuItems : MonoBehaviour
 {
     [SerializeField]
     private GameObject targetEnemyUnitPrefab;
+
+    [SerializeField]
+    private GameObject healthBar;
+
+    [SerializeField]
+    private GameObject healthText;
 
     [SerializeField]
     private Sprite menuItemSprite;
@@ -17,9 +24,11 @@ public class CreateEnemyMenuItems : MonoBehaviour
     [SerializeField]
     private KillEnemy killEnemyScript;
 
+    //Creates Buttons for targeting the Enemy.
     void Awake()
     {
         GameObject enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
+        GameObject enemyUnitsInfo = GameObject.Find("EnemyUnitsInfo");
 
         GameObject[] existingItems = GameObject.FindGameObjectsWithTag("TargetEnemyUnit");
         Vector2 nextPosition = new Vector2(this.initialPosition.x + (existingItems.Length * this.itemDimensions.x), this.initialPosition.y);
@@ -31,11 +40,17 @@ public class CreateEnemyMenuItems : MonoBehaviour
         targetEnemyUnit.GetComponent<Button>().onClick.AddListener(() => selectEnemyTarget());
         targetEnemyUnit.GetComponent<Image>().sprite = this.menuItemSprite;
 
-        killEnemyScript.menuItem = targetEnemyUnit;
-    }
+        GameObject enemyHealth = Instantiate(this.healthBar, enemyUnitsInfo.transform) as GameObject;
+        enemyHealth.GetComponentInChildren<ShowUnitHealth>().changeUnit(this.gameObject);
 
+        killEnemyScript.menuItem = targetEnemyUnit;
+        killEnemyScript.health = enemyHealth;
+    }
+    
+    //Targets Enemy on click
     public void selectEnemyTarget()
     {
+        Debug.Log("running");
         GameObject partyData = GameObject.Find("PlayerParty");
         partyData.GetComponent<SelectUnit>().attackEnemyTarget(this.gameObject);
     }

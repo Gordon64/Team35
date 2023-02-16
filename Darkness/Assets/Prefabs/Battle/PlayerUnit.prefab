@@ -51,6 +51,7 @@ MonoBehaviour:
   speed: 15
   damageTextPosition: {x: 0, y: 0}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
+  healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
   nextActTurn: 0
 --- !u!114 &-7970524053244345887
 MonoBehaviour:
@@ -64,4 +65,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52237b578f45ea7409c2dff2a3775384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  physicalAttack: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
+  physicalAttack: {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}
