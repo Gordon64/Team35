@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class InventoryManager : MonoBehaviour
         foreach (var anItem in ourItems)
         {
             GameObject ob = Instantiate(TheItem, ItemContent);
-            var ItemText = ob.transform.Find("ItemText").GetComponent<Text>();
+            var ItemText = ob.transform.Find("ItemText").GetComponent<TextMeshProUGUI>();
             var ItemImage = ob.transform.Find("ItemImage").GetComponent<Image>();
 
             ItemText.text = anItem.itemName;
