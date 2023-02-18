@@ -14,6 +14,7 @@ public class TurnSystem : MonoBehaviour
 
     void Start()
     {
+        //Finds Player units, adds to turn list
         unitsStats = new List<UnitStats>();
         GameObject[] playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
 
@@ -24,6 +25,7 @@ public class TurnSystem : MonoBehaviour
             unitsStats.Add(currentUnitStats);
         }
 
+        //Find Enemy units, adds to turn list
         GameObject[] enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
 
         foreach(GameObject enemyUnit in enemyUnits)
@@ -33,6 +35,7 @@ public class TurnSystem : MonoBehaviour
             unitsStats.Add(currentUnitStats);
         }
 
+        //Sorts units by turn order
         unitsStats.Sort();
 
         this.actionsMenu.SetActive(false);
@@ -43,6 +46,7 @@ public class TurnSystem : MonoBehaviour
 
     public void nextTurn()
     {
+        //end conditions, no enemies or no players
         GameObject[] remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
 
         if(remainingEnemyUnits.Length == 0)
@@ -57,6 +61,7 @@ public class TurnSystem : MonoBehaviour
             SceneManager.LoadScene("LevelScene");
         }
 
+        //Top of turn list is popped, unit takes their turn
         UnitStats currentUnitStats = unitsStats[0];
         unitsStats.Remove(currentUnitStats);
         GameObject playerParty = GameObject.Find("PlayerParty");
@@ -67,12 +72,14 @@ public class TurnSystem : MonoBehaviour
 
             foreach(var x in unitsStats)
             {
-                Debug.Log(x.ToString());
+                //Debug.Log(x.ToString());
             }
 
+            //recalculates the current unit's next turn
             currentUnitStats.calculateNextActTurn(currentUnitStats.nextActTurn);
             unitsStats.Add(currentUnitStats);
             unitsStats.Sort();
+
             if(currentUnit.tag == "PlayerUnit")
             {
                 playerParty.GetComponent<SelectUnit>().selectCurrentUnit(currentUnit.gameObject);
