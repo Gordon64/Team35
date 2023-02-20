@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class HealthPotionObtained : MonoBehaviour
 {
+    public Bandit bandit;
     // Start is called before the first frame update
     void Start()
     {
-
+        bandit = FindObjectOfType<Bandit>();
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class HealthPotionObtained : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Bandit.health += 3;
+        bandit.health += 3;
         Destroy(this.gameObject);
     }
 }
