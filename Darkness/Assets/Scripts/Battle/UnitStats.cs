@@ -24,6 +24,8 @@ public class UnitStats : MonoBehaviour, IComparable
     [SerializeField]
     private GameObject healTextPrefab;
 
+    public List<StatusEffect> statusEffects;
+
     public int nextActTurn;
 
     private bool dead = false;
@@ -83,6 +85,24 @@ public class UnitStats : MonoBehaviour, IComparable
         if(this.health >= this.maxHealth)
         {
             this.health = this.maxHealth;
+        }
+    }
+
+    public void ProcessStatusEffects()
+    {
+        for (int i = statusEffects.Count - 1; i >= 0; i--)
+        {
+            StatusEffect statusEffect = statusEffects[i];
+            statusEffect.DecreaseDuration();
+
+            if(statusEffect.duration <= 0)
+            {
+                statusEffects.RemoveAt(i);
+            }
+            else
+            {
+                statusEffect.OnTurnStart(this);
+            }
         }
     }
 }

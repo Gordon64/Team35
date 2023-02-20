@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7206624775632731158}
   - component: {fileID: -2401650245694280861}
   m_Layer: 0
-  m_Name: EnemyUnit
+  m_Name: Angel
   m_TagString: EnemyUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   damageTextPosition: {x: 40, y: 30}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
   healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
+  statusEffects: []
   nextActTurn: 0
 --- !u!114 &-876656634205146675
 MonoBehaviour:
@@ -136,11 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetEnemyUnitPrefab: {fileID: 3538781575327652717, guid: 7fa700bcea300914096fcf55502c8b80, type: 3}
-  healthBar: {fileID: 131777247768663635, guid: da3f283d6c8e03a41b222447fcae4361, type: 3}
-  healthText: {fileID: 0}
+  healthBar: {fileID: 6271789084525495305, guid: 516bec9641cf2c943b004d9562b00207, type: 3}
   menuItemSprite: {fileID: 21300166, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   initialPosition: {x: -60, y: -30}
-  itemDimensions: {x: 10, y: 2}
+  itemDimensions: {x: 0, y: 0}
   killEnemyScript: {fileID: -876656634205146675}
 --- !u!114 &-2401650245694280861
 MonoBehaviour:

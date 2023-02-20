@@ -52,4 +52,5 @@ MonoBehaviour:
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
   prehitDialogue: 
-  posthitDialogue: You struggle in the visage of a higher being.
+  posthitDialogue: You swing at your target.
+  statusEffect: {fileID: 0}
