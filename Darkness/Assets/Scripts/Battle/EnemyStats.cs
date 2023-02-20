@@ -13,7 +13,7 @@ public class EnemyStats : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float movespeed = 5f;
+    public float movespeed;
 
 
     void Start()
@@ -51,6 +51,7 @@ public class EnemyStats : MonoBehaviour
     public void takeDamage(int damageTaken)
     {
         health -= damageTaken;
+        StartCoroutine(FlashRed());
 
         if (health <= 0)
         {
@@ -64,7 +65,6 @@ public class EnemyStats : MonoBehaviour
         {
             playerHealth.takeDamage(damage);
             takeDamage(damage);
-            StartCoroutine(FlashRed());
         }
     }
 
@@ -73,6 +73,18 @@ public class EnemyStats : MonoBehaviour
         GetComponentInChildren<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(.2f);
         GetComponentInChildren<SpriteRenderer>().color = Color.white;
+    }
+
+    public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Vector2 knockbackDirection)
+    {
+        float timer = 0;
+        while (knockbackDuration > timer)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector3(knockbackDirection.x * 350, knockbackDirection.y * knockbackPower, transform.position.z));
+            //rb.AddForce(knockbackDirection * knockbackPower);
+        }
+        yield return 0;
     }
 
     void move(Vector2 direction)

@@ -356,8 +356,10 @@ MonoBehaviour:
 
     Left Click: Attack
 
-    F: Combat
-    Idle
+    Right Click:
+    Defend
+
+    F: Toggle Run
 
     Q: Hurt
 
@@ -365,8 +367,8 @@ MonoBehaviour:
 
     Space: Jump
 
-    Escape: exit pop
-    ups'
+    Escape:
+    exit pop ups'
 --- !u!222 &82018552
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1807,6 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189d0a9ce0ad25c4ba018745774aea1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3
 --- !u!1 &636873645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4848,8 +4851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599901111efe8a74eaf8f9129427eaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 8
-  health: 8
+  maxHealth: 10
+  health: 10
   damage: 2
   playerHealth: {fileID: 1594297454}
   movespeed: 1

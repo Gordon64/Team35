@@ -23,7 +23,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Attack();
+            StartCoroutine(Attack());
         }
 
         if (attacking)
@@ -39,9 +39,11 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    private void Attack()
+    private IEnumerator Attack()
     {
+        yield return new WaitForSeconds(0.5f);
         attacking = true;
         attackArea.SetActive(attacking);
     }
+
 }

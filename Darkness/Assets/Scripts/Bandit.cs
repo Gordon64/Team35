@@ -9,11 +9,12 @@ public class Bandit : MonoBehaviour
     [SerializeField] float m_jumpForce = 7.5f;
 
     private Animator m_animator;
-    private Rigidbody2D m_body2d;
+    private Rigidbody2D rb2d;
     private Sensor_Bandit m_groundSensor;
     private bool m_grounded = false;
     private bool m_combatIdle = false;
     private bool m_isDead = false;
+    private bool m_running = false;
 
     public TMP_Text healthText;
     public static int maxHealth = 10;
@@ -24,7 +25,7 @@ public class Bandit : MonoBehaviour
     void Start()
     {
         m_animator = GetComponent<Animator>();
-        m_body2d = GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
         health = maxHealth;
         updateText();
@@ -57,10 +58,10 @@ public class Bandit : MonoBehaviour
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         // Move
-        m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+        rb2d.velocity = new Vector2(inputX * m_speed, rb2d.velocity.y);
 
         //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
+        m_animator.SetFloat("AirSpeed", rb2d.velocity.y);
 
         //Check health
         if (health <= 0)
@@ -107,8 +108,34 @@ public class Bandit : MonoBehaviour
         }
 
         //Change between idle and combat idle
-        else if (Input.GetKeyDown("f"))
+        else if (Input.GetMouseButtonDown(1))
+        {
             m_combatIdle = !m_combatIdle;
+            /*
+            if (m_combatIdle)
+            {
+                takeDamage(0);
+            }
+            else
+            {
+                takeDamage(2);
+            }
+            */
+            //Need to update this
+        }
+
+        else if (Input.GetKeyDown("f"))
+        {
+            m_running = !m_running;
+            if (m_running)
+            {
+                m_speed += 2;
+            }
+            else
+            {
+                m_speed -= 2;
+            }
+        }
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded)
@@ -116,7 +143,7 @@ public class Bandit : MonoBehaviour
             m_animator.SetTrigger("Jump");
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, m_jumpForce);
             m_groundSensor.Disable(0.2f);
         }
 
@@ -136,6 +163,7 @@ public class Bandit : MonoBehaviour
     public void takeDamage(int damage)
     {
         health -= damage;
+        m_animator.SetTrigger("Hurt");
     }
 
     void updateText()
@@ -147,4 +175,6 @@ public class Bandit : MonoBehaviour
     {
         updateText();
     }
+
+    
 }
