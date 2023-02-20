@@ -50,7 +50,7 @@ public class EnemyStats : MonoBehaviour
 
     public void takeDamage(int damageTaken)
     {
-        health -= damage;
+        health -= damageTaken;
 
         if (health <= 0)
         {
