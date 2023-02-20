@@ -80,7 +80,9 @@ public class TurnSystem : MonoBehaviour
             unitsStats.Add(currentUnitStats);
             unitsStats.Sort();
 
-            if(currentUnit.tag == "PlayerUnit")
+            currentUnitStats.GetComponent<UnitStats>().ProcessStatusEffects();
+
+            if (currentUnit.tag == "PlayerUnit")
             {
                 playerParty.GetComponent<SelectUnit>().selectCurrentUnit(currentUnit.gameObject);
             }

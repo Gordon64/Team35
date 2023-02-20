@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6974548992871132697}
   - component: {fileID: -1215179069811223699}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: BatSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fce97958da54a4c40a77191a048fa121, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e60a9fe4f206b0448b81a649296b765, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0368c28b0d5eb2b4097a617e97d14562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyEncounterPrefab: {fileID: 9052938527314244046, guid: 995310f4f2967b64fa00cbf73f1b4068, type: 3}
+  enemyEncounterPrefab: {fileID: 9052938527314244046, guid: a7a4376cd5d191740acce9e086816384, type: 3}
 --- !u!61 &-1215179069811223699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 3.65625}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.22, y: 1.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
