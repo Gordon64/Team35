@@ -2,7 +2,7 @@
 using System.Collections;
 using TMPro;
 
-public class Bandit : MonoBehaviour
+public class Bandit : MonoBehaviour, SaveLoadInterface
 {
 
     [SerializeField] float m_speed = 4.0f;
@@ -18,7 +18,7 @@ public class Bandit : MonoBehaviour
 
     public TMP_Text healthText;
     public static int maxHealth = 10;
-    public static int health = 10;
+    public int health = 10;
 
 
     // Use this for initialization
@@ -176,5 +176,17 @@ public class Bandit : MonoBehaviour
         updateText();
     }
 
-    
+    public void LoadData(SavedInfo info){
+        if(info == null){
+            UnityEngine.Debug.Log("info is null");
+            return;
+        }
+        if (info != null){
+            this.health = info.health;
+        }
+    }
+
+    public void SaveData(SavedInfo info){
+        info.health = this.health;
+    }
 }
