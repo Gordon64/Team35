@@ -8,7 +8,7 @@ public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;
 
-    private GameObject actionsMenu, enemyUnitsMenu;
+    private GameObject actionsMenu, enemyUnitsMenu, attackMenu;
 
     void Awake()
     {
@@ -19,6 +19,7 @@ public class SelectUnit : MonoBehaviour
     {
         if(scene.name == "BattleScene")
         {
+            this.attackMenu = GameObject.Find("AttackMenu");
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
         }
@@ -34,13 +35,14 @@ public class SelectUnit : MonoBehaviour
     public void selectAttack()
     {
         this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
-
+        this.attackMenu.SetActive(false);
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(true);
     }
 
     public void attackEnemyTarget(GameObject target)
     {
+        this.attackMenu.SetActive(false);
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
 
