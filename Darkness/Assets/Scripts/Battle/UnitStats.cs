@@ -9,11 +9,13 @@ using TMPro;
 public class UnitStats : MonoBehaviour, IComparable
 {
     public float health;
+    public float energy;
     public float attack;
     public float defense;
     public float speed;
 
     private float maxHealth;
+    private float maxEnergy;
 
     [SerializeField]
     private Vector2 damageTextPosition;
@@ -33,6 +35,7 @@ public class UnitStats : MonoBehaviour, IComparable
     void Start()
     {
         this.maxHealth = this.health;
+        this.maxEnergy = this.energy;
     }
 
     public void calculateNextActTurn(int currentTurn)

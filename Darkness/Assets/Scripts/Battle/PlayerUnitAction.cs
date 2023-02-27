@@ -33,5 +33,7 @@ public class PlayerUnitAction : MonoBehaviour
     {
         GameObject playerUnitHealthBar = GameObject.Find("PlayerHealthBar") as GameObject;
         playerUnitHealthBar.GetComponent<ShowUnitHealth>().changeUnit(this.gameObject);
+        GameObject playerActionEnergyBar = GameObject.Find("PlayerActionEnergyBar") as GameObject;
+        playerActionEnergyBar.GetComponent<ShowActionEnergy>().changeUnit(this.gameObject);
     }
 }
