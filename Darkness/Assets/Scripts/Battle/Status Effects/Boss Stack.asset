@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e1c14efea7ba6a4bbd840e28615792f, type: 3}
-  m_Name: Bat Stack
+  m_Name: Boss Stack
   m_EditorClassIdentifier: 
-  effectName: Stack Damage
-  description: Stacks up to three times, dealing large damage from the third stack
-    onwards. Cannot be removed.
+  effectName: Corruption
+  description: Stacks. Deals a high amount of damage above a stack threshold.
   icon: {fileID: 0}
   duration: 0
-  baseDuration: 2
+  baseDuration: 5
   curStack: 0
-  damage: 10
-  stackProc: 3
+  damage: 15
+  stackProc: 7

@@ -47,7 +47,6 @@ public class CreateEnemyMenuItems : MonoBehaviour
     //Targets Enemy on click
     public void selectEnemyTarget()
     {
-        Debug.Log("running");
         GameObject partyData = GameObject.Find("PlayerParty");
         partyData.GetComponent<SelectUnit>().attackEnemyTarget(this.gameObject);
     }
