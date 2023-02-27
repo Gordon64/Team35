@@ -5,17 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Stacking Status Effect", menuName = "Status Effects/Stack")]
 public class StackEffect : StatusEffect
 {
-    public int stack;
+    public int curStack;
     public int damage;
+    public int stackProc;
 
     public override void OnTurnStart(UnitStats unit)
     {
-        this.stack++;
+        this.curStack++;
 
-        if(stack > 3)
+        if(curStack > 3)
         {
-            unit.receiveDamage(damage);
-            this.stack = 0;
+            unit.receiveDamage(damage, false);
+            this.curStack = 0;
             this.duration--;
         }
     }

@@ -15,7 +15,6 @@ public class KillDamageText : MonoBehaviour
 
 	void OnDestroy()
 	{
-		GameObject turnSystem = GameObject.Find("TurnSystem");
-		turnSystem.GetComponent<TurnSystem>().nextTurn();
+
 	}
 }
