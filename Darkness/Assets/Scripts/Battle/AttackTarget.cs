@@ -49,6 +49,10 @@ public class AttackTarget : MonoBehaviour
         float lifestealMultiplier = (Random.value * (this.minLifestealMultiplier - this.maxLifestealMultiplier)) + this.minLifestealMultiplier;
         float heal = lifestealMultiplier * damage;
 
+        /*
+        ownerStats.useActionEnergy(5);
+        */
+
         GameObject dialogue = GameObject.Find("DialogueBox") as GameObject;
         dialogue.GetComponent<TMP_Text>().text = posthitDialogue;
 

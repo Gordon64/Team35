@@ -14,14 +14,20 @@ public class UnitStats : MonoBehaviour, IComparable
     public float defense;
     public float speed;
 
-    private float maxHealth;
-    private float maxEnergy;
+    public float maxHealth;
+    public float maxEnergy;
 
     [SerializeField]
     private Vector2 damageTextPosition;
 
     [SerializeField]
     private GameObject damageTextPrefab;
+
+    [SerializeField]
+    private Vector2 actionEnergyTextPosition;
+
+    [SerializeField]
+    private GameObject actionEnergyTextPrefab;
 
     [SerializeField]
     private GameObject healTextPrefab;
@@ -72,6 +78,48 @@ public class UnitStats : MonoBehaviour, IComparable
             this.gameObject.tag = "DeadUnit";
             Destroy(this.gameObject);
         }
+    }
+
+    public bool enoughActionEnergy(float energySpent)
+    {
+        float totalActionEnergy = this.energy - energySpent;
+        if (totalActionEnergy < 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void useActionEnergy(float energySpent)
+    {
+        this.energy -= energySpent;
+        
+        GameObject HUDCanvas = GameObject.Find("HUDCanvas");
+        GameObject energySpentText = Instantiate(this.actionEnergyTextPrefab, HUDCanvas.transform) as GameObject;
+        energySpentText.GetComponent<TMP_Text>().text = "" + energySpent.ToString("-#.");
+        energySpentText.transform.localPosition = this.actionEnergyTextPosition;
+        energySpentText.transform.localScale = new Vector2(2.0f, 2.0f);
+    }
+
+    public void replenishActionEnergy(float energyRefill)
+    {
+        this.energy += energyRefill;
+        if (this.energy > maxEnergy)
+        {
+            this.energy = maxEnergy;
+        }
+
+        GameObject HUDCanvas = GameObject.Find("HUDCanvas");
+        GameObject energySpentText = Instantiate(this.actionEnergyTextPrefab, HUDCanvas.transform) as GameObject;
+        energySpentText.GetComponent<TMP_Text>().text = "" + energyRefill.ToString("+#.");
+        energySpentText.transform.localPosition = this.actionEnergyTextPosition;
+        energySpentText.transform.localScale = new Vector2(2.0f, 2.0f);
+
+        GameObject dialogue = GameObject.Find("DialogueBox") as GameObject;
+        dialogue.GetComponent<TMP_Text>().text = "You wait and replenish some energy.";
     }
 
     public void receiveHeal(float heal)

@@ -27,6 +27,12 @@ public class PlayerUnitAction : MonoBehaviour
     public void selectAttack()
     {
         this.currentAttack = this.physicalAttack;
+
+    }
+
+    public void selectWait()
+    {
+        
     }
 
     public void updateHUD()
