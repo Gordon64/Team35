@@ -33,12 +33,26 @@ public class SelectUnit : MonoBehaviour
 
     public void selectAttack()
     {
-        this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
-
-        this.actionsMenu.SetActive(false);
-        this.enemyUnitsMenu.SetActive(true);
+        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
+        if (currentUnitStats.enoughActionEnergy(5))
+        {
+            currentUnitStats.useActionEnergy(5);
+            this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
+            this.actionsMenu.SetActive(false);
+            this.enemyUnitsMenu.SetActive(true);
+        }
+        else
+        {
+            selectWait();
+        }
     }
-
+    
+    public void selectWait()
+    {
+        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
+        currentUnitStats.replenishActionEnergy(3);
+    }
+    
     public void attackEnemyTarget(GameObject target)
     {
         this.actionsMenu.SetActive(false);
