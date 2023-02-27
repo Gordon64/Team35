@@ -8,7 +8,7 @@ public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;
 
-    private GameObject actionsMenu, enemyUnitsMenu;
+    private GameObject actionsMenu, enemyUnitsMenu, attacksMenu;
 
     void Awake()
     {
@@ -21,6 +21,7 @@ public class SelectUnit : MonoBehaviour
         {
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
+            this.attacksMenu = GameObject.Find("SkillsMenu");
         }
     }
 
@@ -28,14 +29,32 @@ public class SelectUnit : MonoBehaviour
     {
         this.currentUnit = unit;
         this.actionsMenu.SetActive(true);
+        this.attacksMenu.SetActive(false);
         this.currentUnit.GetComponent<PlayerUnitAction>().updateHUD();
     }
 
-    public void selectAttack()
+    public void selectAttackType()
     {
-        this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(true);
+        this.enemyUnitsMenu.SetActive(false);
+    }
+
+    public void selectAttack(GameObject attack)
+    {
+        this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack(attack);
 
         this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.enemyUnitsMenu.SetActive(true);
+    }
+
+    public void defaultAttack()
+    {
+        this.currentUnit.GetComponent<PlayerUnitAction>().basicAttack();
+
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(true);
     }
 
@@ -43,6 +62,7 @@ public class SelectUnit : MonoBehaviour
     {
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
 
         this.currentUnit.GetComponent<PlayerUnitAction>().act(target);
     }

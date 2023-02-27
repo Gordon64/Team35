@@ -53,7 +53,7 @@ public class UnitStats : MonoBehaviour, IComparable
         return this.dead;
     }
 
-    public void receiveDamage(float damage)
+    public void receiveDamage(float damage, bool endTurn)
     {
         this.health -= damage;
         //hit animation plays
@@ -64,13 +64,16 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
 
-        Debug.Log(damage);
-
         if(this.health <= 0)
         {
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
             Destroy(this.gameObject);
+        }
+
+        if (endTurn)
+        {
+            StartCoroutine(wait());
         }
     }
 
@@ -83,7 +86,6 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.GetComponent<TMP_Text>().text = "" + heal.ToString("+#.");
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
-        Debug.Log(heal);
 
         if(this.health >= this.maxHealth)
         {
@@ -107,5 +109,13 @@ public class UnitStats : MonoBehaviour, IComparable
                 statusEffect.OnTurnStart(this);
             }
         }
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(2);
+
+        GameObject turnSystem = GameObject.Find("TurnSystem");
+        turnSystem.GetComponent<TurnSystem>().nextTurn();
     }
 }

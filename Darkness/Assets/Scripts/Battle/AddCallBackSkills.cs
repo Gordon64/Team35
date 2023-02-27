@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class AddButtonCallback : MonoBehaviour
+public class AddCallBackSkills : MonoBehaviour
 {
     void Start()
     {
@@ -14,6 +13,6 @@ public class AddButtonCallback : MonoBehaviour
     private void addCallback()
     {
         GameObject playerParty = GameObject.Find("PlayerParty");
-        playerParty.GetComponent<SelectUnit>().defaultAttack();
+        playerParty.GetComponent<SelectUnit>().selectAttackType();
     }
 }
