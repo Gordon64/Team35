@@ -159,4 +159,3 @@ MonoBehaviour:
   attack3: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
   attack4: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
   targetsTag: PlayerUnit
-  attacks: []

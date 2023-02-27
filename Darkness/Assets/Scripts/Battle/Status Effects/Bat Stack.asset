@@ -18,6 +18,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   duration: 0
   baseDuration: 2
-  curStack: 0
+  stack: 1
   damage: 10
-  stackProc: 3

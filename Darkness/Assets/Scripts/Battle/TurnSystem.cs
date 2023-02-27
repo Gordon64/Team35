@@ -84,12 +84,10 @@ public class TurnSystem : MonoBehaviour
 
             if (currentUnit.tag == "PlayerUnit")
             {
-                Debug.Log("Player Turn");
                 playerParty.GetComponent<SelectUnit>().selectCurrentUnit(currentUnit.gameObject);
             }
             else
             {
-                Debug.Log("Enemy Turn");
                 currentUnit.GetComponent<EnemyUnitAction>().act();
             }
         }
