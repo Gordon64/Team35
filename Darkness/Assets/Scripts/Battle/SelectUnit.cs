@@ -8,11 +8,7 @@ public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;
 
-<<<<<<< HEAD
-    private GameObject actionsMenu, enemyUnitsMenu, attackMenu;
-=======
     private GameObject actionsMenu, enemyUnitsMenu, attacksMenu;
->>>>>>> parent of 4840068 (Merge branch 'main' of https://github.com/Gordon64/Team35)
 
     void Awake()
     {
@@ -23,7 +19,6 @@ public class SelectUnit : MonoBehaviour
     {
         if(scene.name == "BattleScene")
         {
-            this.attackMenu = GameObject.Find("AttackMenu");
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
             this.attacksMenu = GameObject.Find("SkillsMenu");
@@ -65,7 +60,6 @@ public class SelectUnit : MonoBehaviour
 
     public void attackEnemyTarget(GameObject target)
     {
-        this.attackMenu.SetActive(false);
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
         this.attacksMenu.SetActive(false);
