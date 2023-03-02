@@ -34,12 +34,6 @@ public class SelectUnit : MonoBehaviour
 
     public void selectAttack()
     {
-<<<<<<< HEAD
-        this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
-        this.attackMenu.SetActive(false);
-        this.actionsMenu.SetActive(false);
-        this.enemyUnitsMenu.SetActive(true);
-=======
         UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
         if (currentUnitStats.enoughActionEnergy(5))
         {
@@ -52,7 +46,6 @@ public class SelectUnit : MonoBehaviour
         {
             selectWait();
         }
->>>>>>> 48400685789e03af90df9a6f26d4b56152b268a2
     }
     
     public void selectWait()
