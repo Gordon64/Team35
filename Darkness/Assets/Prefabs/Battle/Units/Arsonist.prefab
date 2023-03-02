@@ -154,8 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0c06c9e4e697c4b9f084d986c97eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1: {fileID: 7018705526504252920, guid: d1c8622bf207df343b9db987d6c1c51f, type: 3}
-  attack2: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
-  attack3: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
-  attack4: {fileID: 7018705526504252920, guid: f7fc9c3f356df0048bc86f1c34899702, type: 3}
   targetsTag: PlayerUnit
+  attacks:
+  - {fileID: 7018705526504252920, guid: d1c8622bf207df343b9db987d6c1c51f, type: 3}
+  - {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}

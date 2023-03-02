@@ -9,7 +9,7 @@ public class BurnEffect : StatusEffect
 
     public override void OnTurnStart(UnitStats unit)
     {
-        unit.receiveDamage(damagePerTurn);
+        unit.receiveDamage(damagePerTurn, false);
         duration--;
     }
 }

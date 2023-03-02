@@ -8,7 +8,11 @@ public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;
 
+<<<<<<< HEAD
     private GameObject actionsMenu, enemyUnitsMenu, attackMenu;
+=======
+    private GameObject actionsMenu, enemyUnitsMenu, attacksMenu;
+>>>>>>> parent of 4840068 (Merge branch 'main' of https://github.com/Gordon64/Team35)
 
     void Awake()
     {
@@ -22,6 +26,7 @@ public class SelectUnit : MonoBehaviour
             this.attackMenu = GameObject.Find("AttackMenu");
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
+            this.attacksMenu = GameObject.Find("SkillsMenu");
         }
     }
 
@@ -29,36 +34,41 @@ public class SelectUnit : MonoBehaviour
     {
         this.currentUnit = unit;
         this.actionsMenu.SetActive(true);
+        this.attacksMenu.SetActive(false);
         this.currentUnit.GetComponent<PlayerUnitAction>().updateHUD();
     }
 
-    public void selectAttack()
+    public void selectAttackType()
     {
-        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
-        if (currentUnitStats.enoughActionEnergy(5))
-        {
-            currentUnitStats.useActionEnergy(5);
-            this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack();
-            this.actionsMenu.SetActive(false);
-            this.enemyUnitsMenu.SetActive(true);
-        }
-        else
-        {
-            selectWait();
-        }
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(true);
+        this.enemyUnitsMenu.SetActive(false);
     }
-    
-    public void selectWait()
+
+    public void selectAttack(GameObject attack)
     {
-        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
-        currentUnitStats.replenishActionEnergy(3);
+        this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack(attack);
+
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.enemyUnitsMenu.SetActive(true);
     }
-    
+
+    public void defaultAttack()
+    {
+        this.currentUnit.GetComponent<PlayerUnitAction>().basicAttack();
+
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.enemyUnitsMenu.SetActive(true);
+    }
+
     public void attackEnemyTarget(GameObject target)
     {
         this.attackMenu.SetActive(false);
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
 
         this.currentUnit.GetComponent<PlayerUnitAction>().act(target);
     }

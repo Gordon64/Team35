@@ -14,20 +14,14 @@ public class UnitStats : MonoBehaviour, IComparable
     public float defense;
     public float speed;
 
-    public float maxHealth;
-    public float maxEnergy;
+    private float maxHealth;
+    private float maxEnergy;
 
     [SerializeField]
     private Vector2 damageTextPosition;
 
     [SerializeField]
     private GameObject damageTextPrefab;
-
-    [SerializeField]
-    private Vector2 actionEnergyTextPosition;
-
-    [SerializeField]
-    private GameObject actionEnergyTextPrefab;
 
     [SerializeField]
     private GameObject healTextPrefab;
@@ -59,7 +53,7 @@ public class UnitStats : MonoBehaviour, IComparable
         return this.dead;
     }
 
-    public void receiveDamage(float damage)
+    public void receiveDamage(float damage, bool endTurn)
     {
         this.health -= damage;
         //hit animation plays
@@ -70,56 +64,17 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
 
-        Debug.Log(damage);
-
         if(this.health <= 0)
         {
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
             Destroy(this.gameObject);
         }
-    }
 
-    public bool enoughActionEnergy(float energySpent)
-    {
-        float totalActionEnergy = this.energy - energySpent;
-        if (totalActionEnergy < 0)
+        if (endTurn)
         {
-            return false;
+            StartCoroutine(wait());
         }
-        else
-        {
-            return true;
-        }
-    }
-
-    public void useActionEnergy(float energySpent)
-    {
-        this.energy -= energySpent;
-        
-        GameObject HUDCanvas = GameObject.Find("HUDCanvas");
-        GameObject energySpentText = Instantiate(this.actionEnergyTextPrefab, HUDCanvas.transform) as GameObject;
-        energySpentText.GetComponent<TMP_Text>().text = "" + energySpent.ToString("-#.");
-        energySpentText.transform.localPosition = this.actionEnergyTextPosition;
-        energySpentText.transform.localScale = new Vector2(2.0f, 2.0f);
-    }
-
-    public void replenishActionEnergy(float energyRefill)
-    {
-        this.energy += energyRefill;
-        if (this.energy > maxEnergy)
-        {
-            this.energy = maxEnergy;
-        }
-
-        GameObject HUDCanvas = GameObject.Find("HUDCanvas");
-        GameObject energySpentText = Instantiate(this.actionEnergyTextPrefab, HUDCanvas.transform) as GameObject;
-        energySpentText.GetComponent<TMP_Text>().text = "" + energyRefill.ToString("+#.");
-        energySpentText.transform.localPosition = this.actionEnergyTextPosition;
-        energySpentText.transform.localScale = new Vector2(2.0f, 2.0f);
-
-        GameObject dialogue = GameObject.Find("DialogueBox") as GameObject;
-        dialogue.GetComponent<TMP_Text>().text = "You wait and replenish some energy.";
     }
 
     public void receiveHeal(float heal)
@@ -131,7 +86,6 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.GetComponent<TMP_Text>().text = "" + heal.ToString("+#.");
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
-        Debug.Log(heal);
 
         if(this.health >= this.maxHealth)
         {
@@ -155,5 +109,13 @@ public class UnitStats : MonoBehaviour, IComparable
                 statusEffect.OnTurnStart(this);
             }
         }
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(2);
+
+        GameObject turnSystem = GameObject.Find("TurnSystem");
+        turnSystem.GetComponent<TurnSystem>().nextTurn();
     }
 }
