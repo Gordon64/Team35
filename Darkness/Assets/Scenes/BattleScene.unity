@@ -552,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 598403772}
   m_Layer: 5
-  m_Name: SkillsMenu
+  m_Name: AttackMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1531,7 +1531,6 @@ GameObject:
   - component: {fileID: 1070620298}
   - component: {fileID: 1070620297}
   - component: {fileID: 1070620296}
-  - component: {fileID: 1070620295}
   m_Layer: 5
   m_Name: SkillsAction
   m_TagString: Untagged
@@ -1560,18 +1559,6 @@ RectTransform:
   m_AnchoredPosition: {x: 400, y: -275}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1070620295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070620293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a27a28f09fe4434a8169a5492099996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1070620296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +2067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1276692429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9912ba12121a2f4a949f3c5fa206369, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a27a28f09fe4434a8169a5492099996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1346939913
@@ -2928,7 +2915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d999bf9901a19f42a4ab33cfdad8ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runAway: LevelScene
+  runAwayTo: LevelScene
 --- !u!1001 &2924771703952640965
 PrefabInstance:
   m_ObjectHideFlags: 0

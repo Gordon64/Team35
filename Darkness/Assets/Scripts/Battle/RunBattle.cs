@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class RunBattle : MonoBehaviour
 {
-    [SerializeField] private string runAway = "LevelScene";
+    [SerializeField] private string runAwayTo = "LevelScene";
 
     public void RunButton()
     {
-        SceneManager.LoadScene(runAway);
+        SceneManager.LoadScene(runAwayTo);
     }
 }
