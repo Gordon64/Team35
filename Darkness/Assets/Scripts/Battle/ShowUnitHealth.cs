@@ -6,7 +6,7 @@ public class ShowUnitHealth : ShowUnitStat
 {
     override protected float newStatValue()
     {
-        textElement.text = "HP - " + unit.GetComponent<UnitStats>().health.ToString("#.") + "/" + unit.GetComponent<UnitStats>().maxHealth.ToString("#.");
+        textElement.text = "HP - " + unit.GetComponent<UnitStats>().health.ToString("#.");
         return unit.GetComponent<UnitStats>().health;
     }   
 }

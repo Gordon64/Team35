@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WaitButtonCallback : MonoBehaviour
+public class AddCallBackSkills : MonoBehaviour
 {
     void Start()
     {
@@ -13,6 +13,6 @@ public class WaitButtonCallback : MonoBehaviour
     private void addCallback()
     {
         GameObject playerParty = GameObject.Find("PlayerParty");
-        playerParty.GetComponent<SelectUnit>().selectWait();
+        playerParty.GetComponent<SelectUnit>().selectAttackType();
     }
 }
