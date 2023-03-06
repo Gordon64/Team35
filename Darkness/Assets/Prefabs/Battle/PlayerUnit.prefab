@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  energy: 0
   attack: 10
   defense: 0
   speed: 15
   damageTextPosition: {x: 0, y: 0}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
   healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
+  statusEffects: []
   nextActTurn: 0
 --- !u!114 &-7970524053244345887
 MonoBehaviour:
@@ -66,3 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicalAttack: {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}
+  attacks:
+  - {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}
+  - {fileID: 7018705526504252920, guid: ad3285eea79eabd49860f08b3c63fd6a, type: 3}
+  - {fileID: 7018705526504252920, guid: aae779f9260b1224397bd468f69b0360, type: 3}
