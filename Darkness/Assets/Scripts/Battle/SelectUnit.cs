@@ -8,7 +8,7 @@ public class SelectUnit : MonoBehaviour
 {
     private GameObject currentUnit;
 
-    private GameObject actionsMenu, enemyUnitsMenu, attacksMenu;
+    private GameObject actionsMenu, enemyUnitsMenu, attacksMenu, blockMenu;
 
     void Awake()
     {
@@ -22,6 +22,7 @@ public class SelectUnit : MonoBehaviour
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
             this.attacksMenu = GameObject.Find("AttackMenu");
+            this.blockMenu = GameObject.Find("BlockMenu");
         }
     }
 
@@ -30,13 +31,16 @@ public class SelectUnit : MonoBehaviour
         this.currentUnit = unit;
         this.actionsMenu.SetActive(true);
         this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
         this.currentUnit.GetComponent<PlayerUnitAction>().updateHUD();
+        this.currentUnit.GetComponent<PlayerUnitBlock>().updateHUD();
     }
 
     public void selectAttackType()
     {
         this.actionsMenu.SetActive(false);
         this.attacksMenu.SetActive(true);
+        this.blockMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
     }
 
@@ -46,6 +50,7 @@ public class SelectUnit : MonoBehaviour
 
         this.actionsMenu.SetActive(false);
         this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(true);
     }
 
@@ -55,6 +60,7 @@ public class SelectUnit : MonoBehaviour
 
         this.actionsMenu.SetActive(false);
         this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(true);
     }
 
@@ -63,8 +69,37 @@ public class SelectUnit : MonoBehaviour
         this.actionsMenu.SetActive(false);
         this.enemyUnitsMenu.SetActive(false);
         this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
 
         this.currentUnit.GetComponent<PlayerUnitAction>().act(target);
     }
 
+    //blocking code
+    public void selectBlockType()
+    {
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(true);
+        this.enemyUnitsMenu.SetActive(false);
+    }
+
+    public void selectBlock(GameObject block)
+    {
+        this.currentUnit.GetComponent<PlayerUnitBlock>().selectBlock(block);
+
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
+        this.enemyUnitsMenu.SetActive(true);
+    }
+
+    public void defaultBlock()
+    {
+        this.currentUnit.GetComponent<PlayerUnitBlock>().basicBlock();
+
+        this.actionsMenu.SetActive(false);
+        this.attacksMenu.SetActive(false);
+        this.blockMenu.SetActive(false);
+        this.enemyUnitsMenu.SetActive(true);
+    }
 }
