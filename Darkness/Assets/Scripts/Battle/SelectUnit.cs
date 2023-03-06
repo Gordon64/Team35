@@ -33,7 +33,6 @@ public class SelectUnit : MonoBehaviour
         this.attacksMenu.SetActive(false);
         this.blockMenu.SetActive(false);
         this.currentUnit.GetComponent<PlayerUnitAction>().updateHUD();
-        this.currentUnit.GetComponent<PlayerUnitBlock>().updateHUD();
     }
 
     public void selectAttackType()
@@ -83,23 +82,4 @@ public class SelectUnit : MonoBehaviour
         this.enemyUnitsMenu.SetActive(false);
     }
 
-    public void selectBlock(GameObject block)
-    {
-        this.currentUnit.GetComponent<PlayerUnitBlock>().selectBlock(block);
-
-        this.actionsMenu.SetActive(false);
-        this.attacksMenu.SetActive(false);
-        this.blockMenu.SetActive(false);
-        this.enemyUnitsMenu.SetActive(true);
-    }
-
-    public void defaultBlock()
-    {
-        this.currentUnit.GetComponent<PlayerUnitBlock>().basicBlock();
-
-        this.actionsMenu.SetActive(false);
-        this.attacksMenu.SetActive(false);
-        this.blockMenu.SetActive(false);
-        this.enemyUnitsMenu.SetActive(true);
-    }
 }
