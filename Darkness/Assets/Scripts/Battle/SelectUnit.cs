@@ -21,7 +21,7 @@ public class SelectUnit : MonoBehaviour
         {
             this.actionsMenu = GameObject.Find("ActionsMenu");
             this.enemyUnitsMenu = GameObject.Find("EnemyUnitsMenu");
-            this.attacksMenu = GameObject.Find("SkillsMenu");
+            this.attacksMenu = GameObject.Find("AttackMenu");
         }
     }
 
