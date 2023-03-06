@@ -1262,6 +1262,7 @@ GameObject:
   - component: {fileID: 857178252}
   - component: {fileID: 857178251}
   - component: {fileID: 857178250}
+  - component: {fileID: 857178253}
   m_Layer: 5
   m_Name: BlockAction
   m_TagString: Untagged
@@ -1384,6 +1385,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857178248}
   m_CullTransparentMesh: 1
+--- !u!114 &857178253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857178248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81bc3fb4b92efe4aa7a37f9497e9085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1068405432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,6 +2951,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1117026582}
     m_Modifications:
     - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7018705526504252920, guid: 500288f7c51479847ae8a3d4bc03a389, type: 3}
+    - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: attacks.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2962,6 +2979,22 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: defense
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: maxEnergy
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: defaultDefense
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: damageTextPosition.x
       value: -600
       objectReference: {fileID: 0}
@@ -2969,6 +3002,10 @@ PrefabInstance:
       propertyPath: damageTextPosition.y
       value: -120
       objectReference: {fileID: 0}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: actionEnergyTextPrefab
+      value: 
+      objectReference: {fileID: 4050106465722132034, guid: b02cea98394c03a4681294f4417bb011, type: 3}
     - target: {fileID: 5517139317162566873, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: m_RootOrder
       value: -1

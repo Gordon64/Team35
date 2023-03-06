@@ -8,6 +8,9 @@ public class PlayerUnitAction : MonoBehaviour
     private GameObject physicalAttack;
 
     [SerializeField]
+    private GameObject block;
+
+    [SerializeField]
     public List<GameObject> attacks;
 
     private GameObject currentAttack;
@@ -17,6 +20,9 @@ public class PlayerUnitAction : MonoBehaviour
     {
         this.physicalAttack = Instantiate(this.physicalAttack, this.transform);
         this.physicalAttack.GetComponent<AttackTarget>().owner = this.gameObject;
+
+        this.block = Instantiate(this.block, this.transform);
+        this.block.GetComponent<AttackTarget>().owner = this.gameObject;
 
         this.currentAttack = this.physicalAttack;
 
@@ -40,6 +46,11 @@ public class PlayerUnitAction : MonoBehaviour
     public void basicAttack()
     {
         this.currentAttack = physicalAttack;
+    }
+
+    public void blockAttack()
+    {
+        this.currentAttack = block;
     }
 
     public void updateHUD()
