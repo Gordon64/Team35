@@ -66,14 +66,5 @@ public class SelectUnit : MonoBehaviour
 
         this.currentUnit.GetComponent<PlayerUnitAction>().act(target);
     }
-    
-    //blocking code
-    public void selectBlockType()
-    {
-        this.actionsMenu.SetActive(false);
-        this.attacksMenu.SetActive(false);
-        this.blockMenu.SetActive(true);
-        this.enemyUnitsMenu.SetActive(false);
-    }
 
 }
