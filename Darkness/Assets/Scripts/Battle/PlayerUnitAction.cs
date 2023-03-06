@@ -20,7 +20,7 @@ public class PlayerUnitAction : MonoBehaviour
 
         this.currentAttack = this.physicalAttack;
 
-        for(int i = 0; i < attacks.Count; i++)
+        for (int i = 0; i < attacks.Count; i++)
         {
             attacks[i] = Instantiate(attacks[i], this.transform);
             attacks[i].GetComponent<AttackTarget>().owner = this.gameObject;

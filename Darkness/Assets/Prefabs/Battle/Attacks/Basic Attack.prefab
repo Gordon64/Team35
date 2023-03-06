@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7018705526504252921}
   - component: {fileID: 1148291943251712332}
   m_Layer: 0
-  m_Name: BasicAttack
+  m_Name: Basic Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b132986d0249674bba415a385383428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
+  owner: {fileID: 7018705526504252920}
   minAttackMultiplier: 0.5
   maxAttackMultiplier: 1
   minDefenseMultiplier: 0.2

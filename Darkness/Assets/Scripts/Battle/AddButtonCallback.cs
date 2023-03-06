@@ -14,6 +14,7 @@ public class AddButtonCallback : MonoBehaviour
     private void addCallback()
     {
         GameObject playerParty = GameObject.Find("PlayerParty");
+        //.defaultAttack();
         playerParty.GetComponent<SelectUnit>().defaultAttack();
     }
 }

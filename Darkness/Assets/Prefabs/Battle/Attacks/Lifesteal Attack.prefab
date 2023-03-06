@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7018705526504252922}
   - component: {fileID: 7018705526504252921}
   m_Layer: 0
-  m_Name: LifestealAttack
+  m_Name: Lifesteal Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,3 +53,4 @@ MonoBehaviour:
   maxLifestealMultiplier: 0.5
   prehitDialogue: 
   posthitDialogue: A strong blow strikes deep at your core, sapping your vitality.
+  statusEffect: {fileID: 0}

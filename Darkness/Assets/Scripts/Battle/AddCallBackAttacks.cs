@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AddCallBackSkills : MonoBehaviour
+public class AddCallBackAttacks : MonoBehaviour
 {
     void Start()
     {

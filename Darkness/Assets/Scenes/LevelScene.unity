@@ -7305,14 +7305,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: attacks.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: attacks.Array.data[0]
       value: 
-      objectReference: {fileID: 7018705526504252920, guid: ad3285eea79eabd49860f08b3c63fd6a, type: 3}
+      objectReference: {fileID: 7018705526504252920, guid: 6703e72ec9c92a7478f75d0a874c6648, type: 3}
     - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: attacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 7018705526504252920, guid: ad3285eea79eabd49860f08b3c63fd6a, type: 3}
+    - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: attacks.Array.data[2]
       value: 
       objectReference: {fileID: 7018705526504252920, guid: aae779f9260b1224397bd468f69b0360, type: 3}
     - target: {fileID: 1872855528591086782, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
