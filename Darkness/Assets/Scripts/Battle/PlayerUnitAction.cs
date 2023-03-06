@@ -22,7 +22,7 @@ public class PlayerUnitAction : MonoBehaviour
 
         for(int i = 0; i < attacks.Count; i++)
         {
-            attacks[i] = Instantiate(attacks[i]);
+            attacks[i] = Instantiate(attacks[i], this.transform);
             attacks[i].GetComponent<AttackTarget>().owner = this.gameObject;
         }
     }

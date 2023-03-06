@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class TurnSystem : MonoBehaviour
 {
-    private List<UnitStats> unitsStats;
+    public List<UnitStats> unitsStats;
 
     [SerializeField]
     private GameObject actionsMenu, enemyUnitsMenu;
@@ -38,8 +38,11 @@ public class TurnSystem : MonoBehaviour
         //Sorts units by turn order
         unitsStats.Sort();
 
-        this.actionsMenu.SetActive(false);
-        this.enemyUnitsMenu.SetActive(false);
+        if(actionsMenu != null && enemyUnitsMenu != null)
+        {
+            this.actionsMenu.SetActive(false);
+            this.enemyUnitsMenu.SetActive(false);
+        }
 
         this.nextTurn();
     }
@@ -61,7 +64,7 @@ public class TurnSystem : MonoBehaviour
             SceneManager.LoadScene("LevelScene");
         }
 
-        //Top of turn list is popped, unit takes their turn
+        //Top of turn list is popped, popped unit takes their turn
         UnitStats currentUnitStats = unitsStats[0];
         unitsStats.Remove(currentUnitStats);
         GameObject playerParty = GameObject.Find("PlayerParty");
@@ -85,7 +88,10 @@ public class TurnSystem : MonoBehaviour
             if (currentUnit.tag == "PlayerUnit")
             {
                 Debug.Log("Player Turn");
-                playerParty.GetComponent<SelectUnit>().selectCurrentUnit(currentUnit.gameObject);
+                if(playerParty != null)
+                {
+                    playerParty.GetComponent<SelectUnit>().selectCurrentUnit(currentUnit.gameObject);
+                }
             }
             else
             {
