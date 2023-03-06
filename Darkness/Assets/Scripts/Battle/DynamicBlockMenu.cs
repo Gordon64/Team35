@@ -16,6 +16,7 @@ public class DynamicBlockMenu : MonoBehaviour
         GameObject playerParty = GameObject.Find("PlayerParty");
         blockList = playerParty.GetComponentInChildren<PlayerUnitBlock>().blockOptions;
 
+
         foreach (GameObject block in blockList)
         {
             GameObject button = Instantiate(buttonTemplate) as GameObject;
