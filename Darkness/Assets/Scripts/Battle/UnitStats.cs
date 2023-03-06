@@ -36,6 +36,10 @@ public class UnitStats : MonoBehaviour, IComparable
     {
         this.maxHealth = this.health;
         this.maxEnergy = this.energy;
+        if (this.speed == 0)
+        {
+            this.speed = 1;
+        }
     }
 
     public void calculateNextActTurn(int currentTurn)
@@ -95,18 +99,21 @@ public class UnitStats : MonoBehaviour, IComparable
 
     public void ProcessStatusEffects()
     {
-        for (int i = statusEffects.Count - 1; i >= 0; i--)
+        if (statusEffects != null)
         {
-            StatusEffect statusEffect = statusEffects[i];
-            statusEffect.DecreaseDuration();
+            for (int i = statusEffects.Count - 1; i >= 0; i--)
+            {
+                StatusEffect statusEffect = statusEffects[i];
+                statusEffect.DecreaseDuration();
 
-            if(statusEffect.duration <= 0)
-            {
-                statusEffects.RemoveAt(i);
-            }
-            else
-            {
-                statusEffect.OnTurnStart(this);
+                if(statusEffect.duration <= 0)
+                {
+                    statusEffects.RemoveAt(i);
+                }
+                else
+                {
+                    statusEffect.OnTurnStart(this);
+                }
             }
         }
     }
