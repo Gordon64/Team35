@@ -9,4 +9,10 @@ public class InventoryItem :ScriptableObject
     public string itemName;
     public int ourValue;
     public Sprite itemIcon;
+    public ItemType itemType;
+
+    public enum ItemType{
+        Basic_Potion,
+        Basic_Sword
+    }
 }

@@ -35,6 +35,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(anItem.gameObject);
         }
 
+        //prints item name & image to inventory
         foreach (var anItem in ourItems)
         {
             GameObject ob = Instantiate(TheItem, ItemContent);
