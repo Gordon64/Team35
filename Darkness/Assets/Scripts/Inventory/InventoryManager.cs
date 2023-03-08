@@ -14,6 +14,8 @@ public class InventoryManager : MonoBehaviour
 
     public Toggle RemoveItems;
 
+    public ItemController[] invItems;
+
     public void Awake()
     {
         Instance = this;
@@ -43,10 +45,17 @@ public class InventoryManager : MonoBehaviour
             GameObject ob = Instantiate(TheItem, ItemContent);
             var ItemText = ob.transform.Find("ItemText").GetComponent<TextMeshProUGUI>();
             var ItemImage = ob.transform.Find("ItemImage").GetComponent<Image>();
+            var removeButton = ob.transform.Find("RemoveButton").GetComponent<Button>();
 
             ItemText.text = anItem.itemName;
             ItemImage.sprite  = anItem.itemIcon;
+
+            if(RemoveItems.isOn)
+                removeButton.gameObject.SetActive(true);
+                
         }
+
+        SetInvItems();
     }
 
     //allows to remove items from inventory
@@ -66,5 +75,16 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
+    }
+
+    //set the items in the inventory
+    public void SetInvItems()
+    {
+        invItems = ItemContent.GetComponentsInChildren<ItemController>();
+
+        for (int n = 0; n < ourItems.Count; n++)
+        {
+            invItems[n].addItem(ourItems[n]);
+        }
     }
 }
