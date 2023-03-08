@@ -20,7 +20,9 @@ public class DynamicAttackMenu : MonoBehaviour
         {
             GameObject button = Instantiate(buttonTemplate) as GameObject;
             button.SetActive(true);
-            button.GetComponentInChildren<TMP_Text>().text = attack.name;
+            string rmvString = "(Clone)";
+            string fullString = attack.name.Replace(rmvString, "");
+            button.GetComponentInChildren<TMP_Text>().text = fullString;
             button.transform.SetParent(buttonContainer, false);
 
             Button objButton = button.GetComponent<Button>();
