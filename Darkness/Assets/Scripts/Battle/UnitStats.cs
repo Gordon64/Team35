@@ -16,6 +16,7 @@ public class UnitStats : MonoBehaviour, IComparable
 
     public float maxHealth;
     public float maxEnergy;
+    public float defaultDefense;
 
     [SerializeField]
     private Vector2 damageTextPosition;
@@ -101,6 +102,21 @@ public class UnitStats : MonoBehaviour, IComparable
         {
             this.health = this.maxHealth;
         }
+    }
+
+    public void increasedDefense(float defenseAmount, bool endTurn)
+    {
+        this.defense = this.defense * defenseAmount;
+
+        if (endTurn)
+        {
+            StartCoroutine(wait());
+        }
+    }
+
+    public void returnDefense()
+    {
+        this.defense = this.defaultDefense;
     }
 
     public bool enoughActionEnergy(float energySpent)

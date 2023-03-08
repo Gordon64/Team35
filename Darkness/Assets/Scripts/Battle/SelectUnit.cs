@@ -10,6 +10,9 @@ public class SelectUnit : MonoBehaviour
 
     private GameObject actionsMenu, enemyUnitsMenu, attacksMenu, blockMenu;
 
+    private UnitStats currentUnitStats;
+    private PlayerUnitAction currentPlayerUnitAction;
+
     void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -45,12 +48,19 @@ public class SelectUnit : MonoBehaviour
 
     public void selectAttack(GameObject attack)
     {
-        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
-        if (currentUnitStats.enoughActionEnergy(5))
+        currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
+        currentPlayerUnitAction = this.currentUnit.GetComponent<PlayerUnitAction>();
+
+        currentPlayerUnitAction.selectAttack(attack); //Selects an attack prefab
+
+        float attackCost = currentPlayerUnitAction.currentAttack.GetComponent<AttackTarget>().energyCost; //Gets the energy cost of the attack
+
+        //Uses the attack if enough energy can be consumed, otherwise a block attack will be used
+        if (currentUnitStats.enoughActionEnergy(attackCost))
         {
-            currentUnitStats.useActionEnergy(5);
-            this.currentUnit.GetComponent<PlayerUnitAction>().selectAttack(attack);
+            currentUnitStats.useActionEnergy(attackCost);
             this.actionsMenu.SetActive(false);
+            this.attacksMenu.SetActive(false);
             this.enemyUnitsMenu.SetActive(true);
         }
         else
@@ -81,7 +91,8 @@ public class SelectUnit : MonoBehaviour
 
     public void selectBlock()
     {
-        UnitStats currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
+        currentUnitStats = this.currentUnit.GetComponent<UnitStats>();
+
         currentUnitStats.replenishActionEnergy(3);
 
         this.currentUnit.GetComponent<PlayerUnitAction>().blockAttack();

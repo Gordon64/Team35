@@ -8,6 +8,9 @@ public class AttackTarget : MonoBehaviour
     public GameObject owner;
 
     [SerializeField]
+    public float energyCost;
+
+    [SerializeField]
     private float minAttackMultiplier;
     [SerializeField]
     private float maxAttackMultiplier;
@@ -29,6 +32,9 @@ public class AttackTarget : MonoBehaviour
 
     [SerializeField]
     private StatusEffect statusEffect;
+
+    [SerializeField]
+    private StatusEffect buffEffect;
 
     //calculates damage and heal based on target and attack owner's stats. Changes dialogue box according to attack.
     public void hit (GameObject target)
@@ -63,6 +69,11 @@ public class AttackTarget : MonoBehaviour
         {
             statusEffect.ApplyEffect(targetStats);
         }
-            
+
+        if (buffEffect != null)
+        {
+            buffEffect.ApplyEffect(ownerStats);
+        }
+
     }
 }

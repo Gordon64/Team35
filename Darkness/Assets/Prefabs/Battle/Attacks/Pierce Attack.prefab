@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 7018705526504252920}
+  energyCost: 3
   minAttackMultiplier: 0.6
   maxAttackMultiplier: 1
   minDefenseMultiplier: 0.9
@@ -190,3 +191,4 @@ MonoBehaviour:
   prehitDialogue: 
   posthitDialogue: A precise hit goes through your defenses.
   statusEffect: {fileID: 0}
+  buffEffect: {fileID: 0}

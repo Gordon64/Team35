@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  energyCost: 4
   minAttackMultiplier: 1
   maxAttackMultiplier: 1.3
   minDefenseMultiplier: 0.2
@@ -54,3 +55,4 @@ MonoBehaviour:
   prehitDialogue: 
   posthitDialogue: A strong blow strikes deep at your core, sapping your vitality.
   statusEffect: {fileID: 0}
+  buffEffect: {fileID: 0}

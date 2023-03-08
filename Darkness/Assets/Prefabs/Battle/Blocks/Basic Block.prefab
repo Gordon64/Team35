@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 8467094336545903043}
+  energyCost: 5
   minAttackMultiplier: 0.1
   maxAttackMultiplier: 0.2
   minDefenseMultiplier: 1
@@ -54,3 +55,4 @@ MonoBehaviour:
   prehitDialogue: You brace yourself for impact.
   posthitDialogue: Your defense is increased.
   statusEffect: {fileID: 0}
+  buffEffect: {fileID: 11400000, guid: 5de39b5971d132245ba7fa5775f60f25, type: 2}

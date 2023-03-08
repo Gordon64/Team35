@@ -13,7 +13,7 @@ public class PlayerUnitAction : MonoBehaviour
     [SerializeField]
     public List<GameObject> attacks;
 
-    private GameObject currentAttack;
+    public GameObject currentAttack;
 
     //Manages player action during player's turn.
     void Awake()
