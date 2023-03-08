@@ -12,6 +12,8 @@ public class InventoryManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject TheItem;
 
+    public Toggle RemoveItems;
+
     public void Awake()
     {
         Instance = this;
@@ -45,5 +47,24 @@ public class InventoryManager : MonoBehaviour
             ItemText.text = anItem.itemName;
             ItemImage.sprite  = anItem.itemIcon;
         }
+    }
+
+    //allows to remove items from inventory
+    public void allowRemoveItems()
+    {
+        if (RemoveItems.isOn)
+        {
+            foreach (Transform anItem in ItemContent)
+            {
+                anItem.Find("RemoveButton").gameObject.SetActive(true);
+            }
+        } else 
+        {
+            foreach (Transform anItem in ItemContent)
+            {
+                anItem.Find("RemoveButton").gameObject.SetActive(false);
+            }
+        }
+
     }
 }
