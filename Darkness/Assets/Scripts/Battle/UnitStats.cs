@@ -79,7 +79,7 @@ public class UnitStats : MonoBehaviour, IComparable
         {
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
 
         if (endTurn)
