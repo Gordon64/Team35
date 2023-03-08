@@ -51,7 +51,10 @@ public class InventoryManager : MonoBehaviour
             ItemImage.sprite  = anItem.itemIcon;
 
             if(RemoveItems.isOn)
+            {
                 removeButton.gameObject.SetActive(true);
+            }
+                
                 
         }
 

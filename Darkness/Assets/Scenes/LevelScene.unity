@@ -5211,6 +5211,7 @@ MonoBehaviour:
   ItemContent: {fileID: 1959981330}
   TheItem: {fileID: 4454392908309152067, guid: d2ebfd364d1ef8d48ba9f91132fc20d4, type: 3}
   RemoveItems: {fileID: 1293648689}
+  invItems: []
 --- !u!4 &1005035617
 Transform:
   m_ObjectHideFlags: 0

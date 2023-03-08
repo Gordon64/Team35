@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1584641499306375276}
   - component: {fileID: 6674964067610655160}
   - component: {fileID: 4743306762284495056}
+  - component: {fileID: 961217716}
+  - component: {fileID: 961217715}
   m_Layer: 5
   m_Name: RemoveButton
   m_TagString: Untagged
@@ -134,6 +136,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!223 &961217716
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940390528886348955}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 32767
+  m_TargetDisplay: 0
+--- !u!114 &961217715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940390528886348955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &4454392906670453784
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,8 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anItem: {fileID: 0}
-  RemoveButton: {fileID: 0}
-  bandit: {fileID: 0}
+  RemoveButton: {fileID: 4743306762284495056}
 --- !u!1 &5737653466220051736
 GameObject:
   m_ObjectHideFlags: 0
