@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 7018705526504252922}
   - component: {fileID: 7018705526504252921}
   m_Layer: 0
-  m_Name: Pierce Attack
+  m_Name: Pierce Attack (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
