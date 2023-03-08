@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 8467094336545903043}
-  minAttackMultiplier: 0
-  maxAttackMultiplier: 0
-  minDefenseMultiplier: 2
-  maxDefenseMultiplier: 3
+  minAttackMultiplier: 0.1
+  maxAttackMultiplier: 0.2
+  minDefenseMultiplier: 1
+  maxDefenseMultiplier: 1
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: You brace yourself for impact
-  posthitDialogue: 
+  prehitDialogue: You brace yourself for impact.
+  posthitDialogue: Your defense is increased.
   statusEffect: {fileID: 0}
