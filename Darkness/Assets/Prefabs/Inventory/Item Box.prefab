@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Background: {fileID: 8126784857707221447}
+  thisPrefab: {fileID: 3042249363225183293}
 --- !u!1 &7529150569375321587
 GameObject:
   m_ObjectHideFlags: 0
