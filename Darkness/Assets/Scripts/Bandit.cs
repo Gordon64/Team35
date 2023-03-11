@@ -19,8 +19,6 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     private bool m_running = false;
 
     public TMP_Text healthText;
-    public static int maxHealth = 10;
-    // public int health = 10;
     public int health;
 
 
@@ -31,8 +29,8 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         m_animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
-        health = maxHealth;
-        updateText();
+        updateText(); 
+        
     }
 
     // Update is called once per frame
