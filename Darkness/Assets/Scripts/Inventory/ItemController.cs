@@ -7,7 +7,7 @@ public class ItemController : MonoBehaviour
 {
     public InventoryItem anItem;
     public Button RemoveButton;
-    // public Bandit bandit;
+    //public Bandit bandit;
 
 
     // void Start()
@@ -27,18 +27,18 @@ public class ItemController : MonoBehaviour
         anItem = newItem;
     }
 
-    // public void UseItem()
-    // {
-    //     switch(anItem.itemType)
-    //     {
-    //         case InventoryItem.ItemType.Basic_Potion:
-    //             bandit.health += 3;
-    //             break;
-    //         //no case for attack yet
-    //         case InventoryItem.ItemType.Basic_Sword:
-    //             // bandit.attack += 5;
-    //             break;
-    //     }
-    //     deleteItem();
-    // }
+    public void UseItem()
+    {
+        switch(anItem.itemType)
+        {
+            case InventoryItem.ItemType.Basic_Potion:
+                Bandit.Instance.increaseHealth(anItem.ourValue);
+                break;
+            //no case for attack yet
+            case InventoryItem.ItemType.Basic_Sword:
+                // bandit.attack += 5;
+                break;
+        }
+        deleteItem();
+    }
 }

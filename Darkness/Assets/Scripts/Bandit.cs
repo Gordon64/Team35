@@ -8,6 +8,8 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     [SerializeField] float m_speed = 4.0f;
     [SerializeField] float m_jumpForce = 7.5f;
 
+    public static Bandit Instance;
+
     private Animator m_animator;
     private Rigidbody2D rb2d;
     private Sensor_Bandit m_groundSensor;
@@ -18,12 +20,14 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
 
     public TMP_Text healthText;
     public static int maxHealth = 10;
-    public int health = 10;
+    // public int health = 10;
+    public int health;
 
 
     // Use this for initialization
     void Start()
     {
+        Instance = this;
         m_animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
@@ -169,6 +173,13 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     void updateText()
     {
         healthText.text = "Health: " + health.ToString();
+    }
+
+    //increase health with the potion
+    public void increaseHealth(int healthBoost)
+    {
+        health += healthBoost;
+        healthText.text = $"HP: {health}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
