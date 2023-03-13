@@ -17,3 +17,4 @@ MonoBehaviour:
   ourValue: 5
   itemIcon: {fileID: 6426664300169387062, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}
   itemType: 0
+  itemDescription: A potion that if taken, will give you more heatlh.

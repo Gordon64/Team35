@@ -11,6 +11,9 @@ public class InventoryItem :ScriptableObject
     public Sprite itemIcon;
     public ItemType itemType;
 
+    [TextArea]
+    public string itemDescription;
+
     public enum ItemType{
         Basic_Potion,
         Basic_Sword

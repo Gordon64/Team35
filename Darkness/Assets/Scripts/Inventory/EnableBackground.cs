@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnableBackground : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class EnableBackground : MonoBehaviour
     private Shop_Manager shopManager;
     public GameObject thisPrefab;
     public GameObject SelectedImagePanel;
+    public GameObject Description;
     public Image[] ItemSprite;
+    public TMP_Text[] Text;
 
     void Start(){
         GameObject playerObject = GameObject.FindGameObjectWithTag("Shop");
@@ -21,7 +24,9 @@ public class EnableBackground : MonoBehaviour
             UnityEngine.Debug.Log("can't find GameObject");
         }
         SelectedImagePanel = GameObject.FindGameObjectWithTag("SelectedItem");
+        Description = GameObject.FindGameObjectWithTag("Description");
         ItemSprite = SelectedImagePanel.GetComponentsInChildren<Image>();
+        Text = Description.GetComponentsInChildren<TMP_Text>();
     }
 
     public void Enable()
@@ -49,7 +54,16 @@ public class EnableBackground : MonoBehaviour
             if(imageComponent.name == "ImageBoarder"){
                 imageComponent.sprite = Item.itemIcon;
             }
-            //add name and description that need to be passed to text boxes
+        }
+        foreach(TMP_Text selectText in Text){
+            if(selectText.name == "DesTitle"){
+                selectText.text = Item.itemName;  
+            }
+
+            if(selectText.name == "DesText"){
+                selectText.text = Item.itemDescription;
+                UnityEngine.Debug.Log(Item.itemDescription);
+            }
         }
     }
 
