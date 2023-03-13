@@ -17,5 +17,6 @@ MonoBehaviour:
   ourValue: 4
   itemIcon: {fileID: 5484475921171301773, guid: 5086f7f9cf02c27478fdeda4cd78894a, type: 3}
   itemType: 1
+  shopCost: 2
   itemDescription: 'The basic sword, it allows for a difference in strengrth when
     fighting enemies. '

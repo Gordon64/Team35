@@ -10,6 +10,7 @@ public class InventoryItem :ScriptableObject
     public int ourValue;
     public Sprite itemIcon;
     public ItemType itemType;
+    public int shopCost;
 
     [TextArea]
     public string itemDescription;

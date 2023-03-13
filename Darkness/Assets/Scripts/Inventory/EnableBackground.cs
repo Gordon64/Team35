@@ -64,6 +64,9 @@ public class EnableBackground : MonoBehaviour
                 selectText.text = Item.itemDescription;
                 UnityEngine.Debug.Log(Item.itemDescription);
             }
+            if(selectText.name == "Cost"){
+                selectText.text = "   Cost: " + Item.shopCost;
+            }
         }
     }
 
