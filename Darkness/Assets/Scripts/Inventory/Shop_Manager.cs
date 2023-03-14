@@ -10,6 +10,7 @@ public class Shop_Manager : MonoBehaviour
     public List<InventoryItem> ShopItems = new List<InventoryItem>();
     public GameObject[] ItemPrefabs;
     public int context = 0;
+    public InventoryItem SelectedItem;
 
     public Transform ItemContent;
     public GameObject Item;
@@ -20,6 +21,7 @@ public class Shop_Manager : MonoBehaviour
     {
         foreach (var anItem in ShopItems)
         {
+            this.gameObject.SetActive(false);
             GameObject ob = Instantiate(Item, ItemContent);
             if(context >= ItemPrefabs.Length){
                 System.Array.Resize(ref ItemPrefabs, context + 1);
@@ -37,4 +39,14 @@ public class Shop_Manager : MonoBehaviour
        // string Number = Convert.ToString(TutPlayerWallet);
         Money.text = "Money: " + TutPlayerWallet;
     }
+
+    public void setSelectedItem(InventoryItem Item){
+        SelectedItem = Item;
+    }
+
+    public InventoryItem getSelectedItem(){
+        return SelectedItem;
+    }
+
+
 }

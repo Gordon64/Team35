@@ -39,6 +39,7 @@ public class EnableBackground : MonoBehaviour
                 if(thisPrefab == shopManager.ItemPrefabs[i]){
                     UnityEngine.Debug.Log("prefab found");
                     DisplayItemInfo(shopManager.ShopItems[i]);
+                    shopManager.setSelectedItem(shopManager.ShopItems[i]);
                 }
                 else{
                     UnityEngine.Debug.Log("no prefab found");

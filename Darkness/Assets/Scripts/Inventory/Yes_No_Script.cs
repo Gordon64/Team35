@@ -6,6 +6,7 @@ public class Yes_No_Script : MonoBehaviour
 {
     public GameObject YesNoPanel;
     private Shop_Manager shopManager;
+    private InventoryItem Item;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,17 @@ public class Yes_No_Script : MonoBehaviour
         else{
             UnityEngine.Debug.Log("can't find GameObject");
         }
+        YesNoPanel.SetActive(false);
+    }
+
+    public void Update(){
+        Item = shopManager.getSelectedItem();
     }
 
     public void YesButton(){
-        if(shopManager.TutPlayerWallet >= 2){
+        if(shopManager.TutPlayerWallet >= Item.shopCost){
             YesNoPanel.SetActive(false);
-            shopManager.TutPlayerWallet = shopManager.TutPlayerWallet - 2;      //Figure out how to get the value from the selected Item and use that to subtract from the player wallet
+            shopManager.TutPlayerWallet = shopManager.TutPlayerWallet - Item.shopCost;      
             UnityEngine.Debug.Log(shopManager.TutPlayerWallet);
         }
         else{
@@ -32,4 +38,5 @@ public class Yes_No_Script : MonoBehaviour
     public void NoButton(){
         YesNoPanel.SetActive(false);
     }
+
 }

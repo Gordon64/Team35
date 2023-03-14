@@ -5,19 +5,25 @@ using UnityEngine;
 public class Buy_Button : MonoBehaviour
 {
     public GameObject YesNoPanel;
+    private Shop_Manager shopManager;
+    public GameObject shop;
+
+    public InventoryItem selectedItem;
     // Start is called before the first frame update
     void Start()
     {
+        shopManager = shop.GetComponent<Shop_Manager>();
         YesNoPanel.SetActive(false);
     }
 
     public void BuyThisItem(){
-        YesNoPanel.SetActive(true);
+        if(selectedItem != null)
+            YesNoPanel.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        selectedItem = shopManager.getSelectedItem();
     }
 }
