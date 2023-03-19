@@ -79,12 +79,14 @@ public class UnitStats : MonoBehaviour, IComparable
         {
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
 
         if (endTurn)
         {
             StartCoroutine(wait());
+            GameObject turnSystem = GameObject.Find("TurnSystem");
+            turnSystem.GetComponent<TurnSystem>().nextTurn();
         }
     }
 
@@ -111,6 +113,8 @@ public class UnitStats : MonoBehaviour, IComparable
         if (endTurn)
         {
             StartCoroutine(wait());
+            GameObject turnSystem = GameObject.Find("TurnSystem");
+            turnSystem.GetComponent<TurnSystem>().nextTurn();
         }
     }
 
@@ -184,9 +188,6 @@ public class UnitStats : MonoBehaviour, IComparable
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(2);
-
-        GameObject turnSystem = GameObject.Find("TurnSystem");
-        turnSystem.GetComponent<TurnSystem>().nextTurn();
+        yield return new WaitForSeconds(1);
     }
 }
