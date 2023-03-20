@@ -66,8 +66,7 @@ public class UnitStats : MonoBehaviour, IComparable
 
     public void receiveDamage(float damage, bool endTurn)
     {
-        this.health -= damage;
-        //hit animation plays
+        //hit animation plays?
 
         GameObject HUDCanvas = GameObject.Find("HUDCanvas");
         GameObject damageText = Instantiate(this.damageTextPrefab, HUDCanvas.transform) as GameObject;
@@ -75,11 +74,16 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
 
-        if(this.health <= 0)
+        if(this.health - damage <= 0)
         {
+            this.health = 0;
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
             Destroy(this.gameObject);
+        }
+        else
+        {
+            this.health -= damage;
         }
 
         if (endTurn)
