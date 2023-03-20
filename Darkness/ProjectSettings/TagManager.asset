@@ -10,7 +10,7 @@ TagManager:
   - EnemyUnit
   - TargetEnemyUnit
   - PlayerUnit
-  - Shop_1
+  - Inventory
   layers:
   - Default
   - TransparentFX

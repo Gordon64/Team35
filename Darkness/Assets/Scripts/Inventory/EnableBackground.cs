@@ -16,11 +16,12 @@ public class EnableBackground : MonoBehaviour
     public TMP_Text[] Text;
 
     void Start(){
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Shop");
-        if(playerObject != null){
-            shopManager = playerObject.GetComponent<Shop_Manager>();
+        GameObject shopObject = GameObject.FindGameObjectWithTag("Shop");
+        if(shopObject != null){
+            shopManager = shopObject.GetComponent<Shop_Manager>();
         }
-        else{
+
+        if (shopObject == null){
             UnityEngine.Debug.Log("can't find GameObject");
         }
         SelectedImagePanel = GameObject.FindGameObjectWithTag("SelectedItem");

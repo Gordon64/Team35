@@ -21,7 +21,6 @@ public class Shop_Manager : MonoBehaviour
     {
         foreach (var anItem in ShopItems)
         {
-            this.gameObject.SetActive(false);
             GameObject ob = Instantiate(Item, ItemContent);
             if(context >= ItemPrefabs.Length){
                 System.Array.Resize(ref ItemPrefabs, context + 1);
