@@ -34,6 +34,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            SaveLoadSystem.instance.SaveGame();
             this.spawning = true;
             SceneManager.LoadScene("BattleScene");
         }

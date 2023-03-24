@@ -9,6 +9,7 @@ public class RunBattle : MonoBehaviour
 
     public void RunButton()
     {
+        SaveLoadSystem.instance.SaveGame();
         SceneManager.LoadScene(runAwayTo);
     }
 }

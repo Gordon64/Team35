@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class SavedInfo
 {
-    public int health;
+    public float health;
     public Vector3 position;
 
     public SavedInfo(){
-        this.health = 30;
+        this.health = 30.0f;
         position = Vector3.zero;
     }
 }

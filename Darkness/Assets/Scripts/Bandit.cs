@@ -19,7 +19,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     private bool m_running = false;
 
     public TMP_Text healthText;
-    public int health;
+    public float health;
 
 
     // Use this for initialization
@@ -191,13 +191,17 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             return;
         }
         if (info != null){
-            this.health = info.health;
-            this.transform.position = info.position;
+            if (this != null){
+                this.health = info.health;
+                this.transform.position = info.position;
+            }
         }
     }
 
     public void SaveData(SavedInfo info){
-        info.health = this.health;
-        info.position = this.transform.position;
+        if(this != null){
+            info.health = this.health;
+            info.position = this.transform.position;
+        }
     }
 }
