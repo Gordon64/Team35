@@ -6,8 +6,10 @@ using UnityEngine;
 public class SavedInfo
 {
     public int health;
+    public Vector3 position;
 
     public SavedInfo(){
-        this.health = 10;
+        this.health = 30;
+        position = Vector3.zero;
     }
 }

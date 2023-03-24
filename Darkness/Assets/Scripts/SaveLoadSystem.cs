@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadSystem : MonoBehaviour
 {
@@ -14,17 +15,39 @@ public class SaveLoadSystem : MonoBehaviour
 
     private void Awake(){
         if (instance != null){
-            UnityEngine.Debug.Log("Found more than one Data SaveLoadSystem in the scene");
+            UnityEngine.Debug.Log("Found more than one Data SaveLoadSystem in the scene, Destroying newest one.");
+            Destroy(this.gameObject);
+            return;
         }
         instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        this.fileManager = new DataFileManager(fileName);
     }
 
-    private void Start(){
-        this.fileManager = new DataFileManager(fileName);
+    private void OnEnable(){
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnDisable(){
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         this.SaveLoadObjects = FindAllSaveLoadObjects();
         LoadGame();
+        UnityEngine.Debug.Log("loaded called");
     }
 
+    public void OnSceneUnloaded(Scene scene){
+        SaveGame();
+        UnityEngine.Debug.Log("unloaded called");
+    }
+
+    private void OnApplicationQuit(){
+        SaveGame();
+    }
 
     public void NewGame(){
         this.gameData = new SavedInfo();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ContinueButton : MonoBehaviour
 {
@@ -20,5 +21,10 @@ public class ContinueButton : MonoBehaviour
         {
             Close_LoadGameButton.SetActive(true);
         }
+    }
+
+    public void ContinueClick(string sceneName){
+
+        SceneManager.LoadScene(sceneName);
     }
 }

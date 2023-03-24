@@ -192,10 +192,12 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         }
         if (info != null){
             this.health = info.health;
+            this.transform.position = info.position;
         }
     }
 
     public void SaveData(SavedInfo info){
         info.health = this.health;
+        info.position = this.transform.position;
     }
 }
