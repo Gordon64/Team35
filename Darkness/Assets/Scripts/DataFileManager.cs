@@ -10,9 +10,8 @@ public class DataFileManager
 
     private string fileName = "";
 
-    public DataFileManager(string DataFileManager){
-        this.directoryPath = directoryPath;
-        this.fileName = fileName;
+    public DataFileManager(string file){
+        this.fileName = file;
     }
     public SavedInfo Load(){
         string path = Path.Combine(directoryPath, fileName);

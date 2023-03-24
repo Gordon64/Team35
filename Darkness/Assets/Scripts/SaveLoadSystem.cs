@@ -34,6 +34,7 @@ public class SaveLoadSystem : MonoBehaviour
         this.gameData = fileManager.Load();
         if (this.gameData == null){
             UnityEngine.Debug.Log("No data found.");
+            NewGame();
         }
 
         foreach (SaveLoadInterface SaveLoadObject in SaveLoadObjects){
@@ -46,6 +47,7 @@ public class SaveLoadSystem : MonoBehaviour
         if(this.gameData != null){
             foreach (SaveLoadInterface SaveLoadObject in SaveLoadObjects){
                 SaveLoadObject.SaveData(gameData);
+                UnityEngine.Debug.Log("Saved data!");
             }
         }
 
