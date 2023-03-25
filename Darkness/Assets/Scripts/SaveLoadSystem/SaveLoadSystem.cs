@@ -41,6 +41,7 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     public void OnSceneUnloaded(Scene scene){
+        SaveGame();
         UnityEngine.Debug.Log("unloaded called");
     }
 
