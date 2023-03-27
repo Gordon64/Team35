@@ -9,6 +9,7 @@ public class EnemySpawn : MonoBehaviour
     private GameObject enemyEncounterPrefab;
 
     private bool spawning = false;
+    private bool hurt = false;
     //Spawns an encounter when a player enters the spawner range and changes the scene.
     void Start()
     {
@@ -23,6 +24,13 @@ public class EnemySpawn : MonoBehaviour
             if (this.spawning)
             {
                 Instantiate(enemyEncounterPrefab);
+                if (this.hurt)
+                {
+                    GameObject enemyUnit = GameObject.FindGameObjectWithTag("EnemyUnit");
+                    UnitStats currentUnitStats = enemyUnit.GetComponent<UnitStats>();
+                    //currentUnitStats.maxHealth -= 5;
+                    currentUnitStats.health -= 5;
+                }
             }
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -38,5 +46,13 @@ public class EnemySpawn : MonoBehaviour
             this.spawning = true;
             SceneManager.LoadScene("BattleScene");
         }
+        else if(other.gameObject.tag == "Weapon")
+        {
+            SaveLoadSystem.instance.SaveGame();
+            this.spawning = true;
+            this.hurt = true;
+            SceneManager.LoadScene("BattleScene");
+        }
     }
+
 }
