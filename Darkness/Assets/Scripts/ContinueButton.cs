@@ -24,7 +24,6 @@ public class ContinueButton : MonoBehaviour
     }
 
     public void ContinueClick(string sceneName){
-
-        SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
     }
 }

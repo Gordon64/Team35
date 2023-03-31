@@ -26,12 +26,10 @@ public class SaveLoadSystem : MonoBehaviour
 
     private void OnEnable(){
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
@@ -40,17 +38,9 @@ public class SaveLoadSystem : MonoBehaviour
         UnityEngine.Debug.Log("loaded called");
     }
 
-    public void OnSceneUnloaded(Scene scene){
-        SaveGame();
-        UnityEngine.Debug.Log("unloaded called");
-    }
-
-    private void OnApplicationQuit(){
-        SaveGame();
-    }
-
     public void NewGame(){
         this.gameData = new SavedInfo();
+        fileManager.Save(gameData);
     }
 
     public void LoadGame(){
