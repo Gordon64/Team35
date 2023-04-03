@@ -63,12 +63,16 @@ public class SaveLoadSystem : MonoBehaviour
     public void SaveGame(){
         if(this.gameData != null){
             foreach (SaveLoadInterface SaveLoadObject in SaveLoadObjects){
+                UnityEngine.Debug.Log("should be data before " + this.gameData.position);
                 SaveLoadObject.SaveData(gameData);
                 UnityEngine.Debug.Log("Saved data!");
             }
         }
+        UnityEngine.Debug.Log("should be data saved " +this.gameData.position);
 
         fileManager.Save(gameData);
+
+        UnityEngine.Debug.Log("Data actually saved " + gameData.position);
     }
 
     public void LoadGameAction(){

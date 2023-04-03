@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 //Stats container for every unit in battle. Spawns damage text and heal text. Calculates next turn.
-public class UnitStats : MonoBehaviour, IComparable, SaveLoadInterface
+public class UnitStats : MonoBehaviour, IComparable
 {
     public float health;
     public float energy;
@@ -193,21 +193,5 @@ public class UnitStats : MonoBehaviour, IComparable, SaveLoadInterface
     IEnumerator wait()
     {
         yield return new WaitForSeconds(1);
-    }
-
-    public void LoadData(SavedInfo info){
-        if(info == null){
-            UnityEngine.Debug.Log("info is null");
-            return;
-        }
-        if (info != null){
-            this.health = info.health;
-            this.transform.position = info.position;
-        }
-    }
-
-    public void SaveData(SavedInfo info){
-        info.health = this.health;
-        info.position = this.transform.position;
     }
 }

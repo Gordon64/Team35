@@ -1411,6 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 1754625146}
+  ShopPanel: {fileID: 694363110}
 --- !u!4 &162028366
 Transform:
   m_ObjectHideFlags: 0
@@ -28821,7 +28822,6 @@ GameObject:
   - component: {fileID: 694363115}
   - component: {fileID: 694363114}
   - component: {fileID: 694363113}
-  - component: {fileID: 694363112}
   m_Layer: 5
   m_Name: ShopTemplate
   m_TagString: Untagged
@@ -28851,18 +28851,6 @@ RectTransform:
   m_AnchoredPosition: {x: 7.5601807, y: 5.183777}
   m_SizeDelta: {x: -71.41016, y: -43.012665}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &694363112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694363110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbe116f1f6eeb74c8ba9f67f9ebc529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &694363113
 MonoBehaviour:
   m_ObjectHideFlags: 0
