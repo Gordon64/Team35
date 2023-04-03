@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DialogueButton : MonoBehaviour
 {
-    public GameObject T1, T2, T3;
+    public GameObject T1, T2, T3, T4;
 
     public void MoveDialogue()
     {
@@ -18,6 +18,11 @@ public class DialogueButton : MonoBehaviour
         {
             T2.SetActive(false);
             T3.SetActive(true);
+        }
+        else if (T3.activeSelf == true)
+        {
+            T3.SetActive(false);
+            T4.SetActive(true);
         }
     }
 }

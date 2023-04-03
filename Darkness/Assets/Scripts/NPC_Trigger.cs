@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class NPC_Trigger : MonoBehaviour
 {
-    public GameObject TextPanel, firstText, d1, d2;
+    public GameObject Wall, TextPanel, firstText, d1, d2, d3;
     public Dialogue tutorial;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,11 @@ public class NPC_Trigger : MonoBehaviour
             d2.SetActive(false);
             TextPanel.SetActive(true);
             firstText.SetActive(true);
+        }
+        if (d3.activeSelf == true)
+        {
+            Destroy(TextPanel);
+            Destroy(Wall);
         }
     }
 
