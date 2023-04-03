@@ -50,21 +50,6 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             m_animator.SetBool("Grounded", m_grounded);
         }
 
-        // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
-
-        // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (inputX < 0)
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
-        // Move
-        rb2d.velocity = new Vector2(inputX * m_speed, rb2d.velocity.y);
-
-        //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeed", rb2d.velocity.y);
-
         //Check health
         if (health <= 0)
         {
@@ -95,71 +80,89 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             m_isDead = !m_isDead;
         }
 
-        //Hurt
-        else if (Input.GetKeyDown("q"))
+        if (!m_isDead)
         {
-            health -= 1;
-            m_animator.SetTrigger("Hurt");
-            //updateText();
-        }
+            // -- Handle input and movement --
+            float inputX = Input.GetAxis("Horizontal");
 
-        //Attack
-        else if (Input.GetMouseButtonDown(0))
-        {
-            m_animator.SetTrigger("Attack");
-        }
+            // Swap direction of sprite depending on walk direction
+            if (inputX > 0)
+                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            else if (inputX < 0)
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-        //Change between idle and combat idle
-        else if (Input.GetMouseButtonDown(1))
-        {
-            m_combatIdle = !m_combatIdle;
-            /*
-            if (m_combatIdle)
+            // Move
+            rb2d.velocity = new Vector2(inputX * m_speed, rb2d.velocity.y);
+
+            //Set AirSpeed in animator
+            m_animator.SetFloat("AirSpeed", rb2d.velocity.y);
+
+            //Hurt
+            if (Input.GetKeyDown("q"))
             {
-                takeDamage(0);
+                health -= 1;
+                m_animator.SetTrigger("Hurt");
+                //updateText();
             }
+
+            //Attack
+            else if (Input.GetMouseButtonDown(0))
+            {
+                m_animator.SetTrigger("Attack");
+            }
+
+            //Change between idle and combat idle
+            else if (Input.GetMouseButtonDown(1))
+            {
+                m_combatIdle = !m_combatIdle;
+                /*
+                if (m_combatIdle)
+                {
+                    takeDamage(0);
+                }
+                else
+                {
+                    takeDamage(2);
+                }
+                */
+                //Need to update this
+            }
+
+            else if (Input.GetKeyDown("f"))
+            {
+                m_running = !m_running;
+                if (m_running)
+                {
+                    m_speed += 2;
+                }
+                else
+                {
+                    m_speed -= 2;
+                }
+            }
+
+            //Jump
+            else if (Input.GetKeyDown("space") && m_grounded)
+            {
+                m_animator.SetTrigger("Jump");
+                m_grounded = false;
+                m_animator.SetBool("Grounded", m_grounded);
+                rb2d.velocity = new Vector2(rb2d.velocity.x, m_jumpForce);
+                m_groundSensor.Disable(0.2f);
+            }
+
+            //Run
+            else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+                m_animator.SetInteger("AnimState", 2);
+
+            //Combat Idle
+            else if (m_combatIdle)
+                m_animator.SetInteger("AnimState", 1);
+
+            //Idle
             else
-            {
-                takeDamage(2);
-            }
-            */
-            //Need to update this
+                m_animator.SetInteger("AnimState", 0);
         }
-
-        else if (Input.GetKeyDown("f"))
-        {
-            m_running = !m_running;
-            if (m_running)
-            {
-                m_speed += 2;
-            }
-            else
-            {
-                m_speed -= 2;
-            }
-        }
-
-        //Jump
-        else if (Input.GetKeyDown("space") && m_grounded)
-        {
-            m_animator.SetTrigger("Jump");
-            m_grounded = false;
-            m_animator.SetBool("Grounded", m_grounded);
-            rb2d.velocity = new Vector2(rb2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
-        }
-
-        //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
-            m_animator.SetInteger("AnimState", 2);
-
-        //Combat Idle
-        else if (m_combatIdle)
-            m_animator.SetInteger("AnimState", 1);
-
-        //Idle
-        else
-            m_animator.SetInteger("AnimState", 0);
     }
 
     public void takeDamage(int damage)
