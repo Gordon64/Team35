@@ -12,6 +12,7 @@ public class SaveLoadSystem : MonoBehaviour
     private List<SaveLoadInterface> SaveLoadObjects;
     private SavedInfo gameData;
     private DataFileManager fileManager;
+    private string sceneName;
 
     private void Awake(){
         if (instance != null){
@@ -33,8 +34,11 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        sceneName = SceneManager.GetActiveScene().name;
         this.SaveLoadObjects = FindAllSaveLoadObjects();
-        LoadGame();
+        if(sceneName != "Tutorial"){
+            LoadGame();
+        }
         UnityEngine.Debug.Log("loaded called");
     }
 
