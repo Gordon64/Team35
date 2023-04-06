@@ -3,25 +3,27 @@ using TMPro;
 
 public class UpdateStats : MonoBehaviour
 {
-    public TextMeshProUGUI m_text;
+    public TextMeshProUGUI statValue;
+    public TextMeshProUGUI numUpgrades;
 
     public void UpdateStat()
     {
-        string temp = m_text.text;
-        int value = System.Convert.ToInt32(temp);
+        string statTemp = statValue.text;
+        string numTemp = numUpgrades.text;
 
-        if (value >= 30)
+        int value = System.Convert.ToInt32(statTemp);
+        int num = System.Convert.ToInt32(numTemp);
+
+        if (num >= 1)
         {
             value = value + 5;
-            temp = System.Convert.ToString(value);
-            m_text.text = temp;
-        }
+            statTemp = System.Convert.ToString(value);
+            statValue.text = statTemp;
 
-        if (value <= 4)
-        {
-            value = value - 1;
-            temp = System.Convert.ToString(value);
-            m_text.text = temp;
+            num = num - 1;
+            numTemp = System.Convert.ToString(num);
+            numUpgrades.text = numTemp;
         }
+        
     }
 }
