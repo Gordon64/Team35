@@ -22,11 +22,14 @@ public class NPC_Trigger : MonoBehaviour
             d2.SetActive(false);
             TextPanel.SetActive(true);
             firstText.SetActive(true);
+            Bandit.Instance.shopEnabled = true;
+            Bandit.Instance.rb2d.velocity = Vector2.zero;
         }
         if (d3.activeSelf == true)
         {
             Destroy(TextPanel);
             Destroy(Wall);
+            Bandit.Instance.shopEnabled = false;
         }
     }
 

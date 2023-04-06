@@ -2290,7 +2290,6 @@ GameObject:
   - component: {fileID: 378504755}
   - component: {fileID: 378504758}
   - component: {fileID: 378504757}
-  - component: {fileID: 378504756}
   m_Layer: 5
   m_Name: TutTextPanel2
   m_TagString: Untagged
@@ -2323,18 +2322,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 102}
   m_SizeDelta: {x: -365.98, y: -216.87}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &378504756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378504754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbe116f1f6eeb74c8ba9f67f9ebc529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &378504757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5491,6 +5478,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 926575498}
+  ShopPanel: {fileID: 0}
+  DialoguePanel: {fileID: 2005333082}
+  DialoguePanel2: {fileID: 378504754}
 --- !u!4 &1177394287
 Transform:
   m_ObjectHideFlags: 0
@@ -10094,7 +10084,6 @@ GameObject:
   - component: {fileID: 2005333083}
   - component: {fileID: 2005333085}
   - component: {fileID: 2005333084}
-  - component: {fileID: 2005333086}
   m_Layer: 5
   m_Name: TutTextPanel
   m_TagString: Untagged
@@ -10165,18 +10154,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005333082}
   m_CullTransparentMesh: 1
---- !u!114 &2005333086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005333082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbe116f1f6eeb74c8ba9f67f9ebc529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2022680935
 GameObject:
   m_ObjectHideFlags: 0

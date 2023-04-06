@@ -16,6 +16,8 @@ public class NPC_Shop_Trigger : MonoBehaviour
         if (ShopPanel.activeSelf == false)
         {
             ShopPanel.SetActive(true);
+            Bandit.Instance.shopEnabled = true;
+            Bandit.Instance.rb2d.velocity = Vector2.zero;
         }
     }
 
