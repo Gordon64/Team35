@@ -23,10 +23,12 @@ public class Save_Yes_No : MonoBehaviour
     public void YesButton(string sceneName){
         SaveLoadSystem.instance.SaveGame();
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.DeleteAll();
     }
 
     public void NoButton(string sceneName){
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.DeleteAll();
     }
 
     public void TutYesButton(string scenename){

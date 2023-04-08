@@ -36,15 +36,20 @@ public class SaveLoadSystem : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         sceneName = SceneManager.GetActiveScene().name;
         this.SaveLoadObjects = FindAllSaveLoadObjects();
-        if(sceneName != "Tutorial"){
+        if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 ){
             LoadGame();
         }
         UnityEngine.Debug.Log("loaded called");
     }
 
+    public void OnApplicationQuit(){
+        PlayerPrefs.DeleteAll();
+    }
+
     public void NewGame(){
         this.gameData = new SavedInfo();
         fileManager.Save(gameData);
+        LoadGame();
     }
 
     public void LoadGame(){

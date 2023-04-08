@@ -39,8 +39,16 @@ public class UnitStats : MonoBehaviour, IComparable
 
     private bool dead = false;
 
+    static public UnitStats instance;
+ 
+    private void Awake(){
+        instance = this;
+    }
+
     void Start()
     {
+        LoadTempValues();
+        UnityEngine.Debug.Log("start function");
         this.maxHealth = this.health;
         this.maxEnergy = this.energy;
         if (this.speed == 0)
@@ -189,9 +197,31 @@ public class UnitStats : MonoBehaviour, IComparable
             }
         }
     }
+    //increase health with the potion
+    public void increaseHealth(int healthBoost)
+    {
+        health += healthBoost;
+    }
 
     IEnumerator wait()
     {
         yield return new WaitForSeconds(1);
     }
+
+    public void SetTempValues(){
+        UnityEngine.Debug.Log("saving the tempvals");
+        PlayerPrefs.SetFloat("health", this.health);
+        UnityEngine.Debug.Log("health after save " + PlayerPrefs.GetFloat("health", 0));
+        //PlayerPref.SetInt("attack", attack);
+        //PlayerPref.SetInt("defense", defense);
+        //PlayerPref.SetInt("speed", speed);
+    }
+
+    public void LoadTempValues(){
+        UnityEngine.Debug.Log("health before loading if 0 it didn't load correctly: " + PlayerPrefs.GetFloat("health", 0));
+        this.health = PlayerPrefs.GetFloat("health", 30);
+        Bandit.Instance.health = this.health;
+        UnityEngine.Debug.Log("health after loading" + this.health);
+    }
+
 }

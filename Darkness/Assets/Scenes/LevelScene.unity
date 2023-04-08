@@ -1787,6 +1787,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 1754625146}
   ShopPanel: {fileID: 694363110}
+  DialoguePanel: {fileID: 0}
+  DialoguePanel2: {fileID: 0}
 --- !u!4 &162028366
 Transform:
   m_ObjectHideFlags: 0
@@ -35475,11 +35477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.34
+      value: 5.16
       objectReference: {fileID: 0}
     - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.87
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37969,7 +37971,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1426778713
 Canvas:
   m_ObjectHideFlags: 0
@@ -54024,7 +54026,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &2131286271
 Canvas:
   m_ObjectHideFlags: 0

@@ -42,13 +42,15 @@ public class EnemySpawn : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            SaveLoadSystem.instance.SaveGame();
             this.spawning = true;
+            if(UnitStats.instance != null){
+                UnityEngine.Debug.Log("Instance of UnitStats is not null");
+                UnitStats.instance.SetTempValues();
+            }
             SceneManager.LoadScene("BattleScene");
         }
         else if(other.gameObject.tag == "Weapon")
         {
-            SaveLoadSystem.instance.SaveGame();
             this.spawning = true;
             this.hurt = true;
             SceneManager.LoadScene("BattleScene");
