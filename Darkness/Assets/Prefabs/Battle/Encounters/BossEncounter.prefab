@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: defense
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}

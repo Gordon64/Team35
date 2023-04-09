@@ -28,7 +28,6 @@ public class EnemySpawn : MonoBehaviour
                 {
                     GameObject enemyUnit = GameObject.FindGameObjectWithTag("EnemyUnit");
                     UnitStats currentUnitStats = enemyUnit.GetComponent<UnitStats>();
-                    //currentUnitStats.maxHealth -= 5;
                     currentUnitStats.health -= 5;
                 }
             }

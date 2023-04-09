@@ -49,8 +49,8 @@ public class UnitStats : MonoBehaviour, IComparable
     {
         LoadTempValues();
         UnityEngine.Debug.Log("start function");
-        this.maxHealth = this.health;
-        this.maxEnergy = this.energy;
+        //this.health = this.maxHealth;
+        //this.maxEnergy = this.energy;
         if (this.speed == 0)
         {
             this.speed = 1;
@@ -82,9 +82,9 @@ public class UnitStats : MonoBehaviour, IComparable
         damageText.transform.localPosition = this.damageTextPosition;
         damageText.transform.localScale = new Vector2(2.0f, 2.0f);
 
-        if(this.health - damage <= 0)
+        if(this.health - damage <= 0.0f)
         {
-            this.health = 0;
+            this.health = 0.0f;
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
             Destroy(this.gameObject);
@@ -207,21 +207,25 @@ public class UnitStats : MonoBehaviour, IComparable
     {
         yield return new WaitForSeconds(1);
     }
-
-    public void SetTempValues(){
+    
+    public void SetTempValues(){ //***This function needs to be changed as it interferes with health values for battle scene***
+        /*
         UnityEngine.Debug.Log("saving the tempvals");
         PlayerPrefs.SetFloat("health", this.health);
         UnityEngine.Debug.Log("health after save " + PlayerPrefs.GetFloat("health", 0));
+        */
         //PlayerPref.SetInt("attack", attack);
         //PlayerPref.SetInt("defense", defense);
         //PlayerPref.SetInt("speed", speed);
     }
 
-    public void LoadTempValues(){
+    public void LoadTempValues(){ //***This function needs to be changed as it interferes with health values for battle scene***
+        /*
         UnityEngine.Debug.Log("health before loading if 0 it didn't load correctly: " + PlayerPrefs.GetFloat("health", 0));
         this.health = PlayerPrefs.GetFloat("health", 30);
         Bandit.Instance.health = this.health;
         UnityEngine.Debug.Log("health after loading" + this.health);
+        */
     }
-
+    
 }
