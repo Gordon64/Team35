@@ -5,6 +5,7 @@ public class UpdateStats : MonoBehaviour
 {
     public TextMeshProUGUI statValue;
     public TextMeshProUGUI numUpgrades;
+    public Bandit Bandit;
 
     public void UpdateStat()
     {
@@ -23,6 +24,12 @@ public class UpdateStats : MonoBehaviour
             num = num - 1;
             numTemp = System.Convert.ToString(num);
             numUpgrades.text = numTemp;
+
+            if ((value - 5) == Bandit.health)
+            {
+                Bandit.health = Bandit.health + 5;
+            }
+            
         }
         
     }
