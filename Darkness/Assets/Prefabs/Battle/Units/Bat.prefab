@@ -101,12 +101,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  energy: 0
   attack: 5
   defense: 0
   speed: 12
+  maxHealth: 0
+  maxEnergy: 0
+  defaultDefense: 0
   damageTextPosition: {x: 40, y: 30}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
   healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
+  actionEnergyTextPosition: {x: 0, y: 0}
+  actionEnergyTextPrefab: {fileID: 0}
   statusEffects: []
   nextActTurn: 0
 --- !u!114 &-876656634205146675
