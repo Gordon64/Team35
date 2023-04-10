@@ -36,6 +36,9 @@ public class AttackTarget : MonoBehaviour
     [SerializeField]
     private StatusEffect buffEffect;
 
+    [SerializeField]
+    private GameObject animationEffect;
+
     //calculates damage and heal based on target and attack owner's stats. Changes dialogue box according to attack.
     public void hit (GameObject target)
     {
@@ -73,6 +76,11 @@ public class AttackTarget : MonoBehaviour
         if (buffEffect != null)
         {
             buffEffect.ApplyEffect(ownerStats);
+        }
+
+        if(animationEffect != null)
+        {
+            Instantiate(animationEffect, target.transform.position, Quaternion.identity);
         }
 
     }
