@@ -12,6 +12,8 @@ public class TurnSystem : MonoBehaviour
 
     private GameObject playerParty;
 
+    public List<GameObject> enemyUnits, remainingEnemyUnits;
+
     void Start()
     {
         //Finds Player units, adds to turn list
@@ -25,10 +27,12 @@ public class TurnSystem : MonoBehaviour
             unitsStats.Add(currentUnitStats);
         }
 
-        //Find Enemy units, adds to turn list
-        GameObject[] enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
+        //Find Enemy units, adds to turn 
 
-        foreach(GameObject enemyUnit in enemyUnits)
+        //GameObject[] enemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
+        enemyUnits = new List<GameObject>(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+
+        foreach (GameObject enemyUnit in enemyUnits)
         {
             UnitStats currentUnitStats = enemyUnit.GetComponent<UnitStats>();
             currentUnitStats.calculateNextActTurn(0);
@@ -50,9 +54,11 @@ public class TurnSystem : MonoBehaviour
     public void nextTurn()
     {
         //end conditions, no enemies or no players
-        GameObject[] remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
 
-        if(remainingEnemyUnits.Length == 0)
+        //GameObject[] remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
+        remainingEnemyUnits = new List<GameObject>(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+
+        if (remainingEnemyUnits.Count == 0)
         {
             SceneManager.LoadScene("LevelScene");
         }
