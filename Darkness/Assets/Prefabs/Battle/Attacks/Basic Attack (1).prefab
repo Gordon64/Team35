@@ -193,6 +193,7 @@ MonoBehaviour:
   posthitDialogue: You swing at your target.
   statusEffect: {fileID: 0}
   buffEffect: {fileID: 0}
+  animationEffect: {fileID: 1661648566773129237, guid: 2ebe7f84091930540988366deb80711f, type: 3}
 --- !u!114 &1148291943251712332
 MonoBehaviour:
   m_ObjectHideFlags: 0
