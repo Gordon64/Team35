@@ -12,11 +12,22 @@ public class InventoryItem :ScriptableObject
     public ItemType itemType;
     public int shopCost;
 
+    //loot test
+    public int probability;
+
+
     [TextArea]
     public string itemDescription;
 
     public enum ItemType{
         Basic_Potion,
-        Basic_Sword
+        Basic_Sword,
+        //loot test
+        SmallMoney,
+        AverageMoney,
+        BigMoney,
+        SmallUpgradeGem,
+        MediumUpgradeGem,
+        LargeUpgradeGem
     }
 }

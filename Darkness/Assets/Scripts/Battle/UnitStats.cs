@@ -87,6 +87,8 @@ public class UnitStats : MonoBehaviour, IComparable
             this.health = 0.0f;
             this.dead = true;
             this.gameObject.tag = "DeadUnit";
+            //destroy enemy and return loot
+            GetComponent<LootBag>().InstantiateLoot(transform.position);
             Destroy(this.gameObject);
         }
         else

@@ -18,4 +18,5 @@ MonoBehaviour:
   itemIcon: {fileID: 6426664300169387062, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}
   itemType: 0
   shopCost: 2
-  itemDescription: A potion that if taken, will give you more heatlh.
+  probability: 90
+  itemDescription: A potion that if taken, will give you a small boost in heatlh.

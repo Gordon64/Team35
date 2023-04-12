@@ -18,5 +18,6 @@ MonoBehaviour:
   itemIcon: {fileID: 5484475921171301773, guid: 5086f7f9cf02c27478fdeda4cd78894a, type: 3}
   itemType: 1
   shopCost: 4
-  itemDescription: 'The basic sword, it allows for a difference in strengrth when
-    fighting enemies. '
+  probability: 40
+  itemDescription: 'The basic sword, it allows for a small difference in strength
+    when fighting enemies. '
