@@ -8,8 +8,6 @@ public class StatsSet : MonoBehaviour
     public TextMeshProUGUI defenseStat;
     public TextMeshProUGUI energyStat;
 
-    public GameObject StatsPanel;
-
     public UnitStats Player;
 
     public void SetStats()

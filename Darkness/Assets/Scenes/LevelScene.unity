@@ -3410,7 +3410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &400420866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4926,7 +4926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statValue: {fileID: 1157722262}
   numUpgrades: {fileID: 1924032048}
-  Bandit: {fileID: 0}
+  Bandit: {fileID: 432270871}
+  Money: {fileID: 1000908000}
 --- !u!1 &554360784
 GameObject:
   m_ObjectHideFlags: 0
@@ -31476,7 +31477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statValue: {fileID: 1726091468}
   numUpgrades: {fileID: 1924032048}
-  Bandit: {fileID: 0}
+  Bandit: {fileID: 432270871}
+  Money: {fileID: 1000908000}
 --- !u!1 &855258882
 GameObject:
   m_ObjectHideFlags: 0
@@ -39359,6 +39361,7 @@ MonoBehaviour:
   statValue: {fileID: 0}
   numUpgrades: {fileID: 0}
   Bandit: {fileID: 0}
+  Money: {fileID: 0}
 --- !u!114 &1541784816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39832,7 +39835,6 @@ MonoBehaviour:
   attackStat: {fileID: 1657914901}
   defenseStat: {fileID: 1726091468}
   energyStat: {fileID: 1157722262}
-  StatsPanel: {fileID: 1586468706}
   Player: {fileID: 1045028206}
 --- !u!1 &1588842219
 GameObject:
@@ -40733,7 +40735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statValue: {fileID: 1657914901}
   numUpgrades: {fileID: 1924032048}
-  Bandit: {fileID: 0}
+  Bandit: {fileID: 432270871}
+  Money: {fileID: 1000908000}
 --- !u!1 &1647164540
 GameObject:
   m_ObjectHideFlags: 0
@@ -41382,6 +41385,7 @@ MonoBehaviour:
   statValue: {fileID: 1046987366}
   numUpgrades: {fileID: 1924032048}
   Bandit: {fileID: 432270871}
+  Money: {fileID: 1000908000}
 --- !u!1 &1721086812
 GameObject:
   m_ObjectHideFlags: 0
@@ -52012,7 +52016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1924032047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54202,6 +54206,7 @@ MonoBehaviour:
   statValue: {fileID: 0}
   numUpgrades: {fileID: 0}
   Bandit: {fileID: 0}
+  Money: {fileID: 0}
 --- !u!114 &2076501781
 MonoBehaviour:
   m_ObjectHideFlags: 0

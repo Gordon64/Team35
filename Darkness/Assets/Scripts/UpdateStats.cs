@@ -6,9 +6,12 @@ public class UpdateStats : MonoBehaviour
     public TextMeshProUGUI statValue;
     public TextMeshProUGUI numUpgrades;
     public Bandit Bandit;
+    public Shop_Manager Money;
 
     public void UpdateStat()
     {
+        numUpgrades.text = System.Convert.ToString(Money.TutPlayerWallet);
+
         string statTemp = statValue.text;
         string numTemp = numUpgrades.text;
 
@@ -21,9 +24,8 @@ public class UpdateStats : MonoBehaviour
             statTemp = System.Convert.ToString(value);
             statValue.text = statTemp;
 
-            num = num - 1;
-            numTemp = System.Convert.ToString(num);
-            numUpgrades.text = numTemp;
+            num = num - 2;
+            Money.TutPlayerWallet = Money.TutPlayerWallet - 2;
 
             if ((value - 5) == Bandit.health)
             {
