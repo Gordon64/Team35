@@ -34147,6 +34147,17 @@ MonoBehaviour:
   - {x: 8.73, y: 1.12, z: 0}
   - {x: 10, y: -1.2, z: 0}
   - {x: 7, y: -1.2, z: 0}
+--- !u!114 &1045028206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+  m_PrefabInstance: {fileID: 1871374997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b5d8536c984bc488816ccb7648575e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1046987364
 GameObject:
   m_ObjectHideFlags: 0
@@ -38535,7 +38546,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1426778713
 Canvas:
   m_ObjectHideFlags: 0
@@ -39737,6 +39748,7 @@ GameObject:
   - component: {fileID: 1586468707}
   - component: {fileID: 1586468709}
   - component: {fileID: 1586468708}
+  - component: {fileID: 1586468710}
   m_Layer: 5
   m_Name: StatsPanel
   m_TagString: Untagged
@@ -39804,6 +39816,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586468706}
   m_CullTransparentMesh: 1
+--- !u!114 &1586468710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586468706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9c382aa13764829b6664c57d6707b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStat: {fileID: 1046987366}
+  attackStat: {fileID: 1657914901}
+  defenseStat: {fileID: 1726091468}
+  energyStat: {fileID: 1157722262}
+  StatsPanel: {fileID: 1586468706}
+  Player: {fileID: 1045028206}
 --- !u!1 &1588842219
 GameObject:
   m_ObjectHideFlags: 0

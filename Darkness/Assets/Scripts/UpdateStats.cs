@@ -29,7 +29,6 @@ public class UpdateStats : MonoBehaviour
             {
                 Bandit.health = Bandit.health + 5;
             }
-            
         }
         
     }
