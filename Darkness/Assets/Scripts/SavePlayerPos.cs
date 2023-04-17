@@ -22,6 +22,7 @@ public class SavePlayerPos : MonoBehaviour
 
     }
 
+    //Call this function to save player's position
     public void PlayerPosSave()
     {
         PlayerPrefs.SetFloat("p_x", player.transform.position.x);
@@ -30,6 +31,7 @@ public class SavePlayerPos : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    //Call this function to load player's position
     public void PlayerPosLoad()
     {
         PlayerPrefs.SetInt("TimeToLoad", 1);

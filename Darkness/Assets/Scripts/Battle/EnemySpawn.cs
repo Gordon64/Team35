@@ -12,11 +12,13 @@ public class EnemySpawn : MonoBehaviour
     private bool hurt = false;
 
     SavePlayerPos playerPosData;
+    EnemyManager enemyData;
 
     //Spawns an encounter when a player enters the spawner range and changes the scene.
     void Start()
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
+        enemyData = FindObjectOfType<EnemyManager>();
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -51,6 +53,7 @@ public class EnemySpawn : MonoBehaviour
                 UnityEngine.Debug.Log("Instance of UnitStats is not null");
                 UnitStats.instance.SetTempValues();
             }
+            enemyData.defeatedEnemy(this.gameObject.name);
             SceneManager.LoadScene("BattleScene");
         }
         else if(other.gameObject.tag == "Weapon")
@@ -58,6 +61,7 @@ public class EnemySpawn : MonoBehaviour
             playerPosData.PlayerPosSave();
             this.spawning = true;
             this.hurt = true;
+            enemyData.defeatedEnemy(this.gameObject.name);
             SceneManager.LoadScene("BattleScene");
         }
     }
