@@ -22,6 +22,13 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     public TMP_Text healthText;
     public float health;
 
+    SavePlayerPos playerPosData;
+
+    private void Awake()
+    {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+        playerPosData.PlayerPosLoad();
+    }
 
     // Use this for initialization
     void Start()

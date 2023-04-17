@@ -10,9 +10,13 @@ public class EnemySpawn : MonoBehaviour
 
     private bool spawning = false;
     private bool hurt = false;
+
+    SavePlayerPos playerPosData;
+
     //Spawns an encounter when a player enters the spawner range and changes the scene.
     void Start()
     {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -41,6 +45,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            playerPosData.PlayerPosSave();
             this.spawning = true;
             if(UnitStats.instance != null){
                 UnityEngine.Debug.Log("Instance of UnitStats is not null");
@@ -50,6 +55,7 @@ public class EnemySpawn : MonoBehaviour
         }
         else if(other.gameObject.tag == "Weapon")
         {
+            playerPosData.PlayerPosSave();
             this.spawning = true;
             this.hurt = true;
             SceneManager.LoadScene("BattleScene");

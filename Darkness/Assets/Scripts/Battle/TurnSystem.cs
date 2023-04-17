@@ -14,8 +14,12 @@ public class TurnSystem : MonoBehaviour
 
     public List<GameObject> enemyUnits, remainingEnemyUnits;
 
+    SavePlayerPos playerPosData;
+
     void Start()
     {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+
         //Finds Player units, adds to turn list
         unitsStats = new List<UnitStats>();
         GameObject[] playerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
@@ -60,6 +64,7 @@ public class TurnSystem : MonoBehaviour
 
         if (remainingEnemyUnits.Count == 0)
         {
+            playerPosData.PlayerPosLoad();
             SceneManager.LoadScene("LevelScene");
         }
 
