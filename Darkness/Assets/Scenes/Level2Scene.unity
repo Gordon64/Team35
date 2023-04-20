@@ -2008,6 +2008,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6723203340784359636, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_Name
       value: LightBandit
