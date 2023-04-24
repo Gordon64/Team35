@@ -45111,6 +45111,14 @@ PrefabInstance:
       propertyPath: block
       value: 
       objectReference: {fileID: 8467094336545903043, guid: f9e617ae32e5ebd4cafa4f9fbc8a5f7a, type: 3}
+    - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: attacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 7018705526504252920, guid: f7b821d149920aa49ac20f4b65620d8b, type: 3}
+    - target: {fileID: -7970524053244345887, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: attacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 7018705526504252920, guid: ad3285eea79eabd49860f08b3c63fd6a, type: 3}
     - target: {fileID: 1872855528591086782, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: m_Name
       value: PlayerUnit

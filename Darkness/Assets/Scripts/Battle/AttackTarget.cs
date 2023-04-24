@@ -26,9 +26,9 @@ public class AttackTarget : MonoBehaviour
     private float maxLifestealMultiplier;
 
     [SerializeField]
-    private string prehitDialogue;
-    [SerializeField]
-    private string posthitDialogue;
+    private string hitDialogue;
+
+    private string dialogueOutput;
 
     [SerializeField]
     private StatusEffect statusEffect;
@@ -58,8 +58,10 @@ public class AttackTarget : MonoBehaviour
         float lifestealMultiplier = (Random.value * (this.minLifestealMultiplier - this.maxLifestealMultiplier)) + this.minLifestealMultiplier;
         float heal = lifestealMultiplier * damage;
 
+        //dialogue setting
         GameObject dialogue = GameObject.Find("DialogueBox") as GameObject;
-        dialogue.GetComponent<TMP_Text>().text = posthitDialogue;
+        dialogueOutput = hitDialogue.Replace("(enemy)", targetStats.name);
+        dialogue.GetComponent<TMP_Text>().text = dialogueOutput;
 
         targetStats.receiveDamage(damage, true);
 
@@ -82,6 +84,5 @@ public class AttackTarget : MonoBehaviour
         {
             Instantiate(animationEffect, target.transform.position, Quaternion.identity);
         }
-
     }
 }

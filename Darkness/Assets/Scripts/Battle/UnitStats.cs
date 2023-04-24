@@ -90,6 +90,8 @@ public class UnitStats : MonoBehaviour, IComparable
             //destroy enemy and return loot
             //GetComponent<LootBag>().InstantiateLoot(transform.position); //This is commented out until finished
             Destroy(this.gameObject);
+            GameObject turnSystem = GameObject.Find("TurnSystem");
+            turnSystem.GetComponent<TurnSystem>().nextTurn();
         }
         else
         {
@@ -99,8 +101,6 @@ public class UnitStats : MonoBehaviour, IComparable
         if (endTurn)
         {
             StartCoroutine(wait());
-            GameObject turnSystem = GameObject.Find("TurnSystem");
-            turnSystem.GetComponent<TurnSystem>().nextTurn();
         }
     }
 
@@ -127,8 +127,6 @@ public class UnitStats : MonoBehaviour, IComparable
         if (endTurn)
         {
             StartCoroutine(wait());
-            GameObject turnSystem = GameObject.Find("TurnSystem");
-            turnSystem.GetComponent<TurnSystem>().nextTurn();
         }
     }
 
@@ -207,7 +205,10 @@ public class UnitStats : MonoBehaviour, IComparable
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
+
+        GameObject turnSystem = GameObject.Find("TurnSystem");
+        turnSystem.GetComponent<TurnSystem>().nextTurn();
     }
     
     public void SetTempValues(){ //***This function needs to be changed as it interferes with health values for battle scene***

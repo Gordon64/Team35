@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6117126357962311832
 SpriteRenderer:
@@ -101,12 +101,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 35
+  energy: 0
   attack: 8
   defense: 0
   speed: 9
-  damageTextPosition: {x: 40, y: 30}
+  maxHealth: 0
+  maxEnergy: 0
+  defaultDefense: 0
+  damageTextPosition: {x: 40, y: 100}
   damageTextPrefab: {fileID: 4050106465722132034, guid: 1fecf4c2234568949bb2c53d7501cb7d, type: 3}
   healTextPrefab: {fileID: 4050106465722132034, guid: d96f8bc07b0d4614fbdcc987f2ed28bc, type: 3}
+  actionEnergyTextPosition: {x: 0, y: 0}
+  actionEnergyTextPrefab: {fileID: 0}
   statusEffects: []
   nextActTurn: 0
 --- !u!114 &-876656634205146675
@@ -138,8 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetEnemyUnitPrefab: {fileID: 3538781575327652717, guid: 7fa700bcea300914096fcf55502c8b80, type: 3}
   healthBar: {fileID: 6271789084525495305, guid: 516bec9641cf2c943b004d9562b00207, type: 3}
-  menuItemSprite: {fileID: 21300166, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
-  initialPosition: {x: -60, y: -30}
+  menuItemSprite: {fileID: 169905663, guid: 4dd5d7ffcb10cc44c9c5147cfc761271, type: 3}
+  initialPosition: {x: 50, y: 5}
   itemDimensions: {x: 0, y: 0}
   killEnemyScript: {fileID: -876656634205146675}
 --- !u!114 &-2401650245694280861

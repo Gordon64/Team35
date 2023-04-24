@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  energyCost: 0
   minAttackMultiplier: 0.9
   maxAttackMultiplier: 1.2
   minDefenseMultiplier: 0.6
   maxDefenseMultiplier: 0.8
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: 
-  posthitDialogue: '"Face eternity."'
+  hitDialogue: It's gaze pierces you to your core. STACK +
   statusEffect: {fileID: 11400000, guid: f94f5e37ea0bdac4ebadf8c558dfdb13, type: 2}
+  buffEffect: {fileID: 0}
+  animationEffect: {fileID: 0}

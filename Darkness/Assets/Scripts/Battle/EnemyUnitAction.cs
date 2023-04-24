@@ -12,9 +12,10 @@ public class EnemyUnitAction : MonoBehaviour
 
     void Awake()
     {
-        foreach (GameObject attack in attacks)
+        for (int i = 0; i < attacks.Count; i++)
         {
-            attack.GetComponent<AttackTarget>().owner = this.gameObject;
+            attacks[i] = Instantiate(attacks[i], this.transform);
+            attacks[i].GetComponent<AttackTarget>().owner = this.gameObject;
         }
     }
 

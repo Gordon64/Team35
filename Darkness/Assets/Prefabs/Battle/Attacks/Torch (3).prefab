@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7018705526504252921}
   - component: {fileID: 1148291943251712332}
   m_Layer: 0
-  m_Name: Basic Attack (1)
+  m_Name: Torch (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,18 +182,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  energyCost: 1
-  minAttackMultiplier: 0.5
-  maxAttackMultiplier: 1
-  minDefenseMultiplier: 0.2
-  maxDefenseMultiplier: 0.8
+  energyCost: 3
+  minAttackMultiplier: 0.8
+  maxAttackMultiplier: 1.2
+  minDefenseMultiplier: 0.1
+  maxDefenseMultiplier: 0.2
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: 
-  posthitDialogue: You swing at your target.
-  statusEffect: {fileID: 0}
+  hitDialogue: The flames leap wildly, dancing upon the (enemy)'s form. They're burning.
+  statusEffect: {fileID: 11400000, guid: 364573d6a91888f4e88e4ee23aa370c0, type: 2}
   buffEffect: {fileID: 0}
-  animationEffect: {fileID: 1661648566773129237, guid: 2ebe7f84091930540988366deb80711f, type: 3}
+  animationEffect: {fileID: 3670119510924794217, guid: 8c0bf43224a27a9469c1a99901eb3256, type: 3}
 --- !u!114 &1148291943251712332
 MonoBehaviour:
   m_ObjectHideFlags: 0
