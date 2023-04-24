@@ -41,6 +41,9 @@ public class EnemySpawn : MonoBehaviour
             SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(this.gameObject);
         }
+        if(scene.name == "LevelScene"){
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -49,10 +52,6 @@ public class EnemySpawn : MonoBehaviour
         {
             playerPosData.PlayerPosSave();
             this.spawning = true;
-            if(UnitStats.instance != null){
-                UnityEngine.Debug.Log("Instance of UnitStats is not null");
-                UnitStats.instance.SetTempValues();
-            }
             enemyData.defeatedEnemy(this.gameObject.name);
             SceneManager.LoadScene("BattleScene");
         }

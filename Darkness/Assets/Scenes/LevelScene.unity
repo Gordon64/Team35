@@ -30344,7 +30344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.5601807, y: 5.183716}
+  m_AnchoredPosition: {x: 7.5600586, y: 5.183716}
   m_SizeDelta: {x: -71.41016, y: -43.012665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694363113
@@ -30922,7 +30922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -13.289978, y: 5.1838}
+  m_AnchoredPosition: {x: -13.290039, y: 5.1838}
   m_SizeDelta: {x: 735.08, y: 173.79}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &761476556
@@ -34920,7 +34920,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
   m_PrefabInstance: {fileID: 1871374997}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2138232817}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9b5d8536c984bc488816ccb7648575e, type: 3}
@@ -36553,6 +36553,10 @@ PrefabInstance:
       propertyPath: m_speed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: PlayerUnit
+      value: 
+      objectReference: {fileID: 2138232817}
     - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: healthText
       value: 
@@ -56789,7 +56793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 636.0817, y: 312.4205}
+  m_AnchoredPosition: {x: 636.08167, y: 312.42053}
   m_SizeDelta: {x: 19.1374, y: 9.9977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131286269
@@ -56854,6 +56858,11 @@ Canvas:
   m_SortingLayerID: -58410867
   m_SortingOrder: 100
   m_TargetDisplay: 0
+--- !u!1 &2138232817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1872855528591086782, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+  m_PrefabInstance: {fileID: 1871374997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3259777336247671828
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,8 +9,6 @@ public class RunBattle : MonoBehaviour
 
     public void RunButton()
     {
-        UnitStats.instance.SetTempValues();
-        UnityEngine.Debug.Log("health during run: " + UnitStats.instance.health);
         SceneManager.LoadScene(runAwayTo);
     }
 }

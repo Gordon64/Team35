@@ -23,11 +23,14 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     public float health;
 
     SavePlayerPos playerPosData;
+    public GameObject PlayerUnit;
+    private UnitStats units;
 
     private void Awake()
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
         playerPosData.PlayerPosLoad();
+        units = PlayerUnit.GetComponent<UnitStats>();
     }
 
     // Use this for initialization
@@ -44,6 +47,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     // Update is called once per frame
     void Update()
     {
+        UnityEngine.Debug.Log(units.health);
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
@@ -204,16 +208,29 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         }
         if (info != null){
             if (this != null){
-                this.health = info.health;
+                units.health = info.health;
                 this.transform.position = info.position;
+                units.attack = info.attack;
+                units.defense = info.defense;
+                units.speed  = info.speed;
+                units.energy = info.energy;
+                units.maxHealth = info.MaxHealth;
+                units.maxEnergy = info.MaxEnergy;
             }
         }
     }
 
     public void SaveData(SavedInfo info){
         if(this != null){
-            info.health = this.health;
+            UnityEngine.Debug.Log("data I am saving: " + units.health);
+            info.health = units.health;
             info.position = this.transform.position;
+            info.attack = units.attack;
+            info.defense = units.defense;
+            info.speed = units.speed;
+            info.energy = units.energy;
+            info.MaxHealth = units.maxHealth;
+            info.MaxEnergy = units.maxEnergy;
         }
     }
 }
