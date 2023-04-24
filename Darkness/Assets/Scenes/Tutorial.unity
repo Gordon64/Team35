@@ -10257,7 +10257,7 @@ GameObject:
   - component: {fileID: 2022680938}
   - component: {fileID: 2022680937}
   - component: {fileID: 2022680936}
-  - component: {fileID: 2022680940}
+  - component: {fileID: 2022680941}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -10379,7 +10379,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2022680940
+--- !u!114 &2022680941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10388,9 +10388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022680935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90b6aa89458fd6c4a8306d920c1ec847, type: 3}
+  m_Script: {fileID: 11500000, guid: c501be0435e8fef46888be61f16a5017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: TransitionLevel1
 --- !u!1 &2047856476
 GameObject:
   m_ObjectHideFlags: 0
@@ -10995,6 +10996,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: healthText
       value: 
