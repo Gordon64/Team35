@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
-  m_Name: MediumUpgradeGem
+  m_Name: Defense_Potion
   m_EditorClassIdentifier: 
   itemid: 7
-  itemName: Medium Upgrade Gem
-  ourValue: 2
-  itemIcon: {fileID: 21300004, guid: 7796e13d4695cb3479ae0a0dbfb45ee3, type: 3}
-  itemType: 6
-  shopCost: 5
-  probability: 40
-  itemDescription: A medium gem that gives you one additional upgrade point to go
-    towards upgrading the stats of your character.
+  itemName: Defense Potion
+  ourValue: 5
+  itemIcon: {fileID: 5817937334865189329, guid: 140447aefe5ab6240b7562265d351154, type: 3}
+  itemType: 5
+  shopCost: 4
+  probability: 60
+  itemDescription: A potion that if taken, will give you a small boost in defense.

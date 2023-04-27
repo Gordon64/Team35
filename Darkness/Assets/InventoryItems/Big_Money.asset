@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
-  m_Name: BigMoney
+  m_Name: Big_Money
   m_EditorClassIdentifier: 
-  itemid: 6
+  itemid: 5
   itemName: Big Money
   ourValue: 10
   itemIcon: {fileID: 21300000, guid: a44362b4ab5a6d14ea00221a10901134, type: 3}

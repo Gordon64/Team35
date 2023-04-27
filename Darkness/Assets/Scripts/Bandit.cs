@@ -21,6 +21,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
 
     public TMP_Text healthText;
     public float health;
+    public float defense;
 
     SavePlayerPos playerPosData;
     public GameObject PlayerUnit;
@@ -194,6 +195,12 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     {
         health += healthBoost;
         healthText.text = $"HP: {health}";
+    }
+
+    //increase defense with the potion
+    public void increaseDefense(int defenseBoost)
+    {
+        defense += defenseBoost;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -22,12 +22,10 @@ public class InventoryItem :ScriptableObject
     public enum ItemType{
         Basic_Potion,
         Basic_Sword,
-        //loot test
-        SmallMoney,
-        AverageMoney,
-        BigMoney,
-        SmallUpgradeGem,
-        MediumUpgradeGem,
-        LargeUpgradeGem
+        Small_Money,
+        Average_Money,
+        Big_Money,
+        Defense_Potion,
+        Energy_Potion
     }
 }

@@ -54,11 +54,19 @@ public class InventoryManager : MonoBehaviour
             {
                 removeButton.gameObject.SetActive(true);
             }
-                
+          
                 
         }
 
         SetInvItems();
+    }
+
+    public void removeDuplicates(){
+        //prevents duplicates
+        foreach (Transform anItem in ItemContent)
+        {
+            Destroy(anItem.gameObject);
+        }
     }
 
     //allows to remove items from inventory
@@ -70,8 +78,7 @@ public class InventoryManager : MonoBehaviour
             {
                 anItem.Find("RemoveButton").gameObject.SetActive(true);
             }
-        } else 
-        {
+        } else {
             foreach (Transform anItem in ItemContent)
             {
                 anItem.Find("RemoveButton").gameObject.SetActive(false);

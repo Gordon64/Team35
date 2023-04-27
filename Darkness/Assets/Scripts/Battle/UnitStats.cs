@@ -201,6 +201,12 @@ public class UnitStats : MonoBehaviour, IComparable
         health += healthBoost;
     }
 
+    //increase defense with the potion
+    public void increaseDefense(int defenseBoost)
+    {
+        defense += defenseBoost;
+    }
+
     IEnumerator wait()
     {
         yield return new WaitForSeconds(2f);
