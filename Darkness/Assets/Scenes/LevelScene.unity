@@ -43097,6 +43097,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2135746605559224002, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2609825464319370023, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
       propertyPath: m_Name
       value: BatSpawner (1)

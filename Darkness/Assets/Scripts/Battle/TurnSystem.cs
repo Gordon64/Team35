@@ -7,6 +7,8 @@ public class TurnSystem : MonoBehaviour
 {
     public List<UnitStats> unitsStats;
 
+    public GameObject enemyEncounter;
+
     [SerializeField]
     private GameObject actionsMenu, enemyUnitsMenu;
 
@@ -65,6 +67,7 @@ public class TurnSystem : MonoBehaviour
         if (remainingEnemyUnits.Count == 0)
         {
             playerPosData.PlayerPosLoad();
+            this.enemyEncounter.GetComponent<CollectReward>().collectReward();
             SceneManager.LoadScene("LevelScene");
         }
 
@@ -73,6 +76,7 @@ public class TurnSystem : MonoBehaviour
         if(remainingPlayerUnits.Length == 0)
         {
             SceneManager.LoadScene("LevelScene");
+            //Send to main menu for loss? Then, they can load?
         }
 
         //Top of turn list is popped, popped unit takes their turn

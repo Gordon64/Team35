@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StartBattle : MonoBehaviour
 {
+    private static GameObject instance;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (instance != null)
+        {
+            Destroy(instance);
+        }
+
+        instance = gameObject;
         DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6974548992871132697}
   - component: {fileID: -1215179069811223699}
   - component: {fileID: 8567458126521287760}
+  - component: {fileID: 32200982114014544}
   m_Layer: 0
   m_Name: AngelSpawner
   m_TagString: Untagged
@@ -146,3 +147,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &32200982114014544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609825464319370023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60744775e91f7be4382708b5d18f0871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 5

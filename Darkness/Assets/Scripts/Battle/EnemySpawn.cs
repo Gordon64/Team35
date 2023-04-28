@@ -19,7 +19,6 @@ public class EnemySpawn : MonoBehaviour
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
         enemyData = FindObjectOfType<EnemyManager>();
-        DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -37,12 +36,7 @@ public class EnemySpawn : MonoBehaviour
                     currentUnitStats.health -= 5;
                 }
             }
-
             SceneManager.sceneLoaded -= OnSceneLoaded;
-            Destroy(this.gameObject);
-        }
-        if(scene.name == "LevelScene"){
-            Destroy(this.gameObject);
         }
     }
 
@@ -63,6 +57,8 @@ public class EnemySpawn : MonoBehaviour
             enemyData.defeatedEnemy(this.gameObject.name);
             SceneManager.LoadScene("BattleScene");
         }
+
+        this.gameObject.SetActive(false);
     }
 
 }

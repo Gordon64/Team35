@@ -23,9 +23,9 @@ public class EnemyManager : MonoBehaviour
 
     public void defeatedEnemy(string enemyName)
     {
-        GameObject enemyObject = enemy.Find(obj => obj.name == "BatSpawner");
-        //GameObject enemyObject = enemy.Find(obj => obj.name == enemyName);
-        Debug.Log("Enemy Name is: " + enemyName);
-        enemyObject.SetActive(false);
+        //GameObject enemyObject = enemy.Find(obj => obj.name == "BatSpawner");
+        ////GameObject enemyObject = enemy.Find(obj => obj.name == enemyName);
+        //Debug.Log("Enemy Name is: " + enemyName);
+        //enemyObject.SetActive(false);
     }
 }

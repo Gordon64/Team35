@@ -17,7 +17,6 @@ public class GotHurtEnemy : MonoBehaviour
             enemyStats = this.gameObject.GetComponent<UnitStats>();
 
             health = enemyStats.health;
-
         }
     }
 
@@ -26,7 +25,7 @@ public class GotHurtEnemy : MonoBehaviour
     {
         if(health > enemyStats.health)
         {
-            animator.SetTrigger("Hurt");
+            //animator.SetTrigger("Hurt");
         }
     }
 }

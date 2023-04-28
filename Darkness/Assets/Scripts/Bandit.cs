@@ -48,7 +48,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     // Update is called once per frame
     void Update()
     {
-        UnityEngine.Debug.Log(units.health);
+        //UnityEngine.Debug.Log(units.health);
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
