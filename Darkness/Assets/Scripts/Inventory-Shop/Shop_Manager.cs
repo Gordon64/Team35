@@ -47,5 +47,7 @@ public class Shop_Manager : MonoBehaviour
         return SelectedItem;
     }
 
+    
+
 
 }

@@ -20,8 +20,8 @@ public class NoDestroy : MonoBehaviour
                 {
                     return;
                 }
-
                 Destroy(gameObject);
+
 
                 // Return to skip the following registration code
                 return;

@@ -22,9 +22,6 @@ public class InventoryItem :ScriptableObject
     public enum ItemType{
         Basic_Potion,
         Basic_Sword,
-        Small_Money,
-        Average_Money,
-        Big_Money,
         Defense_Potion,
         Energy_Potion
     }
