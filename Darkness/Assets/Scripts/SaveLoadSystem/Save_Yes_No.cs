@@ -39,4 +39,9 @@ public class Save_Yes_No : MonoBehaviour
         if(myObject != null)
             myObject.SetActive(false);
     }
+    
+    public void SaveAndContinue(){
+        SaveLoadSystem.instance.SaveGame();
+        myObject.SetActive(false);
+    }
 }

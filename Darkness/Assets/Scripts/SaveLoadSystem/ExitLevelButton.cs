@@ -14,6 +14,7 @@ public class ExitLevelButton : MonoBehaviour
         ExitPanel.gameObject.SetActive(false);
     }
 
+
     void Update(){
         if (Input.GetKeyDown(KeyCode.Escape)){
             UnityEngine.Debug.Log(ExitPanel.gameObject.activeSelf);
@@ -59,6 +60,10 @@ public class ExitLevelButton : MonoBehaviour
                 ExitPanel.gameObject.SetActive(false);
                 Bandit.Instance.shopEnabled = false;
             }
+        }
+
+        if(ExitPanel.activeSelf == false){
+            Bandit.Instance.shopEnabled = false;
         }
     }
 }

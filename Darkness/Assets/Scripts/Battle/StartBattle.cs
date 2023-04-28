@@ -29,7 +29,7 @@ public class StartBattle : MonoBehaviour
         }
         else
         {
-            this.gameObject.SetActive(scene.name == "BattleScene");
+            //this.gameObject.SetActive(scene.name == "BattleScene");     //This is causing the player party to be deactivated, which means that Save system will not be able to save. Commenting out for the time being.
         }
     }
 
