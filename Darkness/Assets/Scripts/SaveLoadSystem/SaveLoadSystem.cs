@@ -14,6 +14,7 @@ public class SaveLoadSystem : MonoBehaviour
     private DataFileManager fileManager;
     private string sceneName;
     private GameObject SavePanel;
+    public bool stopLoading = false;
 
     private void Awake(){
         if (instance != null){
@@ -38,9 +39,10 @@ public class SaveLoadSystem : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         sceneName = SceneManager.GetActiveScene().name;
         this.SaveLoadObjects = FindAllSaveLoadObjects();
-        if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 ){
+        if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 && stopLoading == false){
             LoadGame();
         }
+        stopLoading = true;
         UnityEngine.Debug.Log("loaded called");
     }
 

@@ -24,16 +24,19 @@ public class Save_Yes_No : MonoBehaviour
 
     public void YesButton(string sceneName){
         SaveLoadSystem.instance.SaveGame();
+        SaveLoadSystem.instance.stopLoading = false;
         SceneManager.LoadScene(sceneName);
         PlayerPrefs.DeleteAll();
     }
 
     public void NoButton(string sceneName){
         SceneManager.LoadScene(sceneName);
+        SaveLoadSystem.instance.stopLoading = false;
         PlayerPrefs.DeleteAll();
     }
 
     public void TutYesButton(string scenename){
+        SaveLoadSystem.instance.stopLoading = false;
         SceneManager.LoadScene(scenename);
     }
     

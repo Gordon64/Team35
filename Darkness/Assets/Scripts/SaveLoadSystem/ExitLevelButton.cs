@@ -63,8 +63,7 @@ public class ExitLevelButton : MonoBehaviour
                 Bandit.Instance.shopEnabled = false;
             }
         }
-
-        if(ExitPanel.activeSelf == false){
+        else if(ExitPanel.activeSelf == false){
             Bandit.Instance.shopEnabled = false;
         }
     }
