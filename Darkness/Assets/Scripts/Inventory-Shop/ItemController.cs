@@ -38,6 +38,8 @@ public class ItemController : MonoBehaviour
             //no case for attack yet
             case InventoryItem.ItemType.Basic_Sword:
                 // bandit.attack += 5;
+                //Bandit.instance.
+                UnitStats.instance.increaseAttack(anItem.ourValue);
                 break;
             case InventoryItem.ItemType.Defense_Potion:
                 Bandit.Instance.increaseDefense(anItem.ourValue);

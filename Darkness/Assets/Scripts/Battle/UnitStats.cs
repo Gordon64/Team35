@@ -209,6 +209,11 @@ public class UnitStats : MonoBehaviour, IComparable
         defense += defenseBoost;
     }
 
+    //increase attack with the sword 
+    public void increaseAttack(int attackBoost){
+        attack += attackBoost;
+    }
+
     IEnumerator wait()
     {
         yield return new WaitForSeconds(2f);
