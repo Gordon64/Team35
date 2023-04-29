@@ -13,6 +13,7 @@ public class SaveLoadSystem : MonoBehaviour
     private SavedInfo gameData;
     private DataFileManager fileManager;
     private string sceneName;
+    private GameObject SavePanel;
 
     private void Awake(){
         if (instance != null){
@@ -23,6 +24,7 @@ public class SaveLoadSystem : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         this.fileManager = new DataFileManager(fileName);
+        SavePanel = GameObject.Find("SavePanel");
     }
 
     private void OnEnable(){
@@ -85,7 +87,7 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     public void SaveGameAction(){
-        SaveGame();
+        SavePanel.SetActive(true);
     }
 
     private List<SaveLoadInterface> FindAllSaveLoadObjects(){

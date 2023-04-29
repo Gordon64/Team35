@@ -8,10 +8,12 @@ public class Save_Yes_No : MonoBehaviour
 { 
 
     private GameObject myObject;
+    private GameObject myObject2;
     // Start is called before the first frame update
     void Start()
     {
         myObject = GameObject.Find("ExitPanel");
+        myObject2 = GameObject.Find("SavePanel");
     }
 
     // Update is called once per frame
@@ -43,5 +45,14 @@ public class Save_Yes_No : MonoBehaviour
     public void SaveAndContinue(){
         SaveLoadSystem.instance.SaveGame();
         myObject.SetActive(false);
+    }
+
+    public void SaveNo(){
+        myObject2.SetActive(false);
+    }
+
+    public void SaveYes(){
+        myObject2.SetActive(false);
+        SaveLoadSystem.instance.SaveGame();
     }
 }

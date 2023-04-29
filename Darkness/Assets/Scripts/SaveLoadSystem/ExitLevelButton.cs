@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class ExitLevelButton : MonoBehaviour
 {
     public GameObject ExitPanel;
+    public GameObject SavePanel;
     public GameObject ShopPanel;
     public GameObject DialoguePanel;
     public GameObject DialoguePanel2;
 
     void Start(){
         ExitPanel.gameObject.SetActive(false);
+        SavePanel.gameObject.SetActive(false);
     }
 
 
