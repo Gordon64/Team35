@@ -18,9 +18,12 @@ public class TurnSystem : MonoBehaviour
 
     SavePlayerPos playerPosData;
 
+    ShowVictoryDefeat screen;
+
     void Start()
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
+        screen = FindObjectOfType<ShowVictoryDefeat>();
 
         //Finds Player units, adds to turn list
         unitsStats = new List<UnitStats>();
@@ -68,6 +71,7 @@ public class TurnSystem : MonoBehaviour
         {
             playerPosData.PlayerPosLoad();
             this.enemyEncounter.GetComponent<CollectReward>().collectReward();
+            screen.ShowVictoryScreen();
             SceneManager.LoadScene("LevelScene");
         }
 
@@ -75,6 +79,7 @@ public class TurnSystem : MonoBehaviour
 
         if(remainingPlayerUnits.Length == 0)
         {
+            screen.ShowDefeatScreen();
             SceneManager.LoadScene("LevelScene");
             //Send to main menu for loss? Then, they can load?
         }

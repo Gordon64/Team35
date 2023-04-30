@@ -10537,6 +10537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 1398012847}
+  SavePanel: {fileID: 0}
   ShopPanel: {fileID: 493908769}
   DialoguePanel: {fileID: 0}
   DialoguePanel2: {fileID: 0}
@@ -11467,6 +11468,7 @@ GameObject:
   - component: {fileID: 977493606}
   - component: {fileID: 977493605}
   - component: {fileID: 977493604}
+  - component: {fileID: 977493607}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11519,6 +11521,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977493607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977493603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4e011b5b6c4ab44972409d714ebb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryScreen: {fileID: 14356838}
+  defeatScreen: {fileID: 1749867780}
 --- !u!1 &1003708026
 GameObject:
   m_ObjectHideFlags: 0
@@ -32661,6 +32677,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2135746605559224002, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2609825464319370023, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
       propertyPath: m_Name
       value: BatSpawner (1)
@@ -32683,7 +32703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3311738383313030032, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.108426
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3311738383313030032, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36587,6 +36607,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2135746605559224002, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
+      propertyPath: ID
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2609825464319370023, guid: 98882979f6ff8c64f85d14a89f5c047b, type: 3}
       propertyPath: m_Name
       value: BatSpawner (2)

@@ -43033,6 +43033,7 @@ GameObject:
   - component: {fileID: 1597678609}
   - component: {fileID: 1597678608}
   - component: {fileID: 1597678610}
+  - component: {fileID: 1597678611}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43086,6 +43087,20 @@ MonoBehaviour:
   - {fileID: 197145789}
   - {fileID: 1021006400}
   - {fileID: 94836399}
+--- !u!114 &1597678611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597678607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4e011b5b6c4ab44972409d714ebb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryScreen: {fileID: 18918265}
+  defeatScreen: {fileID: 1380189827}
 --- !u!1 &1598909849
 GameObject:
   m_ObjectHideFlags: 0
