@@ -36,7 +36,6 @@ public class Save_Yes_No : MonoBehaviour
     }
 
     public void TutYesButton(string scenename){
-        SaveLoadSystem.instance.stopLoading = false;
         SceneManager.LoadScene(scenename);
     }
     

@@ -39,7 +39,11 @@ public class SaveLoadSystem : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         sceneName = SceneManager.GetActiveScene().name;
         this.SaveLoadObjects = FindAllSaveLoadObjects();
-        if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 && stopLoading == false){
+        if(StartNewGame.instance.StartCheck == true){
+            NewGame();
+            StartNewGame.instance.StartCheck = false;
+        }
+        else if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 && stopLoading == false){
             LoadGame();
         }
         stopLoading = true;

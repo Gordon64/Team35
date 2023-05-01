@@ -8,7 +8,12 @@ public class StartButton : MonoBehaviour
 
     public void StartLevel(string sceneName)
     {
-        SaveLoadSystem.instance.NewGame();
+        try{
+            SaveLoadSystem.instance.NewGame();
+        }
+        catch{
+            UnityEngine.Debug.Log("Can't load yet.");
+        }
         SceneManager.LoadScene(sceneName);
     }
 }
