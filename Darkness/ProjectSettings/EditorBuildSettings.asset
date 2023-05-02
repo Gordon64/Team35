@@ -18,27 +18,24 @@ EditorBuildSettings:
     path: Assets/Scenes/DarknessSettingsDisplay.unity
     guid: 5059497af763a0b48ac37d67dc895048
   - enabled: 1
-    path: Assets/Scenes/BattleScene.unity
-    guid: f2d6dfc6c65265a4cae529b1d715c715
+    path: Assets/Scenes/IntroScene.unity
+    guid: 34d280025f067b644ab7bd80edcfa9cf
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 3143e6889a01e6c48835ad30a201bb9d
   - enabled: 1
-    path: Assets/Scenes/LevelScene.unity
-    guid: 4e1c928566c2f5c4abf2c0efb937fe13
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
-    guid: 34d280025f067b644ab7bd80edcfa9cf
-  - enabled: 1
     path: Assets/Scenes/TransitionLevel1.unity
     guid: 3c98b812fce055e4b963c6d2fa43f8b3
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 4e1c928566c2f5c4abf2c0efb937fe13
+  - enabled: 1
+    path: Assets/Scenes/TransitionLevel2.unity
+    guid: 708331ea89d7fb940b8be4beea1f837e
   - enabled: 1
     path: Assets/Scenes/Level2Scene.unity
     guid: 4d713e2db9cf2e34a84461f29ff480e4
   - enabled: 1
-    path: Assets/Scenes/TransitionLevel2.unity
-    guid: 708331ea89d7fb940b8be4beea1f837e
+    path: Assets/Scenes/BattleScene.unity
+    guid: f2d6dfc6c65265a4cae529b1d715c715
   m_configObjects: {}
