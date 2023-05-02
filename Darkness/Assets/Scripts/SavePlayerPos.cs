@@ -19,12 +19,16 @@ public class SavePlayerPos : MonoBehaviour
             PlayerPrefs.SetInt("TimeToLoad", 0);
             PlayerPrefs.Save();
         }
-
     }
 
     //Call this function to save player's position
     public void PlayerPosSave()
     {
+        if (player == null)
+        {
+            player = FindObjectOfType<Bandit>().gameObject;
+        }
+
         PlayerPrefs.SetFloat("p_x", player.transform.position.x);
         PlayerPrefs.SetFloat("p_y", player.transform.position.y);
         PlayerPrefs.SetInt("Saved", 1);

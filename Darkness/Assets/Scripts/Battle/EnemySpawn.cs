@@ -35,8 +35,8 @@ public class EnemySpawn : MonoBehaviour
                     UnitStats currentUnitStats = enemyUnit.GetComponent<UnitStats>();
                     currentUnitStats.health -= 5;
                 }
+                SceneManager.sceneLoaded -= OnSceneLoaded;
             }
-            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
 
@@ -46,7 +46,7 @@ public class EnemySpawn : MonoBehaviour
         {
             playerPosData.PlayerPosSave();
             this.spawning = true;
-            enemyData.defeatedEnemy(this.gameObject.name);
+            //enemyData.defeatedEnemy(this.gameObject.name);
             SceneManager.LoadScene("BattleScene");
         }
         else if(other.gameObject.tag == "Weapon")
@@ -60,5 +60,4 @@ public class EnemySpawn : MonoBehaviour
 
         this.gameObject.SetActive(false);
     }
-
 }

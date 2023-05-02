@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -876656634205146675}
   - component: {fileID: 7206624775632731158}
   - component: {fileID: -2401650245694280861}
+  - component: {fileID: 2895284587248152000}
   m_Layer: 0
   m_Name: Boss
   m_TagString: EnemyUnit
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b5d8536c984bc488816ccb7648575e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currency: 0
   health: 10
   energy: 0
   attack: 5
@@ -165,3 +167,15 @@ MonoBehaviour:
   - {fileID: 7018705526504252920, guid: 4ecc640d50ed1c4419c7c47adc7bf788, type: 3}
   - {fileID: 7018705526504252920, guid: 9c5ebc8d7011c80419c1d049c57660a5, type: 3}
   - {fileID: 7018705526504252920, guid: acb0d837e482b2246b66df50b53d1b00, type: 3}
+--- !u!114 &2895284587248152000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089920838171159866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e98455f67b2814eae5fe85e7513be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
