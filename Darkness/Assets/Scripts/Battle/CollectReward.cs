@@ -6,6 +6,7 @@ public class CollectReward : MonoBehaviour
 {
     [SerializeField]
     private int currency;
+    public GameObject spawner;
 
     public void Start()
     {
@@ -21,7 +22,6 @@ public class CollectReward : MonoBehaviour
         {
             playerUnit.GetComponent<UnitStats>().receiveCurrency(currency);
         }
-
         Destroy(this.gameObject);
     }
 

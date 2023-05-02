@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<GameObject> enemy;
+    //public List<GameObject> enemy;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject enemy in enemy)
-        {
-            enemy.SetActive(true);
-        }
+        //foreach (GameObject enemy in enemy)
+        //{
+        //    enemy.SetActive(true);
+        //}
 
         //Testing purposes
         /*

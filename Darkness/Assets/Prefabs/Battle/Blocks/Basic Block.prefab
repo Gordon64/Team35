@@ -52,7 +52,8 @@ MonoBehaviour:
   maxDefenseMultiplier: 1
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: You brace yourself for impact.
-  posthitDialogue: Your defense is increased.
+  hitDialogue: In your exhaustion, you summon your last reserves of strength to continue
+    fighting. +DEFENSE +STAMINA
   statusEffect: {fileID: 0}
   buffEffect: {fileID: 11400000, guid: 5de39b5971d132245ba7fa5775f60f25, type: 2}
+  animationEffect: {fileID: 0}

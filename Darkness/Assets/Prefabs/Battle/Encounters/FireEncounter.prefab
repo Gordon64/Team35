@@ -56,7 +56,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2089920838171159866, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: m_Name
-      value: FireUnit
+      value: Arsonist
       objectReference: {fileID: 0}
     - target: {fileID: 7563072728192908201, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: m_RootOrder

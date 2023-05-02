@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -876656634205146675}
   - component: {fileID: 7206624775632731158}
   - component: {fileID: -2401650245694280861}
-  - component: {fileID: 1699837964725036640}
   - component: {fileID: 5477771234423016570}
   m_Layer: 0
   m_Name: Bat
@@ -102,12 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b5d8536c984bc488816ccb7648575e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  currency: 0
+  health: 20
   energy: 0
-  attack: 5
+  attack: 8
   defense: 0
   speed: 12
-  maxHealth: 0
+  maxHealth: 20
   maxEnergy: 0
   defaultDefense: 0
   damageTextPosition: {x: 40, y: 100}
@@ -165,26 +165,6 @@ MonoBehaviour:
   targetsTag: PlayerUnit
   attacks:
   - {fileID: 7018705526504252920, guid: a32bd60a802a06a49b9888db10b9cd47, type: 3}
---- !u!95 &1699837964725036640
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089920838171159866}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70917d478c895b543a2cd68fd2bb7803, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5477771234423016570
 MonoBehaviour:
   m_ObjectHideFlags: 0

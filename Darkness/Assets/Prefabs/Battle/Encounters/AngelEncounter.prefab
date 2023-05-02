@@ -56,7 +56,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2089920838171159866, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: m_Name
-      value: EnemyUnit
+      value: Angel
       objectReference: {fileID: 0}
     - target: {fileID: 7563072728192908201, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: m_RootOrder
