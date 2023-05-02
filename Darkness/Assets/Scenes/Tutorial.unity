@@ -5150,8 +5150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e359e55847aff6c4da5a1b3ad5c54c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
-  - {fileID: 1561489909}
 --- !u!114 &1117229300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5627,6 +5625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 926575498}
+  SavePanel: {fileID: 0}
   ShopPanel: {fileID: 0}
   DialoguePanel: {fileID: 2005333082}
   DialoguePanel2: {fileID: 378504754}
@@ -9573,7 +9572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.99907, y: -144.7266}
+  m_AnchoredPosition: {x: -198.99907, y: -96.7}
   m_SizeDelta: {x: 4.9511, y: 1.2378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1912929396
