@@ -22,6 +22,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     public TMP_Text healthText;
     public float health;
     public float defense;
+    public int level;
 
     SavePlayerPos playerPosData;
     public GameObject PlayerUnit;
@@ -48,6 +49,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     // Update is called once per frame
     void Update()
     {
+
         //UnityEngine.Debug.Log(units.health);
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())

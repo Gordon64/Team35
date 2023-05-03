@@ -52,6 +52,17 @@ public class SaveLoadSystem : MonoBehaviour
 
     public void OnApplicationQuit(){
         PlayerPrefs.DeleteAll();
+        switch(SceneManager.GetActiveScene().name){
+            case "LevelScene":
+                PlayerPrefs.SetInt("level", 1);
+                break;
+            case "Level2Scene":
+                PlayerPrefs.SetInt("level", 2);
+                break;
+            case "Level3Scene":
+                PlayerPrefs.SetInt("level", 3);
+                break;
+        }
     }
 
     public void NewGame(){
@@ -81,11 +92,9 @@ public class SaveLoadSystem : MonoBehaviour
                 UnityEngine.Debug.Log("Saved data!");
             }
         }
-        UnityEngine.Debug.Log("should be data saved " +this.gameData.position);
 
         fileManager.Save(gameData);
 
-        UnityEngine.Debug.Log("Data actually saved " + gameData.position);
     }
 
     public void LoadGameAction(){

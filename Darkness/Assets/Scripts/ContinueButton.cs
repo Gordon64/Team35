@@ -23,7 +23,17 @@ public class ContinueButton : MonoBehaviour
         }
     }
 
-    public void ContinueClick(string sceneName){
-            SceneManager.LoadScene(sceneName);
+    public void ContinueClick(){
+            switch(PlayerPrefs.GetInt("level", 1)){
+            case 1:
+                SceneManager.LoadScene("LevelScene");
+                break;
+            case 2:
+                SceneManager.LoadScene("Level2Scene");
+                break;
+            case 3:
+                SceneManager.LoadScene("Level3Scene");
+                break;
+        }
     }
 }
