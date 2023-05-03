@@ -36,6 +36,14 @@ public class ItemController : MonoBehaviour
                 Bandit.Instance.increaseHealth(anItem.ourValue);
                 UnitStats.instance.increaseHealth(anItem.ourValue);
                 break;
+            case InventoryItem.ItemType.Better_Potion:
+                Bandit.Instance.increaseHealth(anItem.ourValue);
+                UnitStats.instance.increaseHealth(anItem.ourValue);
+                break;
+            case InventoryItem.ItemType.Best_Potion:
+                Bandit.Instance.increaseHealth(anItem.ourValue);
+                UnitStats.instance.increaseHealth(anItem.ourValue);
+                break;
             //Sword cases
             case InventoryItem.ItemType.Basic_Sword:
                 Bandit.Instance.increaseAttack(anItem.ourValue);
@@ -46,8 +54,25 @@ public class ItemController : MonoBehaviour
                 Bandit.Instance.increaseDefense(anItem.ourValue);
                 UnitStats.instance.increaseDefense(anItem.ourValue);
                 break;
+            case InventoryItem.ItemType.Better_Defense_Potion:
+                Bandit.Instance.increaseDefense(anItem.ourValue);
+                UnitStats.instance.increaseDefense(anItem.ourValue);
+                break;
+            case InventoryItem.ItemType.Best_Defense_Potion:
+                Bandit.Instance.increaseDefense(anItem.ourValue);
+                UnitStats.instance.increaseDefense(anItem.ourValue);
+                break;
+
             //Energy potion cases
             case InventoryItem.ItemType.Energy_Potion:
+                Bandit.Instance.increaseEnergy(anItem.ourValue);
+                UnitStats.instance.increaseEnergy(anItem.ourValue);
+                break;
+            case InventoryItem.ItemType.Better_Energy_Potion:
+                Bandit.Instance.increaseEnergy(anItem.ourValue);
+                UnitStats.instance.increaseEnergy(anItem.ourValue);
+                break;
+            case InventoryItem.ItemType.Best_Energy_Potion:
                 Bandit.Instance.increaseEnergy(anItem.ourValue);
                 UnitStats.instance.increaseEnergy(anItem.ourValue);
                 break;

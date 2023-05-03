@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
   m_Name: Best_Energy_Potion
   m_EditorClassIdentifier: 
-  itemid: 0
-  itemName: Best_Energy_Potion
-  ourValue: 0
-  itemIcon: {fileID: 0}
-  itemType: 0
-  shopCost: 0
+  itemid: 10
+  itemName: Best Energy Potion
+  ourValue: 3
+  itemIcon: {fileID: 4279212237149549428, guid: 234ac5994eba3364db58a97dda7c83a9, type: 3}
+  itemType: 8
+  shopCost: 9
   probability: 0
-  itemDescription: 
+  itemDescription: A potion that if taken, will give you a big boost in energy for
+    battles.

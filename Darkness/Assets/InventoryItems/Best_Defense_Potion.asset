@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
   m_Name: Best_Defense_Potion
   m_EditorClassIdentifier: 
-  itemid: 0
-  itemName: 
-  ourValue: 0
-  itemIcon: {fileID: 0}
-  itemType: 0
-  shopCost: 0
+  itemid: 8
+  itemName: Best Defense Potion
+  ourValue: 6
+  itemIcon: {fileID: 1853564907622826731, guid: df2b1a7ad3eeb534d8e1d205678a94f8, type: 3}
+  itemType: 5
+  shopCost: 7
   probability: 0
-  itemDescription: 
+  itemDescription: A potion that if taken, will give you a big boost in defense.

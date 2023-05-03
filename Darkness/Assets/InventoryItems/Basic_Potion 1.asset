@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemid: 1
   itemName: Basic Potion
-  ourValue: 3
+  ourValue: 2
   itemIcon: {fileID: 6426664300169387062, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}
   itemType: 0
   shopCost: 2

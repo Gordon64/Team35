@@ -23,7 +23,7 @@ public class StatsSet : MonoBehaviour
         energyStat.text = System.Convert.ToString(Player.energy);
     }
 
-    void Start()
+    void Update()
     {
         SetStats();
     }

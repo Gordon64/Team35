@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
   m_Name: Best_Potion
   m_EditorClassIdentifier: 
-  itemid: 0
-  itemName: 
-  ourValue: 0
-  itemIcon: {fileID: 0}
-  itemType: 0
-  shopCost: 0
+  itemid: 6
+  itemName: Best Potion
+  ourValue: 6
+  itemIcon: {fileID: -3109346013065267574, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}
+  itemType: 2
+  shopCost: 6
   probability: 0
-  itemDescription: 
+  itemDescription: A potion that if taken, will give you a big boost in heatlh.

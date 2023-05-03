@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemid: 2
   itemName: Basic Sword
-  ourValue: 4
+  ourValue: 3
   itemIcon: {fileID: 5484475921171301773, guid: 5086f7f9cf02c27478fdeda4cd78894a, type: 3}
-  itemType: 1
+  itemType: 9
   shopCost: 4
   probability: 40
   itemDescription: 'The basic sword, it allows for a small difference in strength

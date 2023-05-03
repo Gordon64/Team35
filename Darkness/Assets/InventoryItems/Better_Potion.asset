@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
   m_Name: Better_Potion
   m_EditorClassIdentifier: 
-  itemid: 0
-  itemName: 
-  ourValue: 0
-  itemIcon: {fileID: 0}
-  itemType: 0
-  shopCost: 0
+  itemid: 5
+  itemName: Better Potion
+  ourValue: 4
+  itemIcon: {fileID: -4508665475090276393, guid: 8eed8bc61f5222b41a710b272c7f1396, type: 3}
+  itemType: 1
+  shopCost: 4
   probability: 0
-  itemDescription: 
+  itemDescription: A potion that if taken, will give you a medium boost in heatlh.

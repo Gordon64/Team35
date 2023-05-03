@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4eec4e86ba04b04a8dbcbe96b672f20, type: 3}
   m_Name: Energy_Potion
   m_EditorClassIdentifier: 
-  itemid: 8
+  itemid: 4
   itemName: Energy Potion
   ourValue: 2
   itemIcon: {fileID: 7012010456378013424, guid: 234ac5994eba3364db58a97dda7c83a9, type: 3}
-  itemType: 3
+  itemType: 6
   shopCost: 7
   probability: 50
   itemDescription: A potion that if taken, will give you a small boost in energy
