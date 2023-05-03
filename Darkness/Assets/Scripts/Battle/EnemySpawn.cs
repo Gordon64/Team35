@@ -32,8 +32,11 @@ public class EnemySpawn : MonoBehaviour
 
     private void OnSceneLoaded (Scene scene, LoadSceneMode mode)
     {
-        gameObject.SetActive(true);
-
+        try{
+            gameObject.SetActive(true);
+        }catch{
+            UnityEngine.Debug.Log("Game Object Not Loadable");
+        }
         if (scene.name == "BattleScene")
         {
             if (this.spawning)
@@ -58,7 +61,12 @@ public class EnemySpawn : MonoBehaviour
         else if (scene.name != initialScene)
         {
             //destroys the gameobjects for levels besides their initial level
+            try{
             Destroy(gameObject);
+            }
+            catch{
+                UnityEngine.Debug.Log("Not able to destroy because game Objects dont exist");
+            }
         }
     }
 

@@ -14,6 +14,7 @@ public class StartButton : MonoBehaviour
         catch{
             UnityEngine.Debug.Log("Can't load yet.");
         }
+        StartNewGame.instance.StartCheck = true;
         SceneManager.LoadScene(sceneName);
     }
 }

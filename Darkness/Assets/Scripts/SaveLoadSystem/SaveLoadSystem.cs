@@ -10,11 +10,11 @@ public class SaveLoadSystem : MonoBehaviour
     [SerializeField] private string fileName;
     public static SaveLoadSystem instance {get; private set;}
     private List<SaveLoadInterface> SaveLoadObjects;
-    private SavedInfo gameData;
+    public SavedInfo gameData;
     private DataFileManager fileManager;
     private string sceneName;
     private GameObject SavePanel;
-    public bool stopLoading = false;
+    private Scene thisScene;
 
     private void Awake(){
         if (instance != null){
@@ -34,35 +34,27 @@ public class SaveLoadSystem : MonoBehaviour
 
     private void OnDisable(){
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         sceneName = SceneManager.GetActiveScene().name;
+        UnityEngine.Debug.Log("onsceneLoadedCalled");
         this.SaveLoadObjects = FindAllSaveLoadObjects();
         if(StartNewGame.instance.StartCheck == true){
             NewGame();
             StartNewGame.instance.StartCheck = false;
+            UnityEngine.Debug.Log("Loading New Game");
         }
-        else if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0 && stopLoading == false){
+        else if(sceneName != "Tutorial" && PlayerPrefs.GetFloat("health", 0) == 0){
             LoadGame();
+            UnityEngine.Debug.Log("Loading game");
         }
-        stopLoading = true;
-        UnityEngine.Debug.Log("loaded called");
+        thisScene = scene;
     }
 
     public void OnApplicationQuit(){
         PlayerPrefs.DeleteAll();
-        switch(SceneManager.GetActiveScene().name){
-            case "LevelScene":
-                PlayerPrefs.SetInt("level", 1);
-                break;
-            case "Level2Scene":
-                PlayerPrefs.SetInt("level", 2);
-                break;
-            case "Level3Scene":
-                PlayerPrefs.SetInt("level", 3);
-                break;
-        }
     }
 
     public void NewGame(){

@@ -228,14 +228,17 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         }
         if (info != null){
             if (this != null){
-                units.health = info.health;
+                if(StartNewGame.instance.BattleCheck != true){
+                    units.health = info.health;
+                    units.attack = info.attack;
+                    units.defense = info.defense;
+                    units.speed  = info.speed;
+                    units.energy = info.energy;
+                    units.maxHealth = info.MaxHealth;
+                    units.maxEnergy = info.MaxEnergy;
+                }
+                StartNewGame.instance.BattleCheck = false;
                 this.transform.position = info.position;
-                units.attack = info.attack;
-                units.defense = info.defense;
-                units.speed  = info.speed;
-                units.energy = info.energy;
-                units.maxHealth = info.MaxHealth;
-                units.maxEnergy = info.MaxEnergy;
             }
         }
     }
@@ -251,6 +254,8 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             info.energy = units.energy;
             info.MaxHealth = units.maxHealth;
             info.MaxEnergy = units.maxEnergy;
+            info.LastScene = StartNewGame.instance.sceneStack.Pop();
+            UnityEngine.Debug.Log(info.LastScene);
         }
     }
 }

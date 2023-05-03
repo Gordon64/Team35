@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SavePlayerPos : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class SavePlayerPos : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("TimeToLoad") == 1)
+        if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("TimeToLoad") == 1 && SceneManager.GetActiveScene().name != "Tutorial")
         {
             float pX = player.transform.position.x;
             float pY = player.transform.position.y;
@@ -16,6 +17,7 @@ public class SavePlayerPos : MonoBehaviour
             pX = PlayerPrefs.GetFloat("p_x");
             pY = PlayerPrefs.GetFloat("p_y");
             player.transform.position = new Vector2(pX, pY);
+            UnityEngine.Debug.Log(player.transform.position);
             PlayerPrefs.SetInt("TimeToLoad", 0);
             PlayerPrefs.Save();
         }

@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartCheck: 1
+  BattleCheck: 0
 --- !u!4 &346827818
 Transform:
   m_ObjectHideFlags: 0

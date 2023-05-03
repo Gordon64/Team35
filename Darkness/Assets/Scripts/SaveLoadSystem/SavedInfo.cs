@@ -13,6 +13,7 @@ public class SavedInfo
     public float energy;
     public float MaxHealth;
     public float MaxEnergy;
+    public string LastScene;
 
     public SavedInfo(){
         this.health = 30.0f;
@@ -23,5 +24,6 @@ public class SavedInfo
         this.energy = 10.0f;
         this.MaxHealth = 30.0f;
         this.MaxEnergy = 10.0f;
+        this.LastScene = "";
     }
 }

@@ -24,15 +24,25 @@ public class Save_Yes_No : MonoBehaviour
 
     public void YesButton(string sceneName){
         SaveLoadSystem.instance.SaveGame();
-        SaveLoadSystem.instance.stopLoading = false;
         SceneManager.LoadScene(sceneName);
         PlayerPrefs.DeleteAll();
+        switch(SceneManager.GetActiveScene().name){
+            case "LevelScene":
+                PlayerPrefs.SetInt("level", 1);
+                break;
+            case "Level2Scene":
+                PlayerPrefs.SetInt("level", 2);
+                break;
+            case "Level3Scene":
+                PlayerPrefs.SetInt("level", 3);
+                break;
+        }
     }
 
     public void NoButton(string sceneName){
         SceneManager.LoadScene(sceneName);
-        SaveLoadSystem.instance.stopLoading = false;
         PlayerPrefs.DeleteAll();
+        
     }
 
     public void TutYesButton(string scenename){
@@ -47,6 +57,18 @@ public class Save_Yes_No : MonoBehaviour
     public void SaveAndContinue(){
         SaveLoadSystem.instance.SaveGame();
         myObject.SetActive(false);
+        PlayerPrefs.DeleteAll();
+        switch(SceneManager.GetActiveScene().name){
+            case "LevelScene":
+                PlayerPrefs.SetInt("level", 1);
+                break;
+            case "Level2Scene":
+                PlayerPrefs.SetInt("level", 2);
+                break;
+            case "Level3Scene":
+                PlayerPrefs.SetInt("level", 3);
+                break;
+        }
     }
 
     public void SaveNo(){
@@ -56,5 +78,17 @@ public class Save_Yes_No : MonoBehaviour
     public void SaveYes(){
         myObject2.SetActive(false);
         SaveLoadSystem.instance.SaveGame();
+        PlayerPrefs.DeleteAll();
+        switch(SceneManager.GetActiveScene().name){
+            case "LevelScene":
+                PlayerPrefs.SetInt("level", 1);
+                break;
+            case "Level2Scene":
+                PlayerPrefs.SetInt("level", 2);
+                break;
+            case "Level3Scene":
+                PlayerPrefs.SetInt("level", 3);
+                break;
+        }
     }
 }
