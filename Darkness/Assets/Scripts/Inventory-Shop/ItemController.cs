@@ -35,15 +35,17 @@ public class ItemController : MonoBehaviour
                 Bandit.Instance.increaseHealth(anItem.ourValue);
                 UnitStats.instance.increaseHealth(anItem.ourValue);
                 break;
-            //no case for attack yet
             case InventoryItem.ItemType.Basic_Sword:
-                // bandit.attack += 5;
-                //Bandit.instance.
+                Bandit.Instance.increaseAttack(anItem.ourValue);
                 UnitStats.instance.increaseAttack(anItem.ourValue);
                 break;
             case InventoryItem.ItemType.Defense_Potion:
                 Bandit.Instance.increaseDefense(anItem.ourValue);
                 UnitStats.instance.increaseDefense(anItem.ourValue);
+                break;
+            case InventoryItem.ItemType.Energy_Potion:
+                Bandit.Instance.increaseEnergy(anItem.ourValue);
+                UnitStats.instance.increaseEnergy(anItem.ourValue);
                 break;
         }
         deleteItem();

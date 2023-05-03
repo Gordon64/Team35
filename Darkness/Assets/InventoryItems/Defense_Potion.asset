@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemid: 7
   itemName: Defense Potion
-  ourValue: 5
+  ourValue: 2
   itemIcon: {fileID: 5817937334865189329, guid: 140447aefe5ab6240b7562265d351154, type: 3}
-  itemType: 5
+  itemType: 2
   shopCost: 4
   probability: 60
   itemDescription: A potion that if taken, will give you a small boost in defense.

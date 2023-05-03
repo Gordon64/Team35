@@ -203,10 +203,21 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         defense += defenseBoost;
     }
 
+    //increase energy
+    public void increaseEnergy(int energyBoost){
+        units.energy += energyBoost;
+    }
+
+    //increase attack
+    public void increaseAttack(int attackBoost){
+        units.attack += attackBoost;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         updateText();
     }
+    
 
     public void LoadData(SavedInfo info){
         if(info == null){

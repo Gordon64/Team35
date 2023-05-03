@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemid: 8
   itemName: Energy Potion
-  ourValue: 5
+  ourValue: 2
   itemIcon: {fileID: 7012010456378013424, guid: 234ac5994eba3364db58a97dda7c83a9, type: 3}
-  itemType: 6
+  itemType: 3
   shopCost: 7
   probability: 50
   itemDescription: A potion that if taken, will give you a small boost in energy
