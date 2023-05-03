@@ -23,6 +23,12 @@ public class InventoryItem :ScriptableObject
         Basic_Potion,
         Basic_Sword,
         Defense_Potion,
-        Energy_Potion
+        Energy_Potion,
+        Better_Potion,
+        Better_Defense_Potion,
+        Better_Energy_Potion,
+        Best_Potion,
+        Best_Defense_Potion,
+        Best_Energy_Potion
     }
 }
