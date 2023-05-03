@@ -7,6 +7,7 @@ public class UpdateStats : MonoBehaviour
     public TextMeshProUGUI numUpgrades;
     public Bandit Bandit;
     public Shop_Manager Money;
+    public UnitStats Stats;
 
     public void UpdateStat()
     {
@@ -25,14 +26,31 @@ public class UpdateStats : MonoBehaviour
             statValue.text = statTemp;
 
             num = num - 2;
-            Money.TutPlayerWallet = Money.TutPlayerWallet - 2;
+            Money.TutPlayerWallet -= 2;
 
-            if ((value - 5) == Bandit.health)
+            if (statValue.name == "Health Value")
             {
-                Bandit.health = Bandit.health + 5;
+                Bandit.increaseHealth(5);
+                Stats.increaseHealth(5);
             }
-        
+
+            if (statValue.name == "Attack Value")
+            {
+                //Bandit.increaseAttack(5);
+                Stats.increaseAttack(5);
+            }
+
+            if (statValue.name == "Defense Value")
+            {
+                Bandit.increaseDefense(5);
+                Stats.increaseDefense(5); 
+            }
+
+            if (statValue.name == "Energy Value")
+            {
+                //Bandit.increaseEnergy(5);
+                Stats.increaseEnergy(5);
+            }
         }
-        
     }
 }
