@@ -88,4 +88,12 @@ public class EnemySpawn : MonoBehaviour
             SceneManager.LoadScene("BattleScene");
         }
     }
+
+    //IEnumerator BattleScene()
+    //{
+    //    TransitionLoader transition = FindObjectOfType<TransitionLoader>();
+    //    transition.StartTransition();
+    //    yield return new WaitForSeconds(transition.transitionTime);
+    //    SceneManager.LoadScene("BattleScene")
+    //}
 }

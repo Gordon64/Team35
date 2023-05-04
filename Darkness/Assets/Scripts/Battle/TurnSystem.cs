@@ -130,16 +130,22 @@ public class TurnSystem : MonoBehaviour
 
     IEnumerator EndScreen(bool lost)
     {
+        TransitionLoader transition = FindObjectOfType<TransitionLoader>();
+  
         if (lost)
         {
             screen.ShowDefeatScreen();
             yield return new WaitForSeconds(2f);
+            transition.StartTransition();
+            yield return new WaitForSeconds(transition.transitionTime);
             SceneManager.LoadScene("Start Screen");
         }
         else if (!lost)
         {
             screen.ShowVictoryScreen();
             yield return new WaitForSeconds(2f);
+            transition.StartTransition();
+            yield return new WaitForSeconds(transition.transitionTime);
             SceneManager.LoadScene(StartBattle.previousScene);
         }
     }
