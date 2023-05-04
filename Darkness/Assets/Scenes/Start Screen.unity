@@ -521,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartCheck: 1
   BattleCheck: 0
+  TransitionCheck: 0
 --- !u!4 &346827818
 Transform:
   m_ObjectHideFlags: 0
@@ -1333,7 +1334,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Tutorial
+          m_StringArgument: DarknessSettingsControls
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1640625339
