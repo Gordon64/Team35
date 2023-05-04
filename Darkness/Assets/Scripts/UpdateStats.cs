@@ -9,6 +9,11 @@ public class UpdateStats : MonoBehaviour
     public Shop_Manager Money;
     public UnitStats Stats;
 
+    private void Start()
+    {
+        Stats = FindObjectOfType<UnitStats>();
+    }
+
     public void UpdateStat()
     {
         numUpgrades.text = System.Convert.ToString(Money.PlayerWallet);

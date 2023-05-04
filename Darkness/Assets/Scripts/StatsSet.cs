@@ -9,6 +9,10 @@ public class StatsSet : MonoBehaviour
     public TextMeshProUGUI energyStat;
 
     public UnitStats Player;
+    private void Start()
+    {
+        Player = FindObjectOfType<UnitStats>();
+    }
 
     public void SetStats()
     {
