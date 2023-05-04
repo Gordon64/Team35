@@ -41058,7 +41058,7 @@ MonoBehaviour:
   SelectedItem: {fileID: 0}
   ItemContent: {fileID: 1384037818}
   Item: {fileID: 3042249363225183293, guid: a46530b0a14008b4f99e067436dd8c66, type: 3}
-  TutPlayerWallet: 10
+  PlayerWallet: 0
   Money: {fileID: 191399839}
 --- !u!4 &1000908003
 Transform:
@@ -43007,6 +43007,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: Shop
+      value: 
+      objectReference: {fileID: 1000907999}
     - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: health
       value: 30

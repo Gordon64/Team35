@@ -35,11 +35,11 @@ public class Yes_No_Script : MonoBehaviour
     }
 
     public void YesButton(){
-        if(shopManager.TutPlayerWallet >= Item.shopCost){
+        if(shopManager.PlayerWallet >= Item.shopCost){
             YesNoPanel.SetActive(false);
             Inventory.Add(Item);
-            shopManager.TutPlayerWallet = shopManager.TutPlayerWallet - Item.shopCost;      
-            UnityEngine.Debug.Log(shopManager.TutPlayerWallet);
+            shopManager.PlayerWallet = shopManager.PlayerWallet - Item.shopCost;      
+            UnityEngine.Debug.Log(shopManager.PlayerWallet);
         }
         else{
             UnityEngine.Debug.Log("Not enough money!");

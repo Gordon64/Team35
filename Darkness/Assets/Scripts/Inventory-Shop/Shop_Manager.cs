@@ -14,7 +14,7 @@ public class Shop_Manager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject Item;
-    public int TutPlayerWallet;
+    public int PlayerWallet;
     public TMP_Text Money;
 
     public void Start()
@@ -31,12 +31,11 @@ public class Shop_Manager : MonoBehaviour
 
             context++;
             ItemImage.sprite = anItem.itemIcon;
-            TutPlayerWallet = 10;
         }
     }
     public void Update(){
        // string Number = Convert.ToString(TutPlayerWallet);
-        Money.text = "Money: " + TutPlayerWallet;
+        Money.text = "Money: " + PlayerWallet;
     }
 
     public void setSelectedItem(InventoryItem Item){
@@ -46,8 +45,6 @@ public class Shop_Manager : MonoBehaviour
     public InventoryItem getSelectedItem(){
         return SelectedItem;
     }
-
-    
 
 
 }

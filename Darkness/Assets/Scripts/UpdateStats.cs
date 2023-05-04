@@ -11,7 +11,7 @@ public class UpdateStats : MonoBehaviour
 
     public void UpdateStat()
     {
-        numUpgrades.text = System.Convert.ToString(Money.TutPlayerWallet);
+        numUpgrades.text = System.Convert.ToString(Money.PlayerWallet);
 
         string statTemp = statValue.text;
         string numTemp = numUpgrades.text;
@@ -26,7 +26,7 @@ public class UpdateStats : MonoBehaviour
             statValue.text = statTemp;
 
             num = num - 2;
-            Money.TutPlayerWallet -= 2;
+            Money.PlayerWallet -= 2;
 
             if (statValue.name == "Health Value")
             {

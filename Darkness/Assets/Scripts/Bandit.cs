@@ -26,13 +26,16 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
 
     SavePlayerPos playerPosData;
     public GameObject PlayerUnit;
+    public GameObject Shop;
     private UnitStats units;
+    private Shop_Manager ShopWallet;
 
     private void Awake()
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
         playerPosData.PlayerPosLoad();
         units = PlayerUnit.GetComponent<UnitStats>();
+        ShopWallet = Shop.GetComponent<Shop_Manager>();
     }
 
     // Use this for initialization
@@ -222,10 +225,6 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
     
 
     public void LoadData(SavedInfo info){
-        if(info == null){
-            UnityEngine.Debug.Log("info is null");
-            return;
-        }
         if (info != null){
             if (this != null){
                 if(StartNewGame.instance.BattleCheck != true){
@@ -236,6 +235,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
                     units.energy = info.energy;
                     units.maxHealth = info.MaxHealth;
                     units.maxEnergy = info.MaxEnergy;
+                    ShopWallet.PlayerWallet = info.Wallet;
                 }
                 StartNewGame.instance.BattleCheck = false;
                 this.transform.position = info.position;
@@ -255,6 +255,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             info.MaxHealth = units.maxHealth;
             info.MaxEnergy = units.maxEnergy;
             info.LastScene = StartNewGame.instance.sceneStack.Pop();
+            info.Wallet = ShopWallet.PlayerWallet;
             UnityEngine.Debug.Log(info.LastScene);
         }
     }
