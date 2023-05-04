@@ -32,14 +32,14 @@ public class ShowVictoryDefeat : MonoBehaviour
     IEnumerator Victory()
     {
         victoryScreen.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         victoryScreen.SetActive(false);
     }
 
     IEnumerator Defeat()
     {
         defeatScreen.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         defeatScreen.SetActive(false);
     }
 }

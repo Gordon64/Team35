@@ -53578,7 +53578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: currency
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: deathSfx
