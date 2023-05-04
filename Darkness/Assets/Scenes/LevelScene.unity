@@ -41808,7 +41808,7 @@ MonoBehaviour:
   attackStat: {fileID: 1185943385}
   defenseStat: {fileID: 825051874}
   energyStat: {fileID: 1293064309}
-  Player: {fileID: 0}
+  Player: {fileID: 1045028206}
 --- !u!114 &1071054840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43045,7 +43045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.24
+      value: -1.86
       objectReference: {fileID: 0}
     - target: {fileID: 6726846722335032406, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50993,7 +50993,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1729668085
 Canvas:
   m_ObjectHideFlags: 0
