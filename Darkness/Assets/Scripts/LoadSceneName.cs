@@ -16,6 +16,8 @@ public class LoadSceneName : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            StartNewGame.instance.TransitionCheck = true;
+            Bandit.Instance.Nextlevel();
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
 

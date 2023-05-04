@@ -4387,7 +4387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -23.788757}
+  m_AnchoredPosition: {x: 0, y: -23.788818}
   m_SizeDelta: {x: 480, y: 231.9403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &931547374
@@ -6138,7 +6138,7 @@ MonoBehaviour:
   SelectedItem: {fileID: 0}
   ItemContent: {fileID: 1672384931}
   Item: {fileID: 3042249363225183293, guid: a46530b0a14008b4f99e067436dd8c66, type: 3}
-  TutPlayerWallet: 10
+  PlayerWallet: 0
   Money: {fileID: 552468210}
 --- !u!1 &1237954487
 GameObject:
@@ -11182,6 +11182,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1883533326}
+    - target: {fileID: 6723164767651359362, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6723203340784359636, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_Name
       value: LightBandit

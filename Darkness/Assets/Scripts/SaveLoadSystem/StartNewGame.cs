@@ -8,6 +8,7 @@ public class StartNewGame : MonoBehaviour
     public static StartNewGame instance {get; private set;}
     public bool StartCheck;
     public bool BattleCheck = false;
+    public bool TransitionCheck = false;
     public Stack<string> sceneStack = new Stack<string>();
     private void Awake(){
         if(instance != null){

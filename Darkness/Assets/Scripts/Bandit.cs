@@ -35,7 +35,8 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
         playerPosData = FindObjectOfType<SavePlayerPos>();
         playerPosData.PlayerPosLoad();
         units = PlayerUnit.GetComponent<UnitStats>();
-        ShopWallet = Shop.GetComponent<Shop_Manager>();
+        if(Shop != null)
+            ShopWallet = Shop.GetComponent<Shop_Manager>();
     }
 
     // Use this for initialization
@@ -256,7 +257,15 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             info.MaxEnergy = units.maxEnergy;
             info.LastScene = StartNewGame.instance.sceneStack.Pop();
             info.Wallet = ShopWallet.PlayerWallet;
-            UnityEngine.Debug.Log(info.LastScene);
+            if(StartNewGame.instance.TransitionCheck == true){
+                info.position = Vector3.zero;
+                StartNewGame.instance.TransitionCheck = false;
+            }
+            UnityEngine.Debug.Log("Save Money: " + info.Wallet);
         }
+    }
+
+    public void Nextlevel(){
+        this.transform.position = Vector3.zero;        
     }
 }
