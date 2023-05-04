@@ -19,4 +19,5 @@ MonoBehaviour:
   itemType: 2
   shopCost: 6
   probability: 0
-  itemDescription: A potion that if taken, will give you a big boost in heatlh.
+  itemDescription: A potion that if taken, will give you a big boost in heatlh. (HP
+    +6)

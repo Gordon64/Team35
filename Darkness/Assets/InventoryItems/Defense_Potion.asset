@@ -20,3 +20,4 @@ MonoBehaviour:
   shopCost: 4
   probability: 60
   itemDescription: A potion that if taken, will give you a small boost in defense.
+    (Defense +2)

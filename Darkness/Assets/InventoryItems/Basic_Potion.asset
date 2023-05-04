@@ -20,3 +20,4 @@ MonoBehaviour:
   shopCost: 2
   probability: 100
   itemDescription: A potion that if taken, will give you a small boost in heatlh.
+    (HP +2)

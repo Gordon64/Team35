@@ -20,3 +20,4 @@ MonoBehaviour:
   shopCost: 4
   probability: 0
   itemDescription: A potion that if taken, will give you a medium boost in heatlh.
+    (HPk +4)

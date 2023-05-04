@@ -20,4 +20,4 @@ MonoBehaviour:
   shopCost: 9
   probability: 0
   itemDescription: A potion that if taken, will give you a big boost in energy for
-    battles.
+    battles. (Energy +3)

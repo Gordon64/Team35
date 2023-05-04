@@ -19,5 +19,5 @@ MonoBehaviour:
   itemType: 9
   shopCost: 4
   probability: 40
-  itemDescription: 'The basic sword, it allows for a small difference in strength
-    when fighting enemies. '
+  itemDescription: The basic sword, it allows for a small difference in strength
+    when fighting enemies. (Attack +3)
