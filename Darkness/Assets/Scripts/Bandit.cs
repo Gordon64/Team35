@@ -239,7 +239,10 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
                     ShopWallet.PlayerWallet = info.Wallet;
                 }
                 StartNewGame.instance.BattleCheck = false;
-                this.transform.position = info.position;
+                if(StartNewGame.instance.TransitionCheck == true){
+                    this.transform.position = info.position;
+            }
+            StartNewGame.instance.TransitionCheck = true;
             }
         }
     }
@@ -257,10 +260,6 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
             info.MaxEnergy = units.maxEnergy;
             info.LastScene = StartNewGame.instance.sceneStack.Pop();
             info.Wallet = ShopWallet.PlayerWallet;
-            if(StartNewGame.instance.TransitionCheck == true){
-                info.position = Vector3.zero;
-                StartNewGame.instance.TransitionCheck = false;
-            }
             UnityEngine.Debug.Log("Save Money: " + info.Wallet);
         }
     }
