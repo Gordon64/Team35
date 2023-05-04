@@ -83,7 +83,7 @@ public class TurnSystem : MonoBehaviour
 
         if(remainingPlayerUnits.Length == 0)
         {
-            StartCoroutine(EndScreen(true))
+            StartCoroutine(EndScreen(true));
             //Send to main menu for loss? Then, they can load?
         }
 
