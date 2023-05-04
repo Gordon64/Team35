@@ -20,4 +20,11 @@ public class StackEffect : StatusEffect
             this.duration--;
         }
     }
+
+    public override void RemoveEffect(UnitStats unit)
+    {
+        unit.statusEffects.Remove(this);
+        this.duration = 0;
+        this.curStack = 0;
+    }
 }

@@ -19,6 +19,9 @@ public class Shop_Manager : MonoBehaviour
 
     public void Start()
     {
+        UnitStats player = FindObjectOfType<UnitStats>();
+        PlayerWallet = player.currency;
+
         foreach (var anItem in ShopItems)
         {
             GameObject ob = Instantiate(Item, ItemContent);

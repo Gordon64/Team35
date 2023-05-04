@@ -12,25 +12,10 @@ public class StartBattle : MonoBehaviour
     {
         if (instance != null)
         {
-            Destroy(instance);
+            Destroy(gameObject);
         }
 
         instance = gameObject;
         DontDestroyOnLoad(this.gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if(scene.name == "")
-        {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            //this.gameObject.SetActive(scene.name == "BattleScene");     //This is causing the player party to be deactivated, which means that Save system will not be able to save. Commenting out for the time being.
-        }
-    }
-
 }

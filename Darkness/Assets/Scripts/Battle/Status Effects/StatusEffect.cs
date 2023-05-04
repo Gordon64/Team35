@@ -47,4 +47,5 @@ public abstract class StatusEffect : ScriptableObject
     {
         this.duration--;
     }
+
 }
