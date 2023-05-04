@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7384154143818533244}
   - component: {fileID: 1822191200472474329}
   m_Layer: 0
-  m_Name: AngelEncounter
+  m_Name: AngelEncounter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,12 +104,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
+      propertyPath: attack
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: health
-      value: 50
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
+      propertyPath: defense
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
