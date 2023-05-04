@@ -84,7 +84,7 @@ public class TurnSystem : MonoBehaviour
         if(remainingPlayerUnits.Length == 0)
         {
             screen.ShowDefeatScreen();
-            SceneManager.LoadScene("LevelScene");
+            SceneManager.LoadScene(StartBattle.previousScene);
             //Send to main menu for loss? Then, they can load?
         }
 
@@ -133,6 +133,6 @@ public class TurnSystem : MonoBehaviour
     {
         screen.ShowVictoryScreen();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("LevelScene");
+        SceneManager.LoadScene(StartBattle.previousScene);
     }
 }
