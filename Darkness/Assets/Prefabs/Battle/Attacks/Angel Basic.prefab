@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7018705526504252922}
   - component: {fileID: 7018705526504252921}
   m_Layer: 0
-  m_Name: PhysicalAttack
+  m_Name: Angel Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  minAttackMultiplier: 0.5
+  energyCost: 0
+  minAttackMultiplier: 1
   maxAttackMultiplier: 1
-  minDefenseMultiplier: 0.2
-  maxDefenseMultiplier: 0.8
+  minDefenseMultiplier: 0.8
+  maxDefenseMultiplier: 1
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: 
-  posthitDialogue: The angel swiftly strikes.
+  hitDialogue: The angel, despite it's eminence, strikes with unrelenting force.
+  statusEffect: {fileID: 0}
+  buffEffect: {fileID: 0}
+  animationEffect: {fileID: 0}
+  hitSfx: {fileID: 8300000, guid: e1398d4437d533e44b25a7f63533e157, type: 3}

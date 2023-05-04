@@ -52,8 +52,9 @@ MonoBehaviour:
   maxDefenseMultiplier: 0.8
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  hitDialogue: A beam assaults you, searing your flesh. You feel it's imprints. STACK
-    +
+  hitDialogue: A beam assaults you from the caster's hand.  You feel something lingering..
+    +STACK
   statusEffect: {fileID: 11400000, guid: f94f5e37ea0bdac4ebadf8c558dfdb13, type: 2}
   buffEffect: {fileID: 0}
   animationEffect: {fileID: 0}
+  hitSfx: {fileID: 8300000, guid: e1398d4437d533e44b25a7f63533e157, type: 3}

@@ -57,3 +57,4 @@ MonoBehaviour:
   statusEffect: {fileID: 0}
   buffEffect: {fileID: 0}
   animationEffect: {fileID: 8152830776319284983, guid: db69b60aa0f15b54f907c68dbf30bfd7, type: 3}
+  hitSfx: {fileID: 8300000, guid: 71a49912a06c92b41b310cb99b966618, type: 3}

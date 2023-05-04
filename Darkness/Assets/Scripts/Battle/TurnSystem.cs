@@ -71,8 +71,7 @@ public class TurnSystem : MonoBehaviour
         {
             playerPosData.PlayerPosLoad();
             this.enemyEncounter.GetComponent<CollectReward>().collectReward();
-            screen.ShowVictoryScreen();
-            SceneManager.LoadScene("LevelScene");
+            StartCoroutine(EndScreen());
         }
 
         GameObject[] remainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
@@ -123,5 +122,12 @@ public class TurnSystem : MonoBehaviour
         {
             this.nextTurn();
         }
+    }
+
+    IEnumerator EndScreen()
+    {
+        yield return new WaitForSeconds(2f);
+        screen.ShowVictoryScreen();
+        SceneManager.LoadScene("LevelScene");
     }
 }

@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 7018705526504252922}
   - component: {fileID: 7018705526504252921}
   m_Layer: 0
-  m_Name: Bat Bite
+  m_Name: Bat Claw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,14 +182,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   energyCost: 0
-  minAttackMultiplier: 0.8
-  maxAttackMultiplier: 1
-  minDefenseMultiplier: 0.5
+  minAttackMultiplier: 0.5
+  maxAttackMultiplier: 0.7
+  minDefenseMultiplier: 1
   maxDefenseMultiplier: 1
   minLifestealMultiplier: 0.1
   maxLifestealMultiplier: 0.1
-  hitDialogue: The bat's fangs sink into your flesh, draining your vitality. +1 INFECTION
+  hitDialogue: The bat's claws swing wildly. It forms a vicious imprint. +1 INFECTION
   statusEffect: {fileID: 11400000, guid: 3889ea173fcf38d46a915fec2be14d9c, type: 2}
   buffEffect: {fileID: 0}
   animationEffect: {fileID: 0}
-  hitSfx: {fileID: 8300000, guid: c6f45c5e53c541b4cab57c244dd86c6e, type: 3}
+  hitSfx: {fileID: 8300000, guid: 67945474e04f1d141badea49d82e9da9, type: 3}

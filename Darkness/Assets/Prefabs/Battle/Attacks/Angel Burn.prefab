@@ -45,12 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  energyCost: 0
   minAttackMultiplier: 1.3
   maxAttackMultiplier: 2
   minDefenseMultiplier: 0.2
   maxDefenseMultiplier: 0.8
   minLifestealMultiplier: 0
   maxLifestealMultiplier: 0
-  prehitDialogue: 
-  posthitDialogue: An intense light envelops you searing its marks on your body.
+  hitDialogue: The angel makes it's mark on your skin. The mark sears deeper as you
+    move. +BURN
   statusEffect: {fileID: 11400000, guid: 364573d6a91888f4e88e4ee23aa370c0, type: 2}
+  buffEffect: {fileID: 0}
+  animationEffect: {fileID: 0}
+  hitSfx: {fileID: 8300000, guid: df008723185457b4f84a21a25af6006e, type: 3}

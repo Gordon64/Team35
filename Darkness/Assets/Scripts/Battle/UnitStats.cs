@@ -42,7 +42,10 @@ public class UnitStats : MonoBehaviour, IComparable
     private bool dead = false;
 
     static public UnitStats instance;
- 
+
+    [SerializeField]
+    private AudioClip deathSfx;
+
     private void Awake(){
         instance = this;
     }
@@ -92,6 +95,7 @@ public class UnitStats : MonoBehaviour, IComparable
             Destroy(this.gameObject);
             GameObject turnSystem = GameObject.Find("TurnSystem");
             turnSystem.GetComponent<TurnSystem>().nextTurn();
+            GetComponent<AudioSource>().PlayOneShot(deathSfx);
         }
         else
         {

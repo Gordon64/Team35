@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: 100
+  spawner: {fileID: 0}
 --- !u!1001 &7193125446233104112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 7018705526504252920, guid: 4ecc640d50ed1c4419c7c47adc7bf788, type: 3}
     - target: {fileID: 2089920838171159866, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}
       propertyPath: m_Name
-      value: Boss
+      value: Caster
       objectReference: {fileID: 0}
     - target: {fileID: 7563072728192908201, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}
       propertyPath: m_RootOrder
@@ -112,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}
       propertyPath: attack
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: aa6c19db1d3f7984ebcfe2fd416dee89, type: 3}
       propertyPath: health

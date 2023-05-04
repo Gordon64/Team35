@@ -39,6 +39,9 @@ public class AttackTarget : MonoBehaviour
     [SerializeField]
     private GameObject animationEffect;
 
+    [SerializeField]
+    private AudioClip hitSfx;
+
     //calculates damage and heal based on target and attack owner's stats. Changes dialogue box according to attack.
     public void hit (GameObject target)
     {
@@ -83,6 +86,11 @@ public class AttackTarget : MonoBehaviour
         if(animationEffect != null)
         {
             Instantiate(animationEffect, target.transform.position, Quaternion.identity);
+        }
+
+        if(hitSfx != null)
+        {
+            owner.GetComponent<AudioSource>().PlayOneShot(hitSfx);
         }
     }
 }
