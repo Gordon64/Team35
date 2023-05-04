@@ -8,7 +8,7 @@ using TMPro;
 //Stats container for every unit in battle. Spawns damage text and heal text. Calculates next turn.
 public class UnitStats : MonoBehaviour, IComparable
 {
-    public float currency;
+    public int currency;
 
     public float health;
     public float energy;
@@ -234,5 +234,16 @@ public class UnitStats : MonoBehaviour, IComparable
     public void receiveCurrency(int money)
     {
         currency += money;
-    }    
+    }
+
+    public void cleanStats()
+    {
+        health = maxHealth;
+        energy = maxEnergy;
+        nextActTurn = 0;
+        for(int i = 0; i < statusEffects.Count; i++)
+        {
+            statusEffects[i].RemoveEffect(this);
+        }
+    }
 }

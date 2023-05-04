@@ -66,15 +66,20 @@ public class TurnSystem : MonoBehaviour
 
         //GameObject[] remainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         remainingEnemyUnits = new List<GameObject>(GameObject.FindGameObjectsWithTag("EnemyUnit"));
+        GameObject[] remainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
 
         if (remainingEnemyUnits.Count == 0)
         {
             playerPosData.PlayerPosLoad();
-            this.enemyEncounter.GetComponent<CollectReward>().collectReward();
+            enemyEncounter.GetComponent<CollectReward>().collectReward();
+            foreach(GameObject unit in remainingPlayerUnits)
+            {
+                unit.GetComponent<UnitStats>().cleanStats();
+            }
+
             StartCoroutine(EndScreen());
         }
 
-        GameObject[] remainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
 
         if(remainingPlayerUnits.Length == 0)
         {
@@ -126,8 +131,8 @@ public class TurnSystem : MonoBehaviour
 
     IEnumerator EndScreen()
     {
-        yield return new WaitForSeconds(2f);
         screen.ShowVictoryScreen();
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("LevelScene");
     }
 }
