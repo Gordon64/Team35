@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: health
-      value: 85
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: defense
@@ -121,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: f71938c8a8a4ea147ba20ea2ddc14294, type: 3}
       propertyPath: maxHealth
-      value: 85
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
