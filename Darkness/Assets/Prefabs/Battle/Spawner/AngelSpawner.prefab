@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fce97958da54a4c40a77191a048fa121, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyEncounterPrefab: {fileID: 9052938527314244046, guid: 995310f4f2967b64fa00cbf73f1b4068, type: 3}
+  initialScene: 
 --- !u!61 &-1215179069811223699
 BoxCollider2D:
   m_ObjectHideFlags: 0

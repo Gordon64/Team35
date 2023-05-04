@@ -16,7 +16,7 @@ public class StatsSet : MonoBehaviour
 
     public void SetStats()
     {
-        float playerHealth = Player.health;
+        float playerHealth = Player.maxHealth;
         float playerAttack = Player.attack;
         float playerDefense = Player.defense;
         float playerEnergy = Player.energy;
@@ -24,7 +24,7 @@ public class StatsSet : MonoBehaviour
         healthStat.text = System.Convert.ToString(playerHealth);
         attackStat.text = System.Convert.ToString(Player.attack);
         defenseStat.text = System.Convert.ToString(Player.defense);
-        energyStat.text = System.Convert.ToString(Player.energy);
+        energyStat.text = System.Convert.ToString(Player.maxEnergy);
     }
 
 //Update so that values can change

@@ -5,21 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartBattle : MonoBehaviour
 {
-    public static GameObject instance;
     public static string previousScene;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         previousScene = SceneManager.GetActiveScene().name.ToString();
-
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-
-        instance = gameObject;
-        DontDestroyOnLoad(this.gameObject);
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }

@@ -36,7 +36,7 @@ public class UpdateStats : MonoBehaviour
             if (statValue.name == "Health Value")
             {
                 Bandit.increaseHealth(3);
-                Stats.increaseHealth(3);
+                Stats.increaseMaxHealth(3);
             }
 
             if (statValue.name == "Attack Value")
@@ -54,7 +54,7 @@ public class UpdateStats : MonoBehaviour
             if (statValue.name == "Energy Value")
             {
                 //Bandit.increaseEnergy(5);
-                Stats.increaseEnergy(1);
+                Stats.increaseMaxEnergy(1);
             }
         }
     }
