@@ -106,7 +106,7 @@ MonoBehaviour:
   health: 35
   energy: 0
   attack: 8
-  defense: 0
+  defense: 5
   speed: 9
   maxHealth: 0
   maxEnergy: 0
