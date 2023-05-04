@@ -9,7 +9,7 @@ public abstract class ShowUnitStat : MonoBehaviour
     protected GameObject unit;
 
     [SerializeField]
-    private float maxValue;
+    protected float maxValue;
 
     [SerializeField]
     public TextMeshProUGUI textElement;
