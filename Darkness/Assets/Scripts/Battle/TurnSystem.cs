@@ -77,14 +77,13 @@ public class TurnSystem : MonoBehaviour
                 unit.GetComponent<UnitStats>().cleanStats();
             }
 
-            StartCoroutine(EndScreen());
+            StartCoroutine(EndScreen(false));
         }
 
 
         if(remainingPlayerUnits.Length == 0)
         {
-            screen.ShowDefeatScreen();
-            SceneManager.LoadScene(StartBattle.previousScene);
+            StartCoroutine(EndScreen(true))
             //Send to main menu for loss? Then, they can load?
         }
 
@@ -129,10 +128,19 @@ public class TurnSystem : MonoBehaviour
         }
     }
 
-    IEnumerator EndScreen()
+    IEnumerator EndScreen(bool lost)
     {
-        screen.ShowVictoryScreen();
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(StartBattle.previousScene);
+        if (lost)
+        {
+            screen.ShowDefeatScreen();
+            yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene("Start Screen");
+        }
+        else if (!lost)
+        {
+            screen.ShowVictoryScreen();
+            yield return new WaitForSeconds(2f);
+            SceneManager.LoadScene(StartBattle.previousScene);
+        }
     }
 }
