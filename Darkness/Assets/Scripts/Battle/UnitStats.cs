@@ -62,6 +62,8 @@ public class UnitStats : MonoBehaviour, IComparable
 
     void Update()
     {
+        health = Mathf.Floor(health);
+
         if (health > maxHealth)
         {
             health = maxHealth;

@@ -134,16 +134,18 @@ public class TurnSystem : MonoBehaviour
   
         if (lost)
         {
+            yield return new WaitForSeconds(.5f);
             screen.ShowDefeatScreen();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
             transition.StartTransition();
             yield return new WaitForSeconds(transition.transitionTime);
             SceneManager.LoadScene("Start Screen");
         }
         else if (!lost)
         {
+            yield return new WaitForSeconds(.5f);
             screen.ShowVictoryScreen();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
             transition.StartTransition();
             yield return new WaitForSeconds(transition.transitionTime);
             SceneManager.LoadScene(StartBattle.previousScene);
