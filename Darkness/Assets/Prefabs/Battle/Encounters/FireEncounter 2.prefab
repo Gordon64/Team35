@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7384154143818533244}
   - component: {fileID: -1152695155862818859}
   m_Layer: 0
-  m_Name: FireEncounter
+  m_Name: FireEncounter 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2401650245694280861, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: attacks.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -2401650245694280861, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: attacks.Array.data[1]
@@ -65,10 +65,6 @@ PrefabInstance:
       objectReference: {fileID: 7018705526504252920, guid: dea28056f901a2e4ea16ac5c421b2497, type: 3}
     - target: {fileID: -2401650245694280861, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: attacks.Array.data[2]
-      value: 
-      objectReference: {fileID: 7018705526504252920, guid: dea28056f901a2e4ea16ac5c421b2497, type: 3}
-    - target: {fileID: -2401650245694280861, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
-      propertyPath: attacks.Array.data[3]
       value: 
       objectReference: {fileID: 7018705526504252920, guid: dea28056f901a2e4ea16ac5c421b2497, type: 3}
     - target: {fileID: 2089920838171159866, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
@@ -120,8 +116,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9171501945506674847, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
+      propertyPath: attack
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
+      propertyPath: health
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171501945506674847, guid: 472b0dc1393ee0e48bd53cf732ddc745, type: 3}
       propertyPath: maxHealth
-      value: 35
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
