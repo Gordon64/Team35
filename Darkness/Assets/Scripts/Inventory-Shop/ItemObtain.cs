@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemObtain : MonoBehaviour
 {
     public InventoryItem anItem;
+    public AudioSource audio;
 
     void Obtain()
     {
@@ -15,5 +16,6 @@ public class ItemObtain : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Obtain();
+        audio.Play();
     }
 }
