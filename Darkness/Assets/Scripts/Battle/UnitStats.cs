@@ -60,6 +60,19 @@ public class UnitStats : MonoBehaviour, IComparable
         }
     }
 
+    void Update()
+    {
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        if (energy > maxEnergy)
+        {
+            energy = maxEnergy;
+        }
+    }
+
     public void calculateNextActTurn(int currentTurn)
     {
         this.nextActTurn = currentTurn + (int)Math.Ceiling(100.0f / this.speed);
