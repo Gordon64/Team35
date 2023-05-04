@@ -42866,6 +42866,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 901f58da1a0b0e340b4db5bbe5d4e8b4, type: 2}
   - {fileID: 11400000, guid: 8307a19d16cbc1744a4878762bb8c0cb, type: 2}
   - {fileID: 11400000, guid: e5db387c32389e14ca42df2f6b59e133, type: 2}
+  - {fileID: 11400000, guid: 0d7842bd3baeb0c4fbad87722ed424a5, type: 2}
   ItemPrefabs: []
   context: 0
   SelectedItem: {fileID: 0}
