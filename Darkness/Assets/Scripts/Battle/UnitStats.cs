@@ -219,7 +219,7 @@ public class UnitStats : MonoBehaviour, IComparable
     //increase health with the potion
     public void increaseHealth(int healthBoost)
     {
-        this.health += healthBoost;
+        this.maxHealth += healthBoost;
     }
 
     //increase defense with the potion
@@ -235,7 +235,7 @@ public class UnitStats : MonoBehaviour, IComparable
 
     //increase energy
     public void increaseEnergy(int energyBoost){
-        this.energy += energyBoost;
+        this.maxEnergy += energyBoost;
     }
 
     IEnumerator wait()
