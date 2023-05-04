@@ -1266,6 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExitPanel: {fileID: 0}
+  SavePanel: {fileID: 0}
   ShopPanel: {fileID: 0}
   DialoguePanel: {fileID: 0}
   DialoguePanel2: {fileID: 0}
@@ -1586,7 +1587,9 @@ MonoBehaviour:
     Space:         Jump
 
     Escape:      
-    exit pop ups'
+    exit pop ups
+
+    P:                Pause'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a27e9167efb307340abea6514f4fc486, type: 2}
   m_sharedMaterial: {fileID: 101428362394509859, guid: a27e9167efb307340abea6514f4fc486, type: 2}
