@@ -263,7 +263,7 @@ public class UnitStats : MonoBehaviour, IComparable
 
     public void cleanStats()
     {
-        health = Mathf.Floor(health);
+        health = Mathf.Ceil(health);
         energy = maxEnergy;
         nextActTurn = 0;
         for(int i = 0; i < statusEffects.Count; i++)
