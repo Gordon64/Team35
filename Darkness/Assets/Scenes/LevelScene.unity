@@ -63498,6 +63498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8574159095823082917, guid: 21ea16ac4b77f13448551ab9bcc01372, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 719394356}
     - target: {fileID: 9094135979931867367, guid: 21ea16ac4b77f13448551ab9bcc01372, type: 3}
       propertyPath: m_RootOrder
       value: 13

@@ -529,6 +529,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
+      propertyPath: deathSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d2f348735857f047b7a5defd60d930a, type: 3}
+    - target: {fileID: 2564829423079674796, guid: 56261ea7a762c4e43b873053b0613ecc, type: 3}
       propertyPath: maxEnergy
       value: 10
       objectReference: {fileID: 0}
