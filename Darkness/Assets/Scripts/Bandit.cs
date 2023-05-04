@@ -193,7 +193,7 @@ public class Bandit : MonoBehaviour, SaveLoadInterface
 
     void updateText()
     {
-        healthText.text = "Health: " + health.ToString();
+        healthText.text = "Health: " + FindObjectOfType<UnitStats>().health.ToString();
     }
 
     //increase health with the potion
