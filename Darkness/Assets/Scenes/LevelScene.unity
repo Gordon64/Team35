@@ -43035,6 +43035,10 @@ PrefabInstance:
       propertyPath: m_jumpForce
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 6723164767651359362, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6723203340784359636, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_Name
       value: LightBandit

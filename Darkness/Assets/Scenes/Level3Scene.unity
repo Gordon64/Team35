@@ -543,6 +543,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 0}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &68114484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5938,6 +5939,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 1748947804}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &429978230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6402,7 +6404,7 @@ MonoBehaviour:
   SelectedItem: {fileID: 0}
   ItemContent: {fileID: 1978727674}
   Item: {fileID: 3042249363225183293, guid: a46530b0a14008b4f99e067436dd8c66, type: 3}
-  TutPlayerWallet: 10
+  PlayerWallet: 0
   Money: {fileID: 1912485653}
 --- !u!4 &487156526
 Transform:
@@ -7593,6 +7595,10 @@ PrefabInstance:
     - target: {fileID: 6688853753222441598, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_jumpForce
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723164767651359362, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6723203340784359636, guid: 15214ee8e09c7a949b7cf6fa4411b04e, type: 3}
       propertyPath: m_Name
@@ -10126,6 +10132,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 1748947804}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &672515036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134694,6 +134701,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 1748947804}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &1023408345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138697,6 +138705,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 0}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &1479098530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140992,6 +141001,7 @@ MonoBehaviour:
   numUpgrades: {fileID: 1748947804}
   Bandit: {fileID: 0}
   Money: {fileID: 0}
+  Stats: {fileID: 0}
 --- !u!114 &1679534151
 MonoBehaviour:
   m_ObjectHideFlags: 0
