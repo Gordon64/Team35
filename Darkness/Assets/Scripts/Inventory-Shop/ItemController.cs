@@ -33,29 +33,29 @@ public class ItemController : MonoBehaviour
         {
             //Health potion cases
             case InventoryItem.ItemType.Basic_Potion:
-                if (UnitStats.instance.health <= 28){
+                if (UnitStats.instance.health <= (UnitStats.instance.maxHealth-2)){
                     Bandit.Instance.increaseHealth(anItem.ourValue);
                     UnitStats.instance.increaseHealth(anItem.ourValue);
                 } else {
-                    Bandit.Instance.health = 30;
+                    Bandit.Instance.health = UnitStats.instance.maxHealth;
                     UnitStats.instance.health = UnitStats.instance.maxHealth;
                 }
                 break;
             case InventoryItem.ItemType.Better_Potion:
-                if (UnitStats.instance.health <= 26){
+                if (UnitStats.instance.health <= (UnitStats.instance.maxHealth-4)){
                     Bandit.Instance.increaseHealth(anItem.ourValue);
                     UnitStats.instance.increaseHealth(anItem.ourValue);
                 } else {
-                    Bandit.Instance.health = 30;
+                    Bandit.Instance.health = UnitStats.instance.maxHealth;
                     UnitStats.instance.health = UnitStats.instance.maxHealth;
                 }
                 break;
             case InventoryItem.ItemType.Best_Potion:
-                if (UnitStats.instance.health <= 24){
+                if (UnitStats.instance.health <= (UnitStats.instance.maxHealth-6)){
                     Bandit.Instance.increaseHealth(anItem.ourValue);
                     UnitStats.instance.increaseHealth(anItem.ourValue);
                 } else {
-                    Bandit.Instance.health = 30;
+                    Bandit.Instance.health = UnitStats.instance.maxHealth;
                     UnitStats.instance.health = UnitStats.instance.maxHealth;
                 }
                 break;
@@ -81,30 +81,27 @@ public class ItemController : MonoBehaviour
 
             //Energy potion cases
             case InventoryItem.ItemType.Energy_Potion:
-                if (UnitStats.instance.energy <= 8){
+                if (UnitStats.instance.energy <= (UnitStats.instance.maxEnergy-2)){
                     Bandit.Instance.increaseEnergy(anItem.ourValue);
                     UnitStats.instance.increaseEnergy(anItem.ourValue);
                 } else {
-                    Bandit.Instance.defense = 10;
-                    UnitStats.instance.defense = UnitStats.instance.maxEnergy;
+                    UnitStats.instance.energy = UnitStats.instance.maxEnergy;
                 }
                 break;
             case InventoryItem.ItemType.Better_Energy_Potion:
-                if (UnitStats.instance.energy <= 6){
+                if (UnitStats.instance.energy <= (UnitStats.instance.maxEnergy-4)){
                     Bandit.Instance.increaseEnergy(anItem.ourValue);
                     UnitStats.instance.increaseEnergy(anItem.ourValue);
                 } else {
-                    Bandit.Instance.defense = 10;
-                    UnitStats.instance.defense = UnitStats.instance.maxEnergy;
+                    UnitStats.instance.energy = UnitStats.instance.maxEnergy;
                 }
                 break;
             case InventoryItem.ItemType.Best_Energy_Potion:
-                if (UnitStats.instance.energy <= 4){
+                if (UnitStats.instance.energy <= (UnitStats.instance.maxEnergy-6)){
                     Bandit.Instance.increaseEnergy(anItem.ourValue);
                     UnitStats.instance.increaseEnergy(anItem.ourValue);
                 } else {
-                    Bandit.Instance.defense = 10;
-                    UnitStats.instance.defense = UnitStats.instance.maxEnergy;
+                    UnitStats.instance.energy = UnitStats.instance.maxEnergy;
                 }
                 break;
         }
